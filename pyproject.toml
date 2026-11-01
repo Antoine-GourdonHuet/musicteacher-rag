@@ -1,0 +1,67 @@
+[project]
+name = "musicteacher"
+version = "0.1.0"
+description = "MusicTeacher (RAG): bilingual agentic RAG assistant for music theory, built as a controlled retrieval experiment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "python-dotenv>=1.0",
+    "httpx>=0.27",
+    "qdrant-client>=1.9",
+    "sentence-transformers>=3.0",
+    "torch>=2.4",
+    "bm25s>=0.2",
+    "diskcache>=5.6",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "tqdm>=4.66",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+eval = ["ragas>=0.2"]
+popularity = ["scikit-learn>=1.4", "joblib>=1.3"]
+mcp = ["mcp>=1.0"]
+obs = ["langfuse>=2.0"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+# PyTorch: CUDA build on Windows (local GPU), lightweight CPU build on Linux (CI).
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu132", marker = "sys_platform == 'win32'" },
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/musicteacher"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
