@@ -1,11 +1,10 @@
 """Central configuration, loaded from environment variables and an optional `.env` file.
 
-All variables use the `MUSICTEACHER_` prefix, e.g. `MUSICTEACHER_ANTHROPIC_API_KEY`.
+All variables use the `MUSICTEACHER_` prefix, e.g. `MUSICTEACHER_GENERATOR_MODEL`.
 """
 
 from pathlib import Path
 
-from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -16,11 +15,11 @@ class Settings(BaseSettings):
         env_file=ROOT / ".env", env_prefix="MUSICTEACHER_", extra="ignore"
     )
 
-    anthropic_api_key: SecretStr | None = None
-
-    # Verify current model names in the Anthropic docs.
-    generator_model: str = "claude-haiku-5-5"
-    judge_model: str = "claude-haiku-5-5"
+    # Local LLMs served by Ollama (https://ollama.com/library).
+    ollama_base_url: str = "http://localhost:11434"
+    generator_model: str = "qwen3.5:9b"
+    # Placeholder: a judge from another model family is chosen with the evaluation.
+    judge_model: str = "qwen3.5:9b"
 
     embedding_model: str = "BAAI/bge-m3"
     reranker_model: str = "BAAI/bge-reranker-v2-m3"

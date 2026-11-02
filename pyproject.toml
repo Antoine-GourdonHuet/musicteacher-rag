@@ -5,7 +5,6 @@ description = "MusicTeacher (RAG): bilingual agentic RAG assistant for music the
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "anthropic>=0.40",
     "pydantic>=2.6",
     "pydantic-settings>=2.2",
     "python-dotenv>=1.0",
