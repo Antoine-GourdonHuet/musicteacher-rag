@@ -18,7 +18,7 @@ import random
 import time
 from datetime import UTC, datetime
 
-from musicteacher.agent.loop import AGENT_SYSTEM, run_agent
+from musicteacher.agent.loop import AGENT_SYSTEM, AgentResult, run_agent
 from musicteacher.agent.music import parse_key, pitch_class
 from musicteacher.agent.tools import build_registry
 from musicteacher.config import Settings, get_settings
@@ -52,8 +52,8 @@ def args_match(tool: str, expected: dict, actual: dict) -> bool:
     return False
 
 
-def evaluate_question(agent_llm, judge_llm, registry, q: EvalQuestion, top_k: int) -> dict:
-    result = run_agent(agent_llm, registry, q.question, max_steps=MAX_STEPS)
+def score_question(judge_llm, q: EvalQuestion, result: AgentResult, top_k: int) -> dict:
+    """Tool, retrieval and judge metrics for one agent run."""
     tools_called = [s.tool for s in result.steps]
     expected_tool = q.expected_tool or "search_corpus"
     searches = [s for s in result.steps if s.tool == "search_corpus" and s.ok]
@@ -138,11 +138,19 @@ def run(split: str, limit: int | None, settings: Settings):
         settings.cache_dir / "llm",
         usage=judge_usage,
     )
-    rows = []
+    # Two phases, like C0-C4: the agent and the judge models do not fit together in 8 GB of GPU
+    # memory, and alternating them per question makes Ollama reload a model every time.
+    agent_runs = []
     for i, q in enumerate(questions, start=1):
-        rows.append(evaluate_question(agent_llm, judge_llm, registry, q, settings.top_k))
-        print(f"  {i}/{len(questions)} {q.id}: tools={rows[-1]['tools_called']}", flush=True)
+        agent_runs.append(run_agent(agent_llm, registry, q.question, max_steps=MAX_STEPS))
+        tools = [s.tool for s in agent_runs[-1].steps]
+        print(f"  agent {i}/{len(questions)} {q.id}: tools={tools}", flush=True)
     agent_llm.close()
+    rows = []
+    for i, (q, agent_run) in enumerate(zip(questions, agent_runs, strict=True), start=1):
+        rows.append(score_question(judge_llm, q, agent_run, settings.top_k))
+        print(f"  judging {i}/{len(questions)}", end="\r", flush=True)
+    print()
     judge_llm.close()
 
     result = {
