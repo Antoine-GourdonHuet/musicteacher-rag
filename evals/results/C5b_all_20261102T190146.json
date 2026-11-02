@@ -1,0 +1,4155 @@
+{
+  "condition": "C5b",
+  "retrieval_mode": "agent",
+  "split": "all",
+  "limit": null,
+  "created_at": "2026-11-02T19:01:46+00:00",
+  "git": {
+    "commit": "3c2140376de5545f8c23167de1a41c0bbaef8e95",
+    "dirty": false
+  },
+  "config": {
+    "generator_model": "qwen3.5:9b",
+    "judge_model": "ministral-3:8b",
+    "embedding_model": "BAAI/bge-m3",
+    "reranker_model": "BAAI/bge-reranker-v2-m3",
+    "search_mode": "hybrid_rerank",
+    "top_k": 5,
+    "max_steps": 4,
+    "require_tool": true,
+    "temperature": 0.0,
+    "seed": 42,
+    "tools": [
+      "search_corpus",
+      "transpose",
+      "interval",
+      "key_info"
+    ],
+    "prompt_hash": "2f1210ac99a5"
+  },
+  "n_questions": 73,
+  "judge_invalid": 1,
+  "usage": {
+    "agent": "LLM calls: 177 (115 cached) | tokens in/out: 88295/3129 | generation time: 186.2s",
+    "judge": "LLM calls: 126 (77 cached) | tokens in/out: 39308/2235 | generation time: 81.6s"
+  },
+  "wall_time_s": 753.6,
+  "metrics": {
+    "overall": {
+      "recall_at_5": {
+        "mean": 0.8302,
+        "ci_low": 0.7264,
+        "ci_high": 0.9245,
+        "n": 53
+      },
+      "article_recall_at_5": {
+        "mean": 0.8679,
+        "ci_low": 0.7736,
+        "ci_high": 0.9623,
+        "n": 53
+      },
+      "mrr_at_10": {
+        "mean": 0.7711,
+        "ci_low": 0.6666,
+        "ci_high": 0.8686,
+        "n": 53
+      },
+      "correctness": {
+        "mean": 0.9384,
+        "ci_low": 0.8836,
+        "ci_high": 0.9863,
+        "n": 73
+      },
+      "faithfulness": {
+        "mean": 0.6538,
+        "ci_low": 0.5192,
+        "ci_high": 0.7885,
+        "n": 52
+      },
+      "relevancy": {
+        "mean": 0.9726,
+        "ci_low": 0.9384,
+        "ci_high": 1.0,
+        "n": 73
+      },
+      "tool_selection": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n": 73
+      },
+      "args_correct": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n": 20
+      }
+    },
+    "by_lang": {
+      "en": {
+        "recall_at_5": {
+          "mean": 0.8448,
+          "ci_low": 0.7069,
+          "ci_high": 0.9483,
+          "n": 29
+        },
+        "article_recall_at_5": {
+          "mean": 0.8966,
+          "ci_low": 0.7931,
+          "ci_high": 1.0,
+          "n": 29
+        },
+        "mrr_at_10": {
+          "mean": 0.7701,
+          "ci_low": 0.6322,
+          "ci_high": 0.8966,
+          "n": 29
+        },
+        "correctness": {
+          "mean": 0.9615,
+          "ci_low": 0.9231,
+          "ci_high": 1.0,
+          "n": 39
+        },
+        "faithfulness": {
+          "mean": 0.6207,
+          "ci_low": 0.4483,
+          "ci_high": 0.7931,
+          "n": 29
+        },
+        "relevancy": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 39
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 39
+        },
+        "args_correct": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        }
+      },
+      "fr": {
+        "recall_at_5": {
+          "mean": 0.8125,
+          "ci_low": 0.6667,
+          "ci_high": 0.938,
+          "n": 24
+        },
+        "article_recall_at_5": {
+          "mean": 0.8333,
+          "ci_low": 0.6667,
+          "ci_high": 0.9583,
+          "n": 24
+        },
+        "mrr_at_10": {
+          "mean": 0.7722,
+          "ci_low": 0.5917,
+          "ci_high": 0.9169,
+          "n": 24
+        },
+        "correctness": {
+          "mean": 0.9118,
+          "ci_low": 0.7941,
+          "ci_high": 1.0,
+          "n": 34
+        },
+        "faithfulness": {
+          "mean": 0.6957,
+          "ci_low": 0.5217,
+          "ci_high": 0.8696,
+          "n": 23
+        },
+        "relevancy": {
+          "mean": 0.9412,
+          "ci_low": 0.8676,
+          "ci_high": 1.0,
+          "n": 34
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 34
+        },
+        "args_correct": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        }
+      }
+    },
+    "by_qtype": {
+      "agentic": {
+        "recall_at_5": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        },
+        "article_recall_at_5": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        },
+        "mrr_at_10": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        },
+        "correctness": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 20
+        },
+        "faithfulness": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        },
+        "relevancy": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 20
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 20
+        },
+        "args_correct": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 20
+        }
+      },
+      "conceptual": {
+        "recall_at_5": {
+          "mean": 0.8947,
+          "ci_low": 0.7368,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "article_recall_at_5": {
+          "mean": 0.8947,
+          "ci_low": 0.7368,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "mrr_at_10": {
+          "mean": 0.8684,
+          "ci_low": 0.7105,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "correctness": {
+          "mean": 0.9737,
+          "ci_low": 0.9211,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "faithfulness": {
+          "mean": 0.8421,
+          "ci_low": 0.6842,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "relevancy": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 19
+        },
+        "args_correct": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        }
+      },
+      "definitional": {
+        "recall_at_5": {
+          "mean": 0.9286,
+          "ci_low": 0.7857,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "article_recall_at_5": {
+          "mean": 0.9286,
+          "ci_low": 0.7857,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "mrr_at_10": {
+          "mean": 0.8571,
+          "ci_low": 0.6786,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "correctness": {
+          "mean": 0.9286,
+          "ci_low": 0.7857,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "faithfulness": {
+          "mean": 0.6154,
+          "ci_low": 0.3077,
+          "ci_high": 0.8462,
+          "n": 13
+        },
+        "relevancy": {
+          "mean": 0.9643,
+          "ci_low": 0.8929,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "args_correct": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        }
+      },
+      "multihop": {
+        "recall_at_5": {
+          "mean": 0.8333,
+          "ci_low": 0.6667,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "article_recall_at_5": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "mrr_at_10": {
+          "mean": 0.8056,
+          "ci_low": 0.5826,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "correctness": {
+          "mean": 0.9167,
+          "ci_low": 0.75,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "faithfulness": {
+          "mean": 0.6667,
+          "ci_low": 0.3333,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "relevancy": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "args_correct": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        }
+      },
+      "terminology": {
+        "recall_at_5": {
+          "mean": 0.6429,
+          "ci_low": 0.4286,
+          "ci_high": 0.8571,
+          "n": 14
+        },
+        "article_recall_at_5": {
+          "mean": 0.7143,
+          "ci_low": 0.5,
+          "ci_high": 0.9286,
+          "n": 14
+        },
+        "mrr_at_10": {
+          "mean": 0.5381,
+          "ci_low": 0.2857,
+          "ci_high": 0.7623,
+          "n": 14
+        },
+        "correctness": {
+          "mean": 0.8214,
+          "ci_low": 0.642,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "faithfulness": {
+          "mean": 0.4286,
+          "ci_low": 0.2125,
+          "ci_high": 0.7143,
+          "n": 14
+        },
+        "relevancy": {
+          "mean": 0.8929,
+          "ci_low": 0.75,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "tool_selection": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 14
+        },
+        "args_correct": {
+          "mean": null,
+          "ci_low": null,
+          "ci_high": null,
+          "n": 0
+        }
+      }
+    },
+    "cross_lingual": {
+      "recall_at_5": {
+        "mean": 0.5,
+        "ci_low": 0.25,
+        "ci_high": 0.875,
+        "n": 8
+      },
+      "article_recall_at_5": {
+        "mean": 0.5,
+        "ci_low": 0.25,
+        "ci_high": 0.875,
+        "n": 8
+      },
+      "mrr_at_10": {
+        "mean": 0.5,
+        "ci_low": 0.25,
+        "ci_high": 0.875,
+        "n": 8
+      },
+      "correctness": {
+        "mean": 0.8125,
+        "ci_low": 0.5625,
+        "ci_high": 1.0,
+        "n": 8
+      },
+      "faithfulness": {
+        "mean": 0.375,
+        "ci_low": 0.125,
+        "ci_high": 0.75,
+        "n": 8
+      },
+      "relevancy": {
+        "mean": 0.875,
+        "ci_low": 0.625,
+        "ci_high": 1.0,
+        "n": 8
+      },
+      "tool_selection": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0,
+        "n": 8
+      },
+      "args_correct": {
+        "mean": null,
+        "ci_low": null,
+        "ci_high": null,
+        "n": 0
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "ag-001",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Transpose the progression C - Am - F - G up a minor third.",
+      "reference_answer": "Eb - Cm - Ab - Bb",
+      "answer": "The transposed progression up a minor third is Eb - Cm - Ab - Bb.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly; correct transposition and chord names.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "C",
+              "Am",
+              "F",
+              "G"
+            ],
+            "semitones": 3
+          },
+          "ok": true,
+          "result": "Eb - Cm - Ab - Bb"
+        }
+      ],
+      "gen_tokens_in": 1832,
+      "gen_tokens_out": 71,
+      "gen_latency_s": 12.47
+    },
+    {
+      "id": "ag-002",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Transpose G - Em - C - D down a whole tone.",
+      "reference_answer": "F - Dm - Bb - C",
+      "answer": "The transposed chords are F - Dm - Bb - C.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct transposition and fully addresses the question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "G",
+              "Em",
+              "C",
+              "D"
+            ],
+            "semitones": -2
+          },
+          "ok": true,
+          "result": "F - Dm - Bb - C"
+        }
+      ],
+      "gen_tokens_in": 1830,
+      "gen_tokens_out": 69,
+      "gen_latency_s": 12.9
+    },
+    {
+      "id": "ag-003",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Transpose Dm7 - G7 - Cmaj7 up a perfect fourth.",
+      "reference_answer": "Gm7 - C7 - Fmaj7",
+      "answer": "The transposed chords up a perfect fourth (5 semitones) are Gm7, C7, and Fmaj7.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly; correct transposition and chord names.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "Dm7",
+              "G7",
+              "Cmaj7"
+            ],
+            "semitones": 5
+          },
+          "ok": true,
+          "result": "Gm7 - C7 - Fmaj7"
+        }
+      ],
+      "gen_tokens_in": 1839,
+      "gen_tokens_out": 82,
+      "gen_latency_s": 12.67
+    },
+    {
+      "id": "ag-004",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Transpose Bb - Eb - F up two semitones.",
+      "reference_answer": "C - F - G",
+      "answer": "The transposed chords are C - F - G.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct transposition and fully addresses the question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "Bb",
+              "Eb",
+              "F"
+            ],
+            "semitones": 2
+          },
+          "ok": true,
+          "result": "C - F - G"
+        }
+      ],
+      "gen_tokens_in": 1824,
+      "gen_tokens_out": 62,
+      "gen_latency_s": 4.63
+    },
+    {
+      "id": "ag-005",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Transpose la progression Ab - Eb - Fm - Db d'une tierce majeure vers le haut.",
+      "reference_answer": "C - G - Am - F",
+      "answer": "La progression transposée d'une tierce majeure (4 demi-tons) vers le haut est : C - G - Am - F.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct and fully addresses the transposition question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "Ab",
+              "Eb",
+              "Fm",
+              "Db"
+            ],
+            "semitones": 4
+          },
+          "ok": true,
+          "result": "C - G - Am - F"
+        }
+      ],
+      "gen_tokens_in": 1842,
+      "gen_tokens_out": 83,
+      "gen_latency_s": 12.26
+    },
+    {
+      "id": "ag-006",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Transpose la grille E - A - B7 un demi-ton plus bas.",
+      "reference_answer": "Eb - Ab - Bb7",
+      "answer": "La grille transposée un demi-ton plus bas est Eb - Ab - Bb7.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Facts match reference exactly; fully relevant and clear.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "E",
+              "A",
+              "B7"
+            ],
+            "semitones": -1
+          },
+          "ok": true,
+          "result": "Eb - Ab - Bb7"
+        }
+      ],
+      "gen_tokens_in": 1831,
+      "gen_tokens_out": 71,
+      "gen_latency_s": 12.46
+    },
+    {
+      "id": "ag-007",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Transpose Am - Dm - E7 d'une quinte juste vers le haut.",
+      "reference_answer": "Em - Am - B7",
+      "answer": "Les accords transposés d'une quinte juste (7 demi-tons) vers le haut sont : Em - Am - B7.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct key facts and exact transposition; fully relevant.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "Am",
+              "Dm",
+              "E7"
+            ],
+            "semitones": 7
+          },
+          "ok": true,
+          "result": "Em - Am - B7"
+        }
+      ],
+      "gen_tokens_in": 1834,
+      "gen_tokens_out": 81,
+      "gen_latency_s": 14.0
+    },
+    {
+      "id": "ag-008",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Transpose la grille F - Bb - C7 de trois demi-tons vers le bas.",
+      "reference_answer": "D - G - A7",
+      "answer": "La grille transposée de trois demi-tons vers le bas est D - G - A7.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correctly transposes F→D, Bb→G, C7→A7; fully addresses the question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "transpose",
+      "tools_called": [
+        "transpose"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "transpose",
+          "arguments": {
+            "chords": [
+              "F",
+              "Bb",
+              "C7"
+            ],
+            "semitones": -3
+          },
+          "ok": true,
+          "result": "D - G - A7"
+        }
+      ],
+      "gen_tokens_in": 1839,
+      "gen_tokens_out": 74,
+      "gen_latency_s": 13.94
+    },
+    {
+      "id": "ag-009",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What interval is there from C up to G?",
+      "reference_answer": "perfect fifth (7 semitones)",
+      "answer": "The interval from C up to G is a perfect fifth [1].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct interval name and semitone count match reference; concise and accurate.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "C",
+            "note2": "G"
+          },
+          "ok": true,
+          "result": "perfect fifth (7 semitones); en français : quinte juste (7 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 2821,
+      "gen_tokens_out": 70,
+      "gen_latency_s": 11.75
+    },
+    {
+      "id": "ag-010",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Name the ascending interval from E to C.",
+      "reference_answer": "minor sixth (8 semitones)",
+      "answer": "The ascending interval from E to C is a minor sixth.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct interval name and correct semitone count (8) for E to C ascending.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "E",
+            "note2": "C"
+          },
+          "ok": true,
+          "result": "minor sixth (8 semitones); en français : sixte mineure (8 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 2815,
+      "gen_tokens_out": 66,
+      "gen_latency_s": 2.34
+    },
+    {
+      "id": "ag-011",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What interval separates A and the Eb above it?",
+      "reference_answer": "tritone (6 semitones)",
+      "answer": "The interval between A and the Eb above it is a tritone, which spans 6 semitones.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly, including interval name and semitone count.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "A",
+            "note2": "Eb"
+          },
+          "ok": true,
+          "result": "tritone (6 semitones); en français : triton (6 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 1824,
+      "gen_tokens_out": 63,
+      "gen_latency_s": 1.98
+    },
+    {
+      "id": "ag-012",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quel intervalle y a-t-il de D à F en montant ?",
+      "reference_answer": "tierce mineure (3 demi-tons)",
+      "answer": "L'intervalle de D à F en montant est une tierce mineure [1].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Exactitude et pertinence totale, intervalle correctement identifié.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "D",
+            "note2": "F"
+          },
+          "ok": true,
+          "result": "minor third (3 semitones); en français : tierce mineure (3 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 2847,
+      "gen_tokens_out": 80,
+      "gen_latency_s": 2.64
+    },
+    {
+      "id": "ag-013",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quel est l'intervalle ascendant de F à E ?",
+      "reference_answer": "septième majeure (11 demi-tons)",
+      "answer": "L'intervalle ascendant de F à E est une septième majeure [1].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct and fully addresses the question with precise interval name and semitone count.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "F",
+            "note2": "E"
+          },
+          "ok": true,
+          "result": "major seventh (11 semitones); en français : septième majeure (11 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 2845,
+      "gen_tokens_out": 79,
+      "gen_latency_s": 2.79
+    },
+    {
+      "id": "ag-014",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quel intervalle sépare Bb du D situé au-dessus ?",
+      "reference_answer": "tierce majeure (4 demi-tons)",
+      "answer": "L'intervalle qui sépare Bb du D situé au-dessus est une tierce majeure [1].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Exactitude et pertinence totale, intervalle correctement identifié.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "interval",
+      "tools_called": [
+        "interval"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "interval",
+          "arguments": {
+            "note1": "Bb",
+            "note2": "D"
+          },
+          "ok": true,
+          "result": "major third (4 semitones); en français : tierce majeure (4 demi-tons)"
+        }
+      ],
+      "gen_tokens_in": 2855,
+      "gen_tokens_out": 89,
+      "gen_latency_s": 2.91
+    },
+    {
+      "id": "ag-015",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How many flats are in the key signature of Eb major?",
+      "reference_answer": "3 flats",
+      "answer": "The key signature of Eb major has 3 flats.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully correct and directly answers the question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "Eb major"
+          },
+          "ok": true,
+          "result": "Eb major: scale Eb F G Ab Bb C D; key signature: 3 flats; relative key: C minor"
+        }
+      ],
+      "gen_tokens_in": 1820,
+      "gen_tokens_out": 38,
+      "gen_latency_s": 11.49
+    },
+    {
+      "id": "ag-016",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What is the relative minor of F major?",
+      "reference_answer": "D minor",
+      "answer": "The relative minor of F major is D minor [key_info].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct key fact (D minor) and fully relevant to the question.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "F major"
+          },
+          "ok": true,
+          "result": "F major: scale F G A Bb C D E; key signature: 1 flat; relative key: D minor"
+        }
+      ],
+      "gen_tokens_in": 2807,
+      "gen_tokens_out": 54,
+      "gen_latency_s": 2.04
+    },
+    {
+      "id": "ag-017",
+      "lang": "en",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Which notes make up the D major scale?",
+      "reference_answer": "D E F# G A B C#",
+      "answer": "The D major scale consists of the notes D, E, F#, G, A, B, and C#.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly, no contradictions or omissions.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "D major"
+          },
+          "ok": true,
+          "result": "D major: scale D E F# G A B C#; key signature: 2 sharps; relative key: B minor"
+        }
+      ],
+      "gen_tokens_in": 1816,
+      "gen_tokens_out": 50,
+      "gen_latency_s": 1.64
+    },
+    {
+      "id": "ag-018",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Combien d'altérations a l'armure de A major (la majeur) ?",
+      "reference_answer": "3 dièses",
+      "answer": "L'armure de la majeur contient trois dièses.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Répond correctement et précisément à la question posée.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "A major"
+          },
+          "ok": true,
+          "result": "A major: scale A B C# D E F# G#; key signature: 3 sharps; relative key: F# minor"
+        }
+      ],
+      "gen_tokens_in": 2853,
+      "gen_tokens_out": 59,
+      "gen_latency_s": 2.21
+    },
+    {
+      "id": "ag-019",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Quel est le relatif majeur de C minor (do mineur) ?",
+      "reference_answer": "Eb majeur",
+      "answer": "Le relatif majeur de Do mineur (C minor) est Mi bémol majeur (Eb major), comme indiqué par l'outil [key_info].",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Réponse exacte et complète, sans contradiction ni omission.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "C minor"
+          },
+          "ok": true,
+          "result": "C minor: scale C D Eb F G Ab Bb; key signature: 3 flats; relative key: Eb major"
+        }
+      ],
+      "gen_tokens_in": 2885,
+      "gen_tokens_out": 102,
+      "gen_latency_s": 3.13
+    },
+    {
+      "id": "ag-020",
+      "lang": "fr",
+      "qtype": "agentic",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quelles notes composent la gamme de B minor naturelle ?",
+      "reference_answer": "B C# D E F# G A",
+      "answer": "La gamme de Bm naturelle est composée des notes suivantes : B, C#, D, E, F#, G et A.",
+      "retrieved": [],
+      "source_chunk_ids": [],
+      "recall_at_5": null,
+      "article_recall_at_5": null,
+      "mrr_at_10": null,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Notes exactes et complètes, réponse claire et sans erreur.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": 1.0,
+      "expected_tool": "key_info",
+      "tools_called": [
+        "key_info"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "key_info",
+          "arguments": {
+            "key": "B minor"
+          },
+          "ok": true,
+          "result": "B minor: scale B C# D E F# G A; key signature: 2 sharps; relative key: D major"
+        }
+      ],
+      "gen_tokens_in": 1822,
+      "gen_tokens_out": 53,
+      "gen_latency_s": 1.73
+    },
+    {
+      "id": "en-conc-036",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How can you determine which extra intervals are present in a dominant seventh chord based on its numerical symbol?",
+      "reference_answer": "When a chord symbol includes numbers like 7, 9, 11, or 13, it indicates a dominant chord that contains the standard major triad plus one or more specific extensions. These extensions include a minor seventh, a major ninth, a perfect eleventh, or a major thirteenth.",
+      "answer": "Based on the search results, a dominant seventh chord symbol (like C7) implies a major triad (root, major third, perfect fifth) plus an additional minor seventh interval. The numerical \"7\" in the symbol indicates this extra minor seventh is present alongside the implied major triad [1][2].",
+      "retrieved": [
+        "en-interval_music#035",
+        "en-seventh_chord#004",
+        "en-chord_notation#008",
+        "en-interval_music#033",
+        "en-interval_music#034"
+      ],
+      "source_chunk_ids": [
+        "en-interval_music#035"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate and complete, including the minor seventh detail and triad context.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "dominant seventh chord intervals numerical symbol extra intervals"
+          },
+          "ok": true,
+          "result": "[1] Interval (music) — Intervals in chords > Deducing component intervals from chord names and symbols\nIf the number is 7, 9, 11, 13, etc., the chord is dominant (e.g., C7 = Cdom7) and contains, together with the implied major triad, one or more of the following extra intervals: minor 7th, major 9th, perfect 11th, and major 13th (see names and symbols for seventh and extended chords).\nIf the number is 5, the chord (technically not a chord in the traditional sense, but a dyad) is a power chord. O"
+        }
+      ],
+      "gen_tokens_in": 4209,
+      "gen_tokens_out": 160,
+      "gen_latency_s": 7.49
+    },
+    {
+      "id": "en-conc-039",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How did composers in the 13th century change the role of the chant-based tenor within their polyphonic works?",
+      "reference_answer": "During the 13th century, composers altered the chant-based tenor by fragmenting it and hiding it beneath secular tunes, which caused the sacred texts to become obscured.",
+      "answer": "In the 13th century, composers altered the role of the chant-based tenor by fragmenting and obscuring it beneath secular tunes, which caused sacred texts to be hidden or placed within familiar melodies [1].",
+      "retrieved": [
+        "en-polyphony#003",
+        "en-tenor#001",
+        "fr-ténor#002",
+        "en-countertenor#001",
+        "en-countertenor#004"
+      ],
+      "source_chunk_ids": [
+        "en-polyphony#003"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference answer fully, with minor rephrasing and added citation (irrelevant for correctness).",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "13th century polyphony tenor chant role change"
+          },
+          "ok": true,
+          "result": "[1] Polyphony — European polyphony > Historical context\nEuropean polyphony rose out of melismatic organum, the earliest harmonization of the chant. During the 12th century, composers such as Léonin and Pérotin developed the organum that had been introduced centuries earlier, and added a third and fourth voice to the now homophonic chant. In the 13th century, the chant-based tenor was becoming altered, fragmented, and hidden beneath secular tunes, obscuring the sacred texts, as composers continue"
+        }
+      ],
+      "gen_tokens_in": 2925,
+      "gen_tokens_out": 80,
+      "gen_latency_s": 5.28
+    },
+    {
+      "id": "en-conc-042",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How do the vocal folds and the muscles of the larynx work together to control pitch and tone?",
+      "reference_answer": "The vocal folds vibrate using airflow from the lungs to create sound, while the muscles of the larynx adjust the length and tension of these folds to fine-tune the resulting pitch and tone.",
+      "answer": "The vocal folds and laryngeal muscles work together to control pitch and tone by adjusting the length, size, and tension of the vocal folds [2]. The muscles shorten and bulge the folds, which can change their dimensions to fine-tune the fundamental frequency of the sound generated during phonation [3][5]. Additionally, while the true vocal folds are primarily responsible for normal speech and singing, the false vocal folds (vestibular folds) can produce deep sonorous tones, screams, and growls [1].",
+      "retrieved": [
+        "en-vocal_cords#000",
+        "en-human_voice#001",
+        "en-human_voice#002",
+        "en-vocal_cords#002",
+        "en-vocal_cords#030"
+      ],
+      "source_chunk_ids": [
+        "en-human_voice#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.5,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate, detailed, and fully addresses pitch/tone control via vocal fold tension, length, and false folds' role.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "vocal folds larynx muscles pitch tone control"
+          },
+          "ok": true,
+          "result": "[1] Vocal cords — Introduction\nThe vocal cords, also known as vocal folds, are folds of throat tissues that are key in creating sounds through vocalization. The length of the vocal cords affects the pitch of voice, similar to a stringed musical instrument. Open when breathing and vibrating for speech or singing, the folds are controlled via the recurrent laryngeal branch of the vagus nerve. They are composed of twin infoldings of mucous membrane stretched horizontally, from back to front, across"
+        }
+      ],
+      "gen_tokens_in": 2931,
+      "gen_tokens_out": 141,
+      "gen_latency_s": 6.66
+    },
+    {
+      "id": "en-conc-045",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "How does a bass preamplifier help an upright bassist connect their instrument to an amplifier or PA system?",
+      "reference_answer": "A bass preamplifier acts as a small electronic device that matches the impedance between the piezoelectric pickup on the upright bass and the amp or PA system, ensuring a proper connection.",
+      "answer": "A bass preamplifier helps an upright bassist connect their instrument to an amplifier or PA system by matching the impedance between the piezoelectric pickup and the amp or PA system [1]. It also allows for boosting or cutting the signal gain, and some models offer equalization controls, a compressor, and a DI box connection [1].",
+      "retrieved": [
+        "en-effects_unit#040",
+        "en-guitar#072",
+        "fr-guitare_basse#064",
+        "en-guitar_amplifier#000",
+        "en-distortion_music#002"
+      ],
+      "source_chunk_ids": [
+        "en-effects_unit#040"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully correct and relevant; adds useful extra details without errors.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "bass preamplifier upright bass connect amplifier PA system"
+          },
+          "ok": true,
+          "result": "[1] Effects unit — Bass effects\nBass effects are electronic effects units that are designed for use with the low pitches created by an electric bass or for an upright bass used with a bass amp or PA system. Two examples of bass effects are fuzz bass and bass chorus.  Some bass amplifiers have built-in effects, such as overdrive or chorus. Upright bassists in jazz, folk, blues and similar genres may use a bass preamplifier, a small electronic device that matches the impedance between the piezoele"
+        }
+      ],
+      "gen_tokens_in": 2825,
+      "gen_tokens_out": 107,
+      "gen_latency_s": 5.74
+    },
+    {
+      "id": "en-conc-048",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "How did white mensural notation indicate the use of triplets compared to black notation?",
+      "reference_answer": "In white mensural notation, which appeared around 1450, composers showed triplets by filling in the noteheads with color, such as black or red, whereas black notation used a different system before this change.",
+      "answer": "In white mensural notation, triplets were indicated by coloration, which involved filling in the noteheads to make them black (or sometimes red), whereas black notation used different symbols for durations with ratios of 2:1 or 3:1 [1].",
+      "retrieved": [
+        "en-note_value#004",
+        "en-time_signature#024",
+        "en-tuplet#004",
+        "en-musical_notation#039",
+        "en-tuplet#000"
+      ],
+      "source_chunk_ids": [
+        "en-note_value#004"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate and fully addresses the question with correct historical context and notation details.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "In white mensural notation, triplets were indicated by coloration, which involved filling in the noteheads to make them black (or sometimes red), whereas black notation used different symbols for durations with ratios of 2:1 or 3:1"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "white mensural notation triplets black notation"
+          },
+          "ok": true,
+          "result": "[1] Note value — History > Mensural notation\nAround 1250, Franco of Cologne invented different symbols for different durations, although the relation between different note values could vary; three was the most common ratio. Philippe de Vitry's treatise Ars nova (1320) described a system in which the ratios of different note values could be 2:1 or 3:1, with a system of mensural time signatures to distinguish between them.\nThis black mensural notation gave way to white mensural notation around 14"
+        }
+      ],
+      "gen_tokens_in": 2942,
+      "gen_tokens_out": 86,
+      "gen_latency_s": 5.49
+    },
+    {
+      "id": "en-conc-051",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does the method of stacking every other note from a diatonic scale determine the specific intervals found within a major triad?",
+      "reference_answer": "By selecting the root, the third, and the fifth from the scale while skipping the notes in between, a major triad is formed because the distance from the root to the third creates a major third interval, and the distance from that third to the fifth creates a perfect fifth interval.",
+      "answer": "Stacking every other note from a diatonic scale creates a triad by forming two consecutive thirds: the first interval is between the root and the third, and the second is between the third and the fifth [1]. In a major triad specifically, this method produces a major third (four semitones) followed by a perfect fifth (seven semitones), resulting in the characteristic R–3–5 structure [1][2].",
+      "retrieved": [
+        "en-triad_music#004",
+        "en-interval_music#013",
+        "en-diatonic_scale#008",
+        "en-diatonic_scale#007",
+        "en-interval_music#014"
+      ],
+      "source_chunk_ids": [
+        "en-triad_music#004"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate intervals (major third + perfect fifth) and clear R–3–5 structure explained.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "stacking every other note diatonic scale major triad intervals"
+          },
+          "ok": true,
+          "result": "[1] Triad (music) — Construction\nTriads (or any other tertian chords) are built by superimposing every other note of a diatonic scale (e.g., standard major or minor scale). For example, a C major triad uses the notes C–E–G. This spells a triad by skipping over D and F. While the interval from each note to the one above it is a third, the quality of those thirds varies depending on the quality of the triad:\nmajor triads contain a major third and perfect fifth interval, symbolized: R 3 5 (or 0–4–7"
+        }
+      ],
+      "gen_tokens_in": 2911,
+      "gen_tokens_out": 128,
+      "gen_latency_s": 6.35
+    },
+    {
+      "id": "en-conc-054",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does shifting the harmony while holding over a note from the previous chord create a suspension?",
+      "reference_answer": "When the harmony changes to a new chord, a note that belonged to the first chord is either kept sounding or played again against this new chord. Because this note no longer fits the new harmony, it acts as a nonchord tone before it eventually moves down by step to become part of the new chord.",
+      "answer": "A suspension occurs when one or more notes from the previous chord are held over into the next harmony, where they become nonchord tones (dissonances) against the new chord [1]. These suspended notes must then resolve downwards by step to a chord tone of the new harmony [3], creating a temporary dissonance that resolves to consonance.",
+      "retrieved": [
+        "en-nonchord_tone#007",
+        "en-suspended_chord#001",
+        "en-nonchord_tone#008",
+        "en-suspended_chord#003",
+        "en-suspended_chord#000"
+      ],
+      "source_chunk_ids": [
+        "en-nonchord_tone#007"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurately explains suspension mechanics, resolution, and dissonance/consonance contrast.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "suspension harmony shift hold note previous chord"
+          },
+          "ok": true,
+          "result": "[1] Nonchord tone — Accented non-chord tones > Suspension and retardation\nEndeavor, moreover, to introduce suspensions now in this voice, now in that, for it is incredible how much grace the melody acquires by this means. And every note which has a special function is rendered audible thereby.\nA suspension (SUS) (sometimes referred to as a syncope) occurs when the harmony shifts from one chord to another, but one or more notes of the first chord (the preparation) are either temporarily held over"
+        }
+      ],
+      "gen_tokens_in": 2816,
+      "gen_tokens_out": 105,
+      "gen_latency_s": 5.63
+    },
+    {
+      "id": "en-conc-057",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does the relationship between diminished seventh chords determine the number of distinct octatonic scales available in the twelve-tone system?",
+      "reference_answer": "The twelve tones of the chromatic scale are covered by three disjointed diminished seventh chords, and because the union of any two of these chords creates an octatonic collection, there are exactly three ways to select a pair from the three chords. This results in three distinct octatonic scales existing within the twelve-tone system.",
+      "answer": "The relationship between diminished seventh chords determines the number of distinct octatonic scales because the twelve tones of the chromatic scale are covered by three disjoint diminished seventh chords, and the union of any two is an octatonic collection [1]. Since there are three ways to select two from these three chords, there are exactly three distinct octatonic scales in the twelve-tone system [1].",
+      "retrieved": [
+        "en-octatonic_scale#002",
+        "en-diminished_seventh_chord#017",
+        "en-diminished_seventh_chord#001",
+        "en-octatonic_scale#001",
+        "en-half_diminished_seventh_chord#000"
+      ],
+      "source_chunk_ids": [
+        "en-octatonic_scale#002"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully accurate, detailed, and directly addresses the question with no contradictions or omissions.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "diminished seventh chords octatonic scale relationship twelve tone system"
+          },
+          "ok": true,
+          "result": "[1] Octatonic scale — Construction\nThe twelve tones of the chromatic scale are covered by three disjointed diminished seventh chords, of which the union of any two is an octatonic collection. Because there are three ways to select two from three, there are three octatonic scales in the twelve-tone system.\nEach octatonic scale has exactly two modes: the first begins its ascent with a whole step, while the second begins its ascent with a half step (semitone). These modes are sometimes referred to "
+        }
+      ],
+      "gen_tokens_in": 3037,
+      "gen_tokens_out": 115,
+      "gen_latency_s": 6.04
+    },
+    {
+      "id": "en-conc-060",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does MuSATO justify publishing tablature without paying royalties to composers?",
+      "reference_answer": "MuSATO repositions itself as an educational provider by classifying users as music students and transcribers as music teachers, which allows them to rely on fair use as a rationale for publishing free tablature without needing publication rights or paying royalties.",
+      "answer": "MuSATO justifies publishing tablature without paying royalties by claiming fair use and repositioning itself as an educational provider rather than a copyright infringer [1]. By classifying users as \"music students\" and transcribers as \"music teachers,\" MuSATO argues it does not need to obtain publication rights or pay royalties to original composers [1].",
+      "retrieved": [
+        "en-tablature#012",
+        "en-tablature#008",
+        "en-tablature#011",
+        "en-tablature#010",
+        "en-tablature#000"
+      ],
+      "source_chunk_ids": [
+        "en-tablature#012"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate, detailed, and fully addresses the reference answer’s core justification.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "MuSATO publish tablature without paying royalties composers"
+          },
+          "ok": true,
+          "result": "[1] Tablature — Legal issues > Guitar Tab Universe\nOn 17 July 2006, Guitar Tab Universe (GTU) posted a letter on its home page that its ISP had been jointly threatened with legal action by the National Music Publishers Association (NMPA) and the MPA \"on the basis that sharing tablature constitutes copyright infringement\".\nIn response, GTU's site owner(s) immediately created a website named Music Student and Teacher Organization (MuSATO) to attempt to reposition themselves from an illegal-copyrig"
+        }
+      ],
+      "gen_tokens_in": 3118,
+      "gen_tokens_out": 107,
+      "gen_latency_s": 15.98
+    },
+    {
+      "id": "en-conc-076",
+      "lang": "en",
+      "qtype": "conceptual",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "Under what specific conditions can the leading tone be exempted from its obligatory movement to the tonic?",
+      "reference_answer": "The leading tone may avoid moving directly to the tonic if the tonic is heard in the highest voice part during a perfect cadence, where it descends disjointedly to the dominant, or when moving from the fifth to the sixth degree in a major key, where it descends conjunctively to the sixth degree.",
+      "answer": "The leading tone is exempted from its obligatory movement to the tonic when it appears in an inner voice of a dominant chord, where it can be \"frustrated\" and not resolve to the tonic [3]. Additionally, in four-part chorale texture, while the leading tone in a leading-tone triad must resolve to the tonic, the third of that triad is doubled to avoid emphasizing the tritone, which implies a different voice-leading context [3].",
+      "retrieved": [
+        "en-tendency_tone#001",
+        "en-tendency_tone#003",
+        "en-tendency_tone#005",
+        "en-tendency_tone#000",
+        "en-tonality#008"
+      ],
+      "source_chunk_ids": [
+        "fr-sensible_musique#005"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 0.5,
+      "relevancy": 1.0,
+      "judge_reason": "Partially correct but incomplete; misses reference to tonic in highest voice or 5th→6th motion.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "The leading tone is exempted from its obligatory movement to the tonic when it appears in an inner voice of a dominant chord, where it can be 'frustrated' and not resolve to the tonic"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "leading tone exemption from movement to tonic conditions"
+          },
+          "ok": true,
+          "result": "[1] Tendency tone — Leading tone\nThe leading tone refers to the seventh scale degree () of the major scale, which has a strong affinity for and leads melodically to the tonic. It is sung as si in movable-do solfège. For example, in the F major scale, the leading note is the note E.\nAs a diatonic function, the leading tone is the seventh scale degree of any diatonic scale when the distance between it and the tonic is a single semitone. In diatonic scales in which there is a whole tone between the"
+        }
+      ],
+      "gen_tokens_in": 2975,
+      "gen_tokens_out": 126,
+      "gen_latency_s": 8.7
+    },
+    {
+      "id": "en-defi-041",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What effect does the whole-tone scale create because all its tones are equally spaced?",
+      "reference_answer": "Because every note in the scale is the same distance from its neighbors, no single tone stands out, which results in a blurred and indistinct sound.",
+      "answer": "Because all tones in the whole-tone scale are equally spaced by a whole step, no single tone stands out, creating a blurred, indistinct effect with a soft-edged, neutral sound lacking tonal contrast [1][5]. This symmetry means the scale has no leading tone and does not give a strong impression of a tonic or tonality [1].",
+      "retrieved": [
+        "en-whole_tone_scale#000",
+        "en-major_scale#002",
+        "en-whole_tone_scale#009",
+        "en-interval_music#004",
+        "en-whole_tone_scale#001"
+      ],
+      "source_chunk_ids": [
+        "en-whole_tone_scale#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate, detailed, and fully addresses the question with no contradictions.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "the whole-tone scale is maximally even (this is mentioned only for the major scale in [2])",
+        "the whole-tone scale is a generated collection (this is mentioned only for the major scale in [2] and not explicitly for the whole-tone scale in [5])",
+        "the whole-tone scale is called interval cycle 2, or C2 (this is attributed to George Perle in [5], but the claim is not explicitly stated as a property of the whole-tone scale itself in the context passages)"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "whole-tone scale effect equally spaced tones"
+          },
+          "ok": true,
+          "result": "[1] Whole-tone scale — Introduction\nIn music, a whole-tone scale is a scale in which each note is separated from its neighbors by the interval of a whole tone. In twelve-tone equal temperament, there are only two complementary whole-tone scales, both six-note or hexatonic scales. A single whole-tone scale can also be thought of as a \"six-tone equal temperament\".\nThe whole-tone scale has no leading tone and because all tones are the same distance apart, \"no single tone stands out, [and] the scale"
+        }
+      ],
+      "gen_tokens_in": 2948,
+      "gen_tokens_out": 104,
+      "gen_latency_s": 5.85
+    },
+    {
+      "id": "en-defi-044",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "What does the abbreviation P8 signify when describing an interval?",
+      "reference_answer": "The abbreviation P8 is used to indicate that an octave is one of the perfect intervals, a category that also includes the unison, perfect fourth, and perfect fifth.",
+      "answer": "The abbreviation P8 signifies a Perfect Octave, which is an interval spanning eight diatonic steps and twelve semitones [1][2]. The \"P\" stands for perfect, indicating that it is one of the perfectly consonant intervals in Western music theory.",
+      "retrieved": [
+        "en-interval_music#017",
+        "en-octave#000",
+        "en-octave#002",
+        "en-interval_music#011",
+        "en-interval_music#007"
+      ],
+      "source_chunk_ids": [
+        "en-octave#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.5,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully correct and detailed, including extra relevant info (semitones/diatonic steps) without contradictions.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "The abbreviation P8 signifies a Perfect Octave, which is an interval spanning eight diatonic steps and twelve semitones"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "abbreviation P8 interval meaning"
+          },
+          "ok": true,
+          "result": "[1] Interval (music) — Shorthand notation\nIntervals are often abbreviated with a P for perfect, m for minor, M for major, d for diminished, A for augmented, followed by the interval number. The indications M and P are often omitted. The octave is P8, and a unison is usually referred to simply as \"a unison\" but can be labeled P1. The tritone, an augmented fourth or diminished fifth is often TT. The interval qualities may be also abbreviated with perf, min, maj, dim, aug. Examples:\nm2 (or min2): m"
+        }
+      ],
+      "gen_tokens_in": 3888,
+      "gen_tokens_out": 111,
+      "gen_latency_s": 18.32
+    },
+    {
+      "id": "en-defi-050",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What musical style originated in America during the 1800s and was characterized by tight vocal arrangements?",
+      "reference_answer": "Close harmony is a singing technique that began in the United States in the nineteenth century, where groups sang with voices arranged very closely together.",
+      "answer": "Close harmony originated in the 1800s in America and was characterized by tight vocal arrangements [1].",
+      "retrieved": [
+        "en-close_and_open_harmony#001",
+        "en-yodeling#009",
+        "en-a_cappella#000",
+        "en-bel_canto#002",
+        "en-singing#030"
+      ],
+      "source_chunk_ids": [
+        "en-close_and_open_harmony#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly; no contradictions or omissions.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "was characterized by tight vocal arrangements"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "musical style originated in America 1800s tight vocal arrangements"
+          },
+          "ok": true,
+          "result": "[1] Close and open harmony — Vocal music\nClose harmony originated in the 1800s in America.\nEarly radio quartets continued this tradition. Female harmonists, like The Boswell Sisters (\"Mood Indigo\", 1933) and The Hamilton Sisters and Fordyce (\"Who? You That's Who!\", 1927), who then became Three X Sisters, performed and recorded this style in the 1920s, and continued it on commercial radio of the 1930s. Close harmony singing was especially popular in the 1940s with pop and R&B groups using the tec"
+        }
+      ],
+      "gen_tokens_in": 2813,
+      "gen_tokens_out": 63,
+      "gen_latency_s": 4.81
+    },
+    {
+      "id": "en-defi-053",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "What scale length defines an instrument as having a 'short scale'?",
+      "reference_answer": "An instrument is considered to have a short scale when its length is 30 inches or less.",
+      "answer": "An instrument is considered to have a \"short scale\" if its scale length is 30 inches (760 mm) or less [1][2]. This classification is particularly common when discussing bass guitars, though steel-string acoustic guitars can also have short scales around 24 inches.",
+      "retrieved": [
+        "en-scale_length_string_instruments#008",
+        "en-bass_guitar#003",
+        "en-scale_length_string_instruments#005",
+        "en-scale_length_string_instruments#006",
+        "en-scale_length_string_instruments#000"
+      ],
+      "source_chunk_ids": [
+        "en-scale_length_string_instruments#008"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference fact and adds relevant context without contradiction.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "short scale guitar scale length definition"
+          },
+          "ok": true,
+          "result": "[1] Scale length (string instruments) — Guitars > Bass guitar\nThe first electric basses were upright electric basses built in the 1930s by fitting an otherwise normal double bass with electric pickups, and so had a scale length of about 43 in (1,100 mm). When the electric bass guitar was popularized by the release in 1951 of the Fender Precision Bass, its shorter scale length of 34 in (860 mm) was established as the standard scale length for a bass guitar. An instrument with a scale of 30 in (76"
+        }
+      ],
+      "gen_tokens_in": 2852,
+      "gen_tokens_out": 90,
+      "gen_latency_s": 5.3
+    },
+    {
+      "id": "en-defi-059",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What happens to the harmonic function when any note in a diminished seventh chord is raised by a semitone?",
+      "reference_answer": "Raising any of the four notes in a diminished seventh chord by a semitone creates a flat-seventh that belongs to a half-diminished seventh chord.",
+      "answer": "When any note in a diminished seventh chord is raised by a semitone, that raised note becomes the flat-seventh of a half-diminished seventh chord [1]. This transformation allows for various substitutions and modulations in jazz harmony [1].",
+      "retrieved": [
+        "en-diminished_seventh_chord#006",
+        "en-diminished_seventh_chord#010",
+        "en-diminished_seventh_chord#001",
+        "en-modulation_music#008",
+        "en-diminished_seventh_chord#005"
+      ],
+      "source_chunk_ids": [
+        "en-diminished_seventh_chord#006"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate and fully addresses the question with extra relevant jazz context.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "diminished seventh chord raising a note harmonic function"
+          },
+          "ok": true,
+          "result": "[1] Diminished seventh chord — Function > Most common functions\nIn jazz harmony, a combination of the dominant seventh chord with its substitute diminished seventh (with G in the bass and A♭ simultaneously in an upper voice) yields the seven flat-9 chord, which intensifies the dominant function of either a diminished seventh or dominant seventh chord. Other transformations of this kind facilitate a variety of substitutions and modulations: any of the four notes in a diminished seventh chord are "
+        }
+      ],
+      "gen_tokens_in": 2806,
+      "gen_tokens_out": 83,
+      "gen_latency_s": 5.1
+    },
+    {
+      "id": "en-defi-062",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "According to Sheila Romeo, how is a borrowed chord defined within music theory?",
+      "reference_answer": "In theory, any chord taken from any mode of the scale used in the piece is considered a potential modal interchange or borrowed chord.",
+      "answer": "According to Sheila Romeo, a borrowed chord \"suggests the sound of its own mode without actually switching to that mode\" [1]. She also notes that in theory, any chord from any mode of the scale of the piece can be considered a potential modal interchange or borrowed chord [2].",
+      "retrieved": [
+        "en-borrowed_chord#000",
+        "en-borrowed_chord#001",
+        "en-secondary_chord#006",
+        "en-roman_numeral_analysis#007",
+        "en-borrowed_chord#002"
+      ],
+      "source_chunk_ids": [
+        "en-borrowed_chord#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.5,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly; adds nuance without contradiction.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "Sheila Romeo borrowed chord definition"
+          },
+          "ok": true,
+          "result": "[1] Borrowed chord — Introduction\nA borrowed chord (also called chord borrowing, mode mixture, modal mixture, substituted chord, modal interchange, or mutation) is a chord borrowed from the parallel key (minor or major scale with the same tonic). Borrowed chords are typically used as \"color chords\", providing harmonic variety through contrasting scale forms, which are major scales and the three forms of minor scales. Chords may also be borrowed from other parallel modes besides the major and min"
+        }
+      ],
+      "gen_tokens_in": 2927,
+      "gen_tokens_out": 89,
+      "gen_latency_s": 15.26
+    },
+    {
+      "id": "en-defi-075",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "What is a hammer-on and how does it function on a guitar?",
+      "reference_answer": "A hammer-on is a stringed instrument technique, specifically for guitar, where the fretting hand abruptly presses a string against the fretboard so that it strikes the fret and vibrates. This action produces a new note without needing to pluck the string again, replacing the previous note and creating a legato effect often marked with an 'H' symbol.",
+      "answer": "A hammer-on is a guitar technique where you sharply bring a fretting-hand finger down onto the fingerboard behind a fret, causing a note to sound without re-plucking the string [2]. This creates a smoother, more connected legato phrase because it eliminates the need to synchronize plucking with fingering, though the resulting sound is less bright since the string isn't plucked again [2]. It's typically represented by an 'h' symbol in tablature and is the opposite of a pull-off [3].",
+      "retrieved": [
+        "fr-hammer_on#000",
+        "en-hammer_on#000",
+        "en-hammer_on#001",
+        "fr-pull_off#001",
+        "fr-guitare_basse#051"
+      ],
+      "source_chunk_ids": [
+        "fr-hammer_on#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurate facts, extra details (e.g., legato, brightness, 'h' symbol, pull-off contrast) enhance correctness.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "hammer-on guitar technique definition function"
+          },
+          "ok": true,
+          "result": "[1] Hammer-on — Introduction\nLe hammer-on (de hammer, marteau en anglais), ou « coulé ascendant » en français (bien que le terme soit peu utilisé) est une technique de jeu d'instrument à cordes et plus particulièrement une technique guitaristique. Elle mobilise la main active sur le manche, par convention définie comme étant la main gauche, et consiste à resserrer brusquement la corde sur le manche de façon qu'elle s'entrechoque avec la touche, la faisant vibrer. La note ainsi jouée par martèlem"
+        }
+      ],
+      "gen_tokens_in": 3088,
+      "gen_tokens_out": 134,
+      "gen_latency_s": 8.91
+    },
+    {
+      "id": "en-defi-078",
+      "lang": "en",
+      "qtype": "definitional",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "What are the two categories of symbols used to represent musical durations?",
+      "reference_answer": "There are two classes of symbols for representing musical durations: one category represents played or sung sounds known as note figures, while the other represents moments of silence between notes called rest figures.",
+      "answer": "The two categories of symbols used to represent musical durations are note values (figures de note) for played or sung sounds and rest values (figures de silence) for silences between notes [1].",
+      "retrieved": [
+        "fr-représentation_des_durées_en_musique#000",
+        "fr-représentation_des_durées_en_musique#008",
+        "en-musical_note#001",
+        "en-musical_notation#046",
+        "en-chord_notation#028"
+      ],
+      "source_chunk_ids": [
+        "fr-représentation_des_durées_en_musique#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly, with minor language adaptation (French/English) and minor phrasing differences.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "two categories of symbols used to represent musical durations"
+          },
+          "ok": true,
+          "result": "[1] Représentation des durées en musique — Introduction\nEn musique, si la durée des temps — régulièrement délimités par les pulsations — est le plus souvent constante, la durée des notes ou des silences ne l'est pas nécessairement. La notation musicale doit donc pouvoir exprimer, non seulement des durées égales au temps, mais aussi, des durées qui lui sont supérieures ou inférieures. Pour représenter les durées musicales, deux classes de symboles existent, l'une pour représenter les notes jouées"
+        }
+      ],
+      "gen_tokens_in": 3818,
+      "gen_tokens_out": 118,
+      "gen_latency_s": 8.52
+    },
+    {
+      "id": "en-mult-064",
+      "lang": "en",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "How does the relationship between tempo and duration apply to both metrical rhythm, which relies on regular accents, and free rhythm, where accents do not recur regularly?",
+      "reference_answer": "In both metrical and free rhythms, each time value is calculated as a multiple or fraction of a beat or specified unit. However, while metrical rhythm features regularly recurring accents that create systematic groupings, free rhythm lacks these regular accents despite still being based on a specific time unit.",
+      "answer": "In metrical rhythm, each time value is a multiple or fraction of a fixed beat unit, with normal accents recurring regularly to provide systematic grouping [1][2]. In measured (additive) rhythm, while time values are still multiples of a specified unit, the accents do not recur regularly within the cycle [2]. Free rhythm lacks any fixed time unit entirely, making regularly recurring accents impossible since time values are not based on a repeating pattern [1].",
+      "retrieved": [
+        "en-metre_music#004",
+        "en-rhythm#019",
+        "en-rhythm#009",
+        "en-rhythm#010",
+        "en-metre_music#003"
+      ],
+      "source_chunk_ids": [
+        "en-rhythm#009",
+        "en-rhythm#019"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.5,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurately describes metrical, additive (measured), and free rhythm with correct tempo/duration relationships.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "relationship between tempo and duration metrical rhythm free rhythm regular accents"
+          },
+          "ok": true,
+          "result": "[1] Metre (music) — Metric structure\nMetrical rhythm, by far the most common class in Western music, is where each time value is a multiple or fraction of a fixed unit (beat, see paragraph below), and normal accents reoccur regularly, providing systematic grouping (bars, divisive rhythm).\nMeasured rhythm is where each time value is a multiple or fraction of a specified time unit but there are not regularly recurring accents (additive rhythm).\nFree rhythm is where the time values are not based on"
+        }
+      ],
+      "gen_tokens_in": 3078,
+      "gen_tokens_out": 128,
+      "gen_latency_s": 6.12
+    },
+    {
+      "id": "en-mult-065",
+      "lang": "en",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How can you determine if a piece with no sharps or flats is in A minor rather than C major, considering that relative keys share the same notes but differ in arrangement?",
+      "reference_answer": "Although C major and A minor are relative keys sharing the same key signature of no sharps or flats, you can identify the piece as being in A minor if the melody frequently uses G♯. This raised seventh note indicates the harmonic minor scale, distinguishing it from the relative major key which would not typically feature this alteration.",
+      "answer": "To distinguish between A minor and C major when both have no sharps or flats, you must look at the **tonic** (the home note) of the piece. In C major, the melody and harmony will resolve to C, while in A minor, they will resolve to A [2]. Additionally, a piece in A minor often features an **A7 chord** (or E7) as a dominant chord leading back to A, whereas C major typically uses a G7 chord leading to C.",
+      "retrieved": [
+        "en-relative_key#002",
+        "en-minor_scale#001",
+        "en-key_music#013",
+        "en-relative_key#000",
+        "en-chord_progression#006"
+      ],
+      "source_chunk_ids": [
+        "en-relative_key#000",
+        "en-relative_key#002"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 0.5,
+      "relevancy": 1.0,
+      "judge_reason": "Partially correct: mentions tonic and dominant chords (relevant), but misses G♯ as key detail.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "In C major, the melody and harmony will resolve to C, while in A minor, they will resolve to A [2]",
+        "a piece in A minor often features an **A7 chord** (or E7) as a dominant chord leading back to A"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "distinguish A minor from C major relative keys tonic resolution dominant chord"
+          },
+          "ok": true,
+          "result": "[1] Relative key — Distinguishing on the basis of melody\nTo distinguish a minor key from its relative major, one can look to the first note/chord of the melody, which usually is the tonic or the dominant (fifth note); The last note/chord also tends to be the tonic. A \"raised 7th\" is also a strong indication of a minor scale (instead of a major scale): For example, C major and A minor both have no sharps or flats in their key signatures, but if the note G♯ (the seventh note in A minor raised by a"
+        }
+      ],
+      "gen_tokens_in": 4154,
+      "gen_tokens_out": 245,
+      "gen_latency_s": 11.98
+    },
+    {
+      "id": "en-mult-066",
+      "lang": "en",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does the vocal classification system for solo singers differ from the standard choral SATB structure, and what specific characteristics define a dramatic soprano within that solo system?",
+      "reference_answer": "Unlike choral music where sopranos are simply divided into highest and lower parts based on range, solo singing classifies voices by multiple traits like timbre, weight, and tessitura to identify subtypes. Within this solo system, a dramatic soprano is defined as having a powerful, rich voice with a darker timbre that can project over large orchestras, typically featuring a lower tessitura than other sopranos and a range from A3 to high C.",
+      "answer": "The vocal classification system for solo singers differs from the standard choral SATB structure because choral music divides voices solely on the basis of vocal range into high and low parts (SATB), whereas solo singers are classified based on multiple traits including tessitura, timbre, weight, and resonance to identify specific sub-types [1][2]. Within the solo soprano system, a dramatic soprano is one of five generally recognized subcategories defined by these comprehensive vocal characteristics rather than just range [1].",
+      "retrieved": [
+        "en-soprano#004",
+        "en-singing#007",
+        "en-vocal_pedagogy#023",
+        "en-voice_type#001",
+        "en-voice_type#016"
+      ],
+      "source_chunk_ids": [
+        "en-soprano#004",
+        "en-soprano#009"
+      ],
+      "recall_at_5": 0.5,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully correct and relevant; matches reference answer’s key points and adds clarity on subcategories.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "vocal classification system solo singers vs choral SATB dramatic soprano characteristics"
+          },
+          "ok": true,
+          "result": "[1] Soprano — In choral music\nIn SATB four-part mixed chorus, the soprano is the highest vocal range, above the alto, tenor, and bass. Sopranos commonly sing in the tessitura G4-A5. When the composer calls for divisi, sopranos can be separated into Soprano I (highest part) and Soprano II (lower soprano part).\nIn contrast to choral singing, in classical solo singing a person is classified through the identification of several vocal traits, including range, vocal timbre, vocal weight, vocal tessit"
+        }
+      ],
+      "gen_tokens_in": 2948,
+      "gen_tokens_out": 140,
+      "gen_latency_s": 6.36
+    },
+    {
+      "id": "en-mult-068",
+      "lang": "en",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does the definition of enharmonic equivalence change when comparing historical tuning systems to modern equal temperament, and what specific musical notation example illustrates this difference?",
+      "reference_answer": "In historical tuning systems without equal half steps, notes like F# and Gb were very close in pitch but not identical, whereas in modern 12-tone equal temperament they indicate the exact same pitch. This shift means that while earlier systems treated them as distinct enharmonic equivalents, a piano tuned to equal temperament plays both G# and Ab using the same key, resulting in an identical frequency.",
+      "answer": "In historical tuning systems like meantone temperament, enharmonic equivalence referred to notes that were very close in pitch but not identical (e.g., F♯ and G♭ were different pitches), whereas in modern twelve-tone equal temperament they indicate the same pitch [2][4]. A specific musical notation example is the tritone above C, which can be written as a diminished fifth (C to G♭) or an augmented fourth (C to F♯); these are enharmonically equivalent in equal temperament but would have been different pitches in earlier systems [4].",
+      "retrieved": [
+        "en-enharmonic_equivalence#001",
+        "en-interval_music#025",
+        "en-enharmonic_equivalence#009",
+        "en-enharmonic_equivalence#002",
+        "en-enharmonic_equivalence#005"
+      ],
+      "source_chunk_ids": [
+        "en-enharmonic_equivalence#002",
+        "en-enharmonic_equivalence#009"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.3333333333333333,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurately explains historical vs. modern enharmonic equivalence and provides a clear, relevant musical example.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "A specific musical notation example is the tritone above C, which can be written as a diminished fifth (C to G♭) or an augmented fourth (C to F♯); these are enharmonically equivalent in equal temperament but would have been different pitches in earlier systems [4]."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "enharmonic equivalence historical tuning systems vs equal temperament musical notation examples"
+          },
+          "ok": true,
+          "result": "[1] Enharmonic equivalence — Definition\nThe predominant tuning system in Western music is twelve-tone equal temperament (12 tet), where each octave is divided into twelve equal half-steps, or semitones; each half-step is both a chromatic semitone (a sharp or a flat) and a diatonic semitone (a minor step between two diatonic notes). The notes F and G are a whole step apart, so the note one semitone above F (F♯) and the note one semitone below G (G♭) indicate the same pitch. These written notes ar"
+        }
+      ],
+      "gen_tokens_in": 3124,
+      "gen_tokens_out": 155,
+      "gen_latency_s": 7.32
+    },
+    {
+      "id": "en-term-037",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What is the term for the guitar part where one musician plays solos and melody lines while another provides chord accompaniment?",
+      "reference_answer": "The specific role described, where a guitarist performs solos and instrumental melody lines while another accompanies with chords or riffs, is called the lead guitar.",
+      "answer": "The term for the guitar part where one musician plays solos and melody lines while another provides chord accompaniment is **lead guitar** (also known as solo guitar) [3]. The accompanying guitarist typically plays rhythm guitar, which consists of accompaniment chords and riffs [3].",
+      "retrieved": [
+        "en-guitar_solo#000",
+        "en-jazz_guitar#026",
+        "en-lead_guitar#000",
+        "en-jazz_guitar#022",
+        "en-jazz_guitar#024"
+      ],
+      "source_chunk_ids": [
+        "en-guitar_solo#008"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Accurately identifies lead guitar and rhythm guitar roles; no contradictions or omissions.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "guitar part solo melody chord accompaniment term"
+          },
+          "ok": true,
+          "result": "[1] Guitar solo — Introduction\nA guitar solo is a melodic passage, instrumental section, or entire piece of music, pre-written (or improvised) to be played on a classical, electric, or acoustic guitar. In 20th and 21st century traditional music and popular music such as blues, swing, jazz, jazz fusion, rock and heavy metal, guitar solos often contain virtuoso techniques and varying degrees of improvisation. Guitar solos on classical guitar, which are typically written in musical notation, are al"
+        }
+      ],
+      "gen_tokens_in": 2661,
+      "gen_tokens_out": 92,
+      "gen_latency_s": 5.49
+    },
+    {
+      "id": "en-term-046",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What is the specific name given to the progression where a cadential subdominant chord moves directly into a tonic chord?",
+      "reference_answer": "This progression is known as the plagal cadence.",
+      "answer": "The specific name for the progression where a cadential subdominant chord moves directly into a tonic chord is the **plagal cadence** [1].",
+      "retrieved": [
+        "en-subdominant#001",
+        "en-ii_v_i_progression#000",
+        "en-cadence#002",
+        "en-dominant_music#002",
+        "en-chord_progression#005"
+      ],
+      "source_chunk_ids": [
+        "en-subdominant#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly, no contradictions or omissions.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "cadential subdominant chord moves directly into a tonic chord progression name"
+          },
+          "ok": true,
+          "result": "[1] Subdominant — Introduction\nA cadential subdominant chord followed by a tonic chord produces the so-called plagal cadence.\nSubdominant chords typically have predominant (subdominant) function, less resolved than tonic but more resolved than dominant, as with other chords which often precede the dominant. In Riemannian theory in particular, it is considered to balance the dominant around the tonic (being as far below the tonic as the dominant is above).\nThe term subdominant may also refer to a"
+        }
+      ],
+      "gen_tokens_in": 2883,
+      "gen_tokens_out": 70,
+      "gen_latency_s": 4.81
+    },
+    {
+      "id": "en-term-049",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What is the specific term used to describe the distance between two adjacent notes in a scale, and how does this differ from the term that refers to the position of a note within the scale?",
+      "reference_answer": "The term 'scale step' can refer to the distance between two successive notes, whereas 'scale degree' specifically denotes the position or function of a note within the seven-note diatonic scale.",
+      "answer": "The distance between two adjacent notes in a scale is called a \"scale step,\" while the position of a note within the scale is referred to as its \"degree\" or \"step number.\"",
+      "retrieved": [
+        "en-scale_music#002",
+        "en-interval_music#004",
+        "en-chromatic_scale#000",
+        "en-guitar_chord#003",
+        "en-interval_music#000"
+      ],
+      "source_chunk_ids": [
+        "en-degree_music#001"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct terms used, though 'degree' is more precise than 'step number' for position.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "the position of a note within the scale is referred to as its 'step number'"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "term for distance between two adjacent notes in a scale and term for position of a note within the scale"
+          },
+          "ok": true,
+          "result": "[1] Scale (music) — Background > Scales, steps, and intervals\nScales are typically listed from low to high pitch. Most scales are octave-repeating, meaning their pattern of notes is the same in every octave (the Bohlen–Pierce scale is one exception). An octave-repeating scale can be represented as a circular arrangement of pitch classes, ordered by increasing (or decreasing) pitch class. For instance, the increasing C major scale is C–D–E–F–G–A–B–[C], with the bracket indicating that the last no"
+        }
+      ],
+      "gen_tokens_in": 4089,
+      "gen_tokens_out": 125,
+      "gen_latency_s": 9.26
+    },
+    {
+      "id": "en-term-052",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "What is the term for the numerical scale used by music theorists to represent pitches based on the logarithm of their fundamental frequency?",
+      "reference_answer": "Music theorists sometimes use a numerical scale derived from the logarithm of the fundamental frequency to represent pitches, such as the MIDI standard which maps frequency to a real number.",
+      "answer": "The term for the numerical scale used by music theorists to represent pitches based on the logarithm of their fundamental frequency is **MIDI** (Musical Instrument Digital Interface), which maps frequencies to real numbers [1]. This system uses a logarithmic relationship where each semitone corresponds to a specific interval in this numerical representation.",
+      "retrieved": [
+        "en-pitch_music#014",
+        "en-musical_note#013",
+        "en-musical_note#014",
+        "en-scientific_pitch_notation#006",
+        "en-scientific_pitch_notation#007"
+      ],
+      "source_chunk_ids": [
+        "en-pitch_music#014"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 0.5,
+      "relevancy": 1.0,
+      "judge_reason": "MIDI is correct but incomplete; the general term is *pitch class* or *logarithmic frequency scale* (e.g., cents, MIDI note number).",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "The term for the numerical scale used by music theorists to represent pitches based on the logarithm of their fundamental frequency is **MIDI** (Musical Instrument Digital Interface)",
+        "This system uses a logarithmic relationship where each semitone corresponds to a specific interval in this numerical representation."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "numerical scale logarithm fundamental frequency pitch representation"
+          },
+          "ok": true,
+          "result": "[1] Pitch (music) — Labeling pitches\nPitches are labeled using:\nLetters, as in Helmholtz pitch notation\nA combination of letters and numbers—as in scientific pitch notation, where notes are labelled upwards from C0, the 16 Hz C\nNumbers that represent the frequency in hertz (Hz), the number of cycles per second\nFor example, one might refer to the A above middle C as a′, A4, or 440 Hz. In standard Western equal temperament, the notion of pitch is insensitive to \"spelling\": the description \"G4 doub"
+        }
+      ],
+      "gen_tokens_in": 3027,
+      "gen_tokens_out": 98,
+      "gen_latency_s": 5.58
+    },
+    {
+      "id": "en-term-055",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "How does the emphasis differ between an acciaccatura and an appoggiatura when both are performed before the beat?",
+      "reference_answer": "In an acciaccatura, the main note receives the emphasis while the grace note is played quickly before the beat. Conversely, with an appoggiatura, whether long or short, the emphasis falls on the grace note itself.",
+      "answer": "When both are performed before the beat, the acciaccatura places emphasis on the main note rather than the grace note [1], whereas the appoggiatura emphasizes the grace note itself [1].",
+      "retrieved": [
+        "en-ornament_music#009",
+        "en-ornament_music#008",
+        "en-ornament_music#010",
+        "fr-ornement_musique#003",
+        "en-beat_music#003"
+      ],
+      "source_chunk_ids": [
+        "en-ornament_music#009"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Fully accurate and directly addresses the question.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "When both are performed before the beat, the acciaccatura places emphasis on the main note rather than the grace note [1]",
+        "whereas the appoggiatura emphasizes the grace note itself [1]"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "acciaccatura appoggiatura emphasis before the beat"
+          },
+          "ok": true,
+          "result": "[1] Ornament (music) — Types > Acciaccatura\nThe word acciaccatura (UK: ə-CHAK-ə-TURE-ə, US:  -⁠CHAHK-; Italian: [attʃakkaˈtuːra]) comes from the Italian verb acciaccare, \"to crush\". In the 18th century, it was an ornament applied to any of the main notes of arpeggiated chords, either a tone or semitone below the chord tone, struck simultaneously with it and then immediately released. Hence the German translation Zusammenschlag (together-stroke).\nIn the 19th century, the acciaccatura (sometimes c"
+        }
+      ],
+      "gen_tokens_in": 2975,
+      "gen_tokens_out": 75,
+      "gen_latency_s": 5.49
+    },
+    {
+      "id": "en-term-061",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "What term describes a situation where two guitarists alternate between playing lead and rhythm parts during a performance?",
+      "reference_answer": "This arrangement is known as performing as a guitar tandem.",
+      "answer": "The term for two guitarists alternating between playing lead and rhythm parts is a \"guitar tandem\" [1]. In this arrangement, they trade off roles during the performance, though they may also share or duplicate these roles throughout the show [1][2].",
+      "retrieved": [
+        "en-lead_guitar#009",
+        "en-rhythm_guitar#008",
+        "en-guitar_solo#008",
+        "en-rhythm_guitar#010",
+        "en-guitar_solo#012"
+      ],
+      "source_chunk_ids": [
+        "en-lead_guitar#009"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Matches reference exactly; adds minor clarifications without errors.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "two guitarists alternate lead and rhythm parts term"
+          },
+          "ok": true,
+          "result": "[1] Lead guitar — Role in a band\nIn a band with two guitars, there can be a logical division between lead and rhythm guitars, although that division may be unclear. Two guitarists may perform as a guitar tandem, and trade off the lead guitar and rhythm guitar roles. Alternatively, two or more guitarists can share the lead and rhythm roles throughout the show, or both guitarists can play the same role (\"dual lead guitars\" or \"dual rhythm guitars\"). Often several guitarists playing individual note"
+        }
+      ],
+      "gen_tokens_in": 2459,
+      "gen_tokens_out": 86,
+      "gen_latency_s": 5.45
+    },
+    {
+      "id": "en-term-077",
+      "lang": "en",
+      "qtype": "terminology",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "What is the specific term used to describe the tool found on synthesizers and other instruments that allows for programmable or automatic chord sequences?",
+      "reference_answer": "The tool designed to reproduce arpeggios on instruments like synthesizers, which can be programmed, parameterized, or set to play automatically depending on the brand, is called an arpégiateur.",
+      "answer": "The specific term for a tool on synthesizers and other instruments that allows for programmable or automatic chord sequences is an **arpeggiator** (or simply \"arp\"). This device plays the notes of a chord in succession rather than simultaneously, creating a rolling effect.",
+      "retrieved": [
+        "en-chorus_audio_effect#004",
+        "en-arpeggio#000",
+        "fr-chorus_effet#009",
+        "en-chord_progression#012",
+        "fr-chorus_effet#012"
+      ],
+      "source_chunk_ids": [
+        "fr-arpège#002"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Correct term with extra clarity on function; fully addresses the question.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "The specific term for a tool on synthesizers and other instruments that allows for programmable or automatic chord sequences is an **arpeggiator** (or simply 'arp')."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "tool synthesizer programmable automatic chord sequences"
+          },
+          "ok": true,
+          "result": "[1] Chorus (audio effect) — Electronic effect\nThe chorus effect can be simulated by a range of electronic and digital effects units and signal processing equipment, including software effects. The signal processor may be software running on a computer, software running in a digital effect processor, or an analog effect processor. If the processor is hardware-based, it may be packaged as a pedal, a rack-mount module, a table-top device, built into an instrument amplifier (often an acoustic guitar"
+        }
+      ],
+      "gen_tokens_in": 2990,
+      "gen_tokens_out": 87,
+      "gen_latency_s": 5.34
+    },
+    {
+      "id": "fr-conc-002",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Pourquoi n'est-il pas nécessaire d'écrire une nouvelle altération devant la seconde note lorsqu'une liaison de prolongation traverse une barre de mesure ?",
+      "reference_answer": "L'altération reste valide après la barre de mesure parce que la liaison de prolongation maintient l'état altéré de la note jusqu'à ce qu'une nouvelle indication contraire soit donnée.",
+      "answer": "Lorsqu'une liaison de prolongation relie deux notes de même hauteur traversant une barre de mesure, l'altération n'est pas répétée devant la seconde note car la liaison maintient l'effet de l'accidentel jusqu'à la fin de la note. La convention indique que cette altération reste en vigueur dans la nouvelle mesure tant qu'une autre indication ne vient modifier la hauteur du son [1].",
+      "retrieved": [
+        "fr-altération_musique#006",
+        "fr-altération_musique#005",
+        "fr-point_de_prolongation#000",
+        "fr-basse_chiffrée#004",
+        "fr-altération_musique#000"
+      ],
+      "source_chunk_ids": [
+        "fr-altération_musique#006"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés identiques, précision supplémentaire sur la durée et la convention.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "liaison de prolongation barre de mesure altération répétition"
+          },
+          "ok": true,
+          "result": "[1] Altération (musique) — Effet des altérations > Altérations de précaution\nCette règle comporte une petite exception toutefois. Lorsque deux notes, de même hauteur et affectées du même accident, sont réunies par une liaison de prolongation, et qu'une barre de mesure passe entre les deux notes en question, on n'écrit pas l'altération devant la seconde note. Si la même note est écrite dans cette deuxième mesure, elle reste altérée jusqu'à la prochaine barre de mesure (sauf indication contraire)."
+        }
+      ],
+      "gen_tokens_in": 2737,
+      "gen_tokens_out": 121,
+      "gen_latency_s": 6.15
+    },
+    {
+      "id": "fr-conc-005",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment fonctionne le battement du trille en ce qui concerne la note à alterner ?",
+      "reference_answer": "Le battement du trille s'exécute toujours avec la note naturelle suivante dans l'ordre de l'échelle diatonique, ce qui signifie que l'intervalle entre la note principale et celle du trille dépend directement de l'armure.",
+      "answer": "Le battement du trille consiste à alterner très rapidement deux notes voisines séparées d'un ton ou d'un demi-ton [1]. La seconde note est toujours la note naturelle suivante dans l'ordre de l'échelle diatonique, et son altération dépend de l'armure de la pièce [1].",
+      "retrieved": [
+        "fr-trille#000",
+        "en-trill_music#000",
+        "fr-ornement_musique#003",
+        "fr-trille#002",
+        "en-trill_music#002"
+      ],
+      "source_chunk_ids": [
+        "fr-trille#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés identiques, formulation claire et précise, avec mention de l'armure.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "trille alternance notes"
+          },
+          "ok": true,
+          "result": "[1] Trille — Introduction\nLe trille est un ornement musical, imaginé au XVIe siècle, qui consiste à alterner très rapidement deux notes voisines séparées d'un ton ou d'un demi-ton.\nCet ornement permet par exemple de donner du relief à une note tenue.\nLe battement du trille se réalise toujours avec la note naturelle suivante dans l'ordre de l'échelle diatonique. L'intervalle entre la note principale et le trille dépend donc de l'armure.\nSuivant le contexte on peut distinguer :\nle trille classique"
+        }
+      ],
+      "gen_tokens_in": 2841,
+      "gen_tokens_out": 119,
+      "gen_latency_s": 5.93
+    },
+    {
+      "id": "fr-conc-014",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment fonctionne le chiffrage à numérateur multiple pour indiquer une mesure asymétrique ?",
+      "reference_answer": "Ce système utilise un numérateur composé de plusieurs nombres qui représentent des durées différentes, tandis que le dénominateur indique la figure de note de référence. Par exemple, dans « 3 + 2 sur 8 », le premier temps est ternaire avec une noire pointée comme unité, et le second est binaire avec une noire comme unité.",
+      "answer": "Le chiffrage à numérateur multiple (comme 3+2 sur 8) indique une mesure asymétrique où le numérateur est composé de plusieurs nombres représentant des durées différentes, tandis que le dénominateur indique la figure de note servant d'unité de temps [1]. Par exemple, dans « 3 + 2 sur 8 », le premier temps est ternaire (unité : noire pointée) et le second binaire (unité : noire), créant ainsi une mesure à temps inégaux [1].",
+      "retrieved": [
+        "fr-mesure_musique#016",
+        "fr-mesure_musique#002",
+        "fr-mesure_musique#014",
+        "fr-mesure_musique#012",
+        "fr-mesure_musique#013"
+      ],
+      "source_chunk_ids": [
+        "fr-mesure_musique#016"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Détails précis et complets, conformes à la référence avec reformulation claire.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "chiffrage à numérateur multiple mesure asymétrique"
+          },
+          "ok": true,
+          "result": "[1] Mesure (musique) — Chiffrages > Chiffrage à numérateur multiple\nUn chiffrage à numérateur multiple est un chiffrage particulier dans lequel le numérateur est composé de plusieurs nombres représentant autant de durées différentes. Le dénominateur quant à lui indique une figure de note, comme dans le chiffrage habituel. Ce chiffrage permet d'indiquer une mesure à temps inégaux, appelée parfois « mesure asymétrique », qui ne peut être qualifié de binaire ou ternaire. Dans le chiffrage « 3 + 2 s"
+        }
+      ],
+      "gen_tokens_in": 4383,
+      "gen_tokens_out": 258,
+      "gen_latency_s": 12.94
+    },
+    {
+      "id": "fr-conc-017",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment la structure d'un accord de trois notes en harmonie tonale est-elle construite à partir de sa fondamentale ?",
+      "reference_answer": "Un tel accord se forme en empilant une tierce, qui peut être mineure ou majeure, et une quinte, qui peut être diminuée, juste ou augmentée, sur la note fondamentale.",
+      "answer": "En harmonie tonale, un accord de trois notes est construit à partir d'une fondamentale avec un empilement de tierces : une tierce (majeure ou mineure) et une quinte (juste, diminuée ou augmentée) [1]. Ces trois notes forment ainsi un ensemble où chaque note est séparée des autres par des intervalles de tierces, ce qui définit la structure d'un accord classé [3].",
+      "retrieved": [
+        "fr-accord_de_trois_notes#000",
+        "fr-harmonie#016",
+        "fr-accord_musique#014",
+        "fr-accord_musique#015",
+        "fr-harmonie#017"
+      ],
+      "source_chunk_ids": [
+        "fr-accord_de_trois_notes#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés corrects et complets, bien que la mention des accords classés soit hors contexte.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "structure accord trois notes harmonie tonale fondamentale tierces"
+          },
+          "ok": true,
+          "result": "[1] Accord de trois notes — Introduction\nEn harmonie tonale, un accord de trois notes est un accord formé :\nd'une fondamentale ;\nd'une tierce, qui peut être mineure (trois demi-tons) ou majeure (quatre demi-tons) ;\net d'une quinte, qui peut être diminuée (six demi-tons), juste (sept demi-tons) ou augmentée (huit demi-tons).\nCes trois notes forment aussi un empilement de tierces.\nOn peut dire également un accord de quinte, plus particulièrement quand il est à l'état fondamental.\n\n[2] Harmonie — H"
+        }
+      ],
+      "gen_tokens_in": 2880,
+      "gen_tokens_out": 129,
+      "gen_latency_s": 6.22
+    },
+    {
+      "id": "fr-conc-023",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment distingue-t-on une modulation passagère d'une modulation prolongée en fonction de la durée du séjour dans la nouvelle tonalité ?",
+      "reference_answer": "On considère une modulation comme passagère si l'on n'entend qu'une simple cadence parfaite et que l'on quitte immédiatement la nouvelle tonalité. À l'inverse, la modulation est qualifiée de prolongée lorsque le séjour dans cette nouvelle tonalité dure sur plusieurs mesures ou même plusieurs phrases.",
+      "answer": "Une modulation passagère se distingue d'une modulation prolongée par la durée du séjour dans la nouvelle tonalité : si l'on ne fait entendre qu'une simple cadence parfaite et que l'on quitte aussitôt la nouvelle tonalité, il s'agit d'une modulation passagère [1]. À l'inverse, lorsque le séjour dans la nouvelle tonalité se prolonge sur plusieurs mesures ou phrases, on parle de modulation prolongée [1].",
+      "retrieved": [
+        "fr-modulation_musique#002",
+        "fr-modulation_musique#004",
+        "fr-modulation_musique#003",
+        "fr-modulation_musique#000",
+        "fr-modulation_musique#015"
+      ],
+      "source_chunk_ids": [
+        "fr-modulation_musique#002"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Réponse complète, précise et fidèle au référentiel, avec une formulation claire.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "modulation passagère modulation prolongée durée séjour nouvelle tonalité"
+          },
+          "ok": true,
+          "result": "[1] Modulation (musique) — Généralités\nLorsqu'on module, il peut arriver que l'on reste un certain temps dans la nouvelle tonalité avant de retourner dans la tonalité primitive, ou encore, avant d'aller dans une troisième tonalité — c'est-à-dire, avant de moduler à nouveau. Si l'on ne fait entendre qu'une simple cadence parfaite, et que l'on quitte aussitôt la nouvelle tonalité, on parle alors de modulation passagère. Dans le cas contraire, lorsque le séjour dans la nouvelle tonalité se prolonge"
+        }
+      ],
+      "gen_tokens_in": 4034,
+      "gen_tokens_out": 233,
+      "gen_latency_s": 11.67
+    },
+    {
+      "id": "fr-conc-026",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment détermine-t-on la hauteur d'une note sur une portée classique sans se fier à sa hampe ?",
+      "reference_answer": "La hauteur est indiquée par la position de la tête de la note, qu'elle soit placée sur une ligne ou dans un interligne. La présence d'une hampe ne modifie pas cette indication car elle sert uniquement à préciser la durée de la note.",
+      "answer": "La hauteur d'une note sur une portée classique est déterminée par la position verticale de sa tête (ou « tête de note ») sur les lignes ou les espaces de la portée [1][2]. La hampe n'a aucun rôle dans l'indication de la hauteur ; elle sert uniquement à préciser la durée de la note [1].",
+      "retrieved": [
+        "fr-portée_musique#001",
+        "fr-note_de_musique#003",
+        "fr-hauteur_musique#000",
+        "fr-représentation_des_durées_en_musique#002",
+        "fr-hauteur_musique#007"
+      ],
+      "source_chunk_ids": [
+        "fr-portée_musique#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Réponse complète, précise et sans contradiction.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "comment déterminer la hauteur d'une note sur une portée sans regarder sa hampe"
+          },
+          "ok": true,
+          "result": "[1] Portée (musique) — Portée classique\nDans le solfège, la représentation des hauteurs utilise six types de signes : la portée, les lignes supplémentaires, les figures de note, les clés, les signes d'octaviation et les altérations.\nLes cinq lignes de la portée sont également espacées et forment entre elles quatre interlignes. Les lignes et les interlignes sont numérotés du bas vers le haut :\nLes figures de note (dont la forme permet d'indiquer les durées) sont placées soit sur les lignes, soit "
+        }
+      ],
+      "gen_tokens_in": 4365,
+      "gen_tokens_out": 211,
+      "gen_latency_s": 8.77
+    },
+    {
+      "id": "fr-conc-029",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Comment les lignes de basse contribuent-elles à la fois à la définition de l'harmonie et au rythme dans un morceau ?",
+      "reference_answer": "Les lignes de basse définissent l'harmonie en mettant l'accent sur des notes spécifiques comme la tonique, la tierce ou la quinte de chaque accord, ce qui permet d'identifier la tonalité. Simultanément, elles créent une pulsation rythmique claire en collaborant avec les percussions et autres instruments rythmiques.",
+      "answer": "Les lignes de basse définissent l'harmonie en mettant l'accent sur la tonique, la tierce ou la quinte de chaque accord, ce qui aide à reconnaître la tonalité du morceau [1]. Simultanément, elles contribuent au rythme en travaillant avec les percussions pour créer une pulsation rythmique claire et un groove [1], [5].",
+      "retrieved": [
+        "fr-ligne_de_basse#001",
+        "fr-ligne_de_basse#002",
+        "fr-ligne_de_basse#000",
+        "fr-harmonie#002",
+        "fr-guitare_basse#018"
+      ],
+      "source_chunk_ids": [
+        "fr-ligne_de_basse#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Répond correctement aux deux aspects (harmonie et rythme) avec des détails précis et pertinents.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "comment les lignes de basse définissent l'harmonie et le rythme"
+          },
+          "ok": true,
+          "result": "[1] Ligne de basse — Description\nLors d'interprétations en solo, les lignes de basse peuvent être simplement jouées dans le registre le plus grave de n'importe quel instrument, comme la guitare, tandis que la mélodie et/ou les accompagnements additionnels sont joués dans les registres moyen à supérieur.\nDans la musique populaire, les lignes de basse  utilisent souvent des « riffs » ou des « grooves », qui sont généralement des motifs musicaux répétés, avec des variations, tout au long de l'œuvre"
+        }
+      ],
+      "gen_tokens_in": 2832,
+      "gen_tokens_out": 116,
+      "gen_latency_s": 5.75
+    },
+    {
+      "id": "fr-conc-070",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "Pourquoi les accords de septième dominants sont-ils généralement utilisés dans une progression de blues ?",
+      "reference_answer": "Les accords de septième dominants sont principalement employés tout au long d'une progression de blues car ils constituent la base standard de ce genre musical, tandis que d'autres types d'accords de septième comme les mineurs ou diminués sont souvent réservés aux moments précédant un changement d'accord pour ajouter de la complexité.",
+      "answer": "Les accords de septième dominants sont généralement utilisés dans une progression de blues car ils créent une tension harmonique qui nécessite une résolution, ce qui donne au blues son caractère distinctif et sa progression typique [1]. De plus, l'utilisation fréquente de l'accord de septième harmonique est l'une des caractéristiques définissantes du blues, et comme les instruments à tempérament égal (comme le piano) ne peuvent pas jouer cet accord exact, il est souvent approximé par un accord de septième dominant [2].",
+      "retrieved": [
+        "en-twelve_bar_blues#003",
+        "en-seventh_chord#007",
+        "en-dominant_seventh_chord#010",
+        "en-guitar_chord#014",
+        "en-secondary_chord#006"
+      ],
+      "source_chunk_ids": [
+        "en-twelve_bar_blues#003"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés corrects (tension, résolution, rôle dans le blues) et détails pertinents ajoutés (approximation de la 7e harmonique).",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "why dominant seventh chords are used in blues progressions"
+          },
+          "ok": true,
+          "result": "[1] Twelve-bar blues — Variations > Seventh chords\nSeventh chords are a type of chord that includes the 7th scale degree (that is, the 7th note of the scale). There are different types of 7th chords such as major 7ths, dominant 7ths, minor 7ths, half diminished 7ths, and fully diminished 7ths. These chords are similar with slight changes, but are all centered around the same key center. Dominant 7th chords are generally used throughout a blues progression. The addition of dominant 7th chords as "
+        }
+      ],
+      "gen_tokens_in": 3943,
+      "gen_tokens_out": 225,
+      "gen_latency_s": 11.51
+    },
+    {
+      "id": "fr-conc-073",
+      "lang": "fr",
+      "qtype": "conceptual",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "Pourquoi la résolution d'un accord de septième dominante vers un accord stable est-elle attendue dans une chanson pop ?",
+      "reference_answer": "Dans la musique populaire, l'oreille s'attend à ce que le triton dissonant contenu dans l'accord de septième dominante soit résolu vers un accord consonant et stable, comme un accord majeur ou mineur, afin d'atteindre un point de repos.",
+      "answer": "La résolution attendue d'un accord de septième dominante vers un accord stable (comme la tonique) est due à sa nature dissonante et tendue : sa septième (la note la plus haute) a une forte tendance à descendre, tandis que sa tierce (la sensible) monte vers la tonique [1]. Cette tension-résolution crée une sensation de clôture harmonique essentielle dans les structures pop.",
+      "retrieved": [
+        "fr-accord_de_septième_de_dominante#005",
+        "fr-accord_de_septième_de_dominante#008",
+        "fr-modulation_musique#025",
+        "fr-accord_de_septième_d_espèce#001",
+        "fr-accord_de_septième_de_dominante#000"
+      ],
+      "source_chunk_ids": [
+        "en-tonality#010"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Détails précis et complets sur la tension-résolution, incluant la sensible et la septième, tout en restant pertinent à la pop.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "Cette tension-résolution crée une sensation de clôture harmonique essentielle dans les structures pop."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "résolution accord septième dominante accord stable tension release pop song"
+          },
+          "ok": true,
+          "result": "[1] Accord de septième de dominante — Préparation et résolution de la septième\nUne des particularités de l'accord de septième de dominante est que sa septième n'a pas besoin d'être strictement préparée par mouvement oblique : le mouvement contraire est tout à fait possible.\nLe mouvement direct est également accepté, si l'une des deux parties procède par mouvement conjoint. Le mouvement direct est même toléré par mouvement disjoint à condition, d'une part que la septième ne soit pas renversée, d'"
+        }
+      ],
+      "gen_tokens_in": 3080,
+      "gen_tokens_out": 123,
+      "gen_latency_s": 6.09
+    },
+    {
+      "id": "fr-defi-001",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Que signifie le terme « tierce de la basse » dans le contexte du chiffrage des accords ?",
+      "reference_answer": "La tierce de la basse désigne l'intervalle représenté par le chiffre spécifique utilisé pour indiquer la note de basse, ce qui permet de distinguer cette tierce de celle de la fondamentale afin d'éviter les confusions lors des accords renversés.",
+      "answer": "Le terme « tierce de la basse » désigne la note jouée en position de basse qui correspond à une tierce par rapport à cette note de basse, et non pas nécessairement la tierce de l'accord lui-même [2]. Il est important de distinguer cette notion de celle de « tierce de l'accord », qui est la tierce au-dessus de la fondamentale, afin d'éviter les malentendus dans le cas d'accords renversés [4].",
+      "retrieved": [
+        "fr-chiffrage_des_accords#003",
+        "fr-basse_chiffrée#008",
+        "fr-basse_chiffrée#007",
+        "fr-accord_musique#013",
+        "fr-basse_chiffrée#014"
+      ],
+      "source_chunk_ids": [
+        "fr-chiffrage_des_accords#003"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Détails précis et clairs, évite les confusions tout en restant fidèle au concept.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "tierce de la basse chiffrage accords inversion"
+          },
+          "ok": true,
+          "result": "[1] Chiffrage des accords — Chiffrage classique > Chiffres du chiffrage\nIl est donc très prudent, lorsqu'on parle par exemple d'une « tierce », de préciser s'il s'agit de la tierce « de l'accord » — autrement dit, la tierce de la fondamentale — ou bien s'il s'agit de la tierce « de la basse », représentée par le chiffrage, ceci, afin d'éviter tout malentendu en cas d'accord renversé.\nExemples :\nOrdinairement, en cas de pluralité de chiffres, ceux-ci sont disposés de manière ascendante et par ord"
+        }
+      ],
+      "gen_tokens_in": 4151,
+      "gen_tokens_out": 276,
+      "gen_latency_s": 12.96
+    },
+    {
+      "id": "fr-defi-007",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment définit-on le terme de « degré » dans le contexte de la théorie musicale ?",
+      "reference_answer": "En théorie musicale, le degré d'une note correspond à sa position spécifique au sein d'une échelle musicale donnée.",
+      "answer": "En théorie musicale, un « degré » désigne la place d'une note dans une échelle musicale donnée [2]. Le premier degré est appelé tonique et donne son nom à la tonalité correspondante [1], tandis que les autres degrés (comme le 5e degré, la dominante) remplissent des fonctions harmoniques spécifiques [4].",
+      "retrieved": [
+        "fr-degré_musique#000",
+        "fr-note_de_musique#013",
+        "fr-basse_chiffrée#019",
+        "fr-degré_musique#001",
+        "fr-hauteur_musique#007"
+      ],
+      "source_chunk_ids": [
+        "fr-degré_musique#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Définit correctement le degré comme position dans une échelle et précise les rôles fonctionnels (tonique/dominante).",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "définition du terme degré théorie musicale"
+          },
+          "ok": true,
+          "result": "[1] Degré (musique) — Introduction\nEn théorie de la musique, le degré d'une note est sa place  dans l'échelle musicale considérée.\n(Chaque échelle est spécifique à un type de musique).\nLe premier degré d'une échelle est appelé « tonique »  : c'est à partir d'elle que commence la gamme correspondante.\nDans l'échelle diatonique, la tonique est parfaitement définie[pas clair].\nPour l'échelle chromatique, distinguer les degrés a peu d'intérêt.\nAu XXe siècle, la composition de certaines pièces (musiq"
+        }
+      ],
+      "gen_tokens_in": 4154,
+      "gen_tokens_out": 210,
+      "gen_latency_s": 8.88
+    },
+    {
+      "id": "fr-defi-010",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment la durée d'une note est-elle indiquée lorsqu'elle ne possède ni crochet ni barre horizontale ?",
+      "reference_answer": "Pour les notes qui n'ont pas de crochet ou de barre, leur longueur se détermine par le fait que la tête soit remplie ou non, ainsi que par la présence ou l'absence d'une hampe.",
+      "answer": "Lorsqu'une note ne possède ni crochet ni barre horizontale, elle est dite « ronde » (ou semibreve) et sa durée correspond à une unité de temps complète dans la mesure [2].",
+      "retrieved": [
+        "en-note_value#000",
+        "en-musical_notation#013",
+        "en-note_value#003",
+        "en-note_value#001",
+        "en-musical_note#001"
+      ],
+      "source_chunk_ids": [
+        "fr-note_de_musique#004"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 0.0,
+      "relevancy": 0.5,
+      "judge_reason": "Partiellement correct (mentionne la ronde), mais manque la distinction tête pleine/vide et hampe, et ignore la durée exacte dans le contexte de la référence.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "sa durée correspond à une unité de temps complète dans la mesure"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "duration of a note without stem or beam indicated"
+          },
+          "ok": true,
+          "result": "[1] Note value — Introduction\nIn music notation, a note value indicates the relative duration of a note, using the texture or shape of the notehead, the presence or absence of a stem, and the presence or absence of flags/beams/hooks/tails. Unmodified note values are fractional powers of two, for example one, one-half, one fourth, etc.\nA rest indicates a silence of an equivalent duration.\nShorter notes can be created theoretically ad infinitum by adding further flags, but are very rare.\n\n[2] Musi"
+        }
+      ],
+      "gen_tokens_in": 3722,
+      "gen_tokens_out": 122,
+      "gen_latency_s": 6.29
+    },
+    {
+      "id": "fr-defi-013",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment définit-on un ornement dans le contexte de la musique classique ?",
+      "reference_answer": "Un ornement, également appelé note d'agrément ou fioriture, est un symbole musical composé de petites figures de notes qui désignent des notes secondaires destinées à embellir la mélodie principale.",
+      "answer": "En musique classique, un ornement est une note ou un groupe de notes ajouté à une mélodie principale pour l'enrichir sans en changer la structure fondamentale [1]. Il s'agit d'un symbole généralement composé de figures de notes de taille inférieure, désignant des notes secondaires dont la fonction est d'embellir la ligne mélodique principale [1].",
+      "retrieved": [
+        "fr-ornement_musique#000",
+        "fr-ornement_musique#003",
+        "en-ornament_music#000",
+        "fr-ornement_musique#002",
+        "en-ornament_music#021"
+      ],
+      "source_chunk_ids": [
+        "fr-ornement_musique#000"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Répond correctement et en détail, sans contradiction ni omission majeure.",
+      "faithfulness": null,
+      "unsupported_claims": [],
+      "judge_valid": false,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "définition ornement musique classique"
+          },
+          "ok": true,
+          "result": "[1] Ornement (musique) — Introduction\nEn musique classique, un ornement, appelé aussi note d'agrément ou fioriture, ou encore selon le terme italien abbellimenti (« embellissements »), est un symbole généralement composé de figures de notes de taille inférieure, désignant des notes secondaires dont la fonction est d'embellir la ligne mélodique principale.\nDu point de vue de l'harmonie, un ornement forme habituellement une ou plusieurs dissonances passagères avec l'accord sur lequel il est placé."
+        }
+      ],
+      "gen_tokens_in": 3974,
+      "gen_tokens_out": 172,
+      "gen_latency_s": 7.65
+    },
+    {
+      "id": "fr-defi-022",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment définit-on une syncope rythmique lorsqu'une noire est placée entre deux temps consécutifs ?",
+      "reference_answer": "Une syncope se produit lorsqu'une noire commence sur la seconde moitié d'un temps et s'étend jusqu'à la première moitié du temps suivant, ce qui crée un déplacement de l'accent attendu par rapport au rythme régulier.",
+      "answer": "Une syncope rythmique se définit comme une note attaquée sur un temps faible ou la partie faible d'un temps et prolongée sur un temps fort ou la partie forte du temps suivant [2]. Dans le cas spécifique d'une noire placée entre deux temps consécutifs, elle est considérée comme une syncope lorsqu'elle est attaquée sur la deuxième partie d'un temps et prolongée sur la première partie du temps suivant [1].",
+      "retrieved": [
+        "fr-syncope_musique#001",
+        "fr-syncope_musique#000",
+        "fr-mesure_musique#021",
+        "en-syncopation#000",
+        "fr-polyrythmie#001"
+      ],
+      "source_chunk_ids": [
+        "fr-syncope_musique#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Détails précis et conformes à la définition de syncope, avec explication claire du cas spécifique.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "syncope rythmique noire entre deux temps consécutifs définition"
+          },
+          "ok": true,
+          "result": "[1] Syncope (musique) — Caractéristiques\nUne noire « à cheval » sur deux temps consécutifs – c’est-à-dire attaquée sur la deuxième partie d'un temps et prolongée sur la première partie du temps suivant – est une syncope. Il peut s'agir par exemple d'une noire encadrée par deux croches ou d'une noire précédée d'un demi-soupir. Dans une mesure à 4/4 (quatre noires par mesure), une blanche placée sur le deuxième temps est également une syncope – le deuxième temps d'un 4/4 étant un temps faible, le "
+        }
+      ],
+      "gen_tokens_in": 4049,
+      "gen_tokens_out": 232,
+      "gen_latency_s": 9.48
+    },
+    {
+      "id": "fr-defi-072",
+      "lang": "fr",
+      "qtype": "definitional",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "Quel est le terme moderne utilisé pour désigner les multiplets de notes et pourquoi l'expression « rythme irrationnel » serait-elle incorrecte dans ce contexte ?",
+      "reference_answer": "Le terme moderne approprié est « tuplet », qui dérive de mots composés comme quintu-plet ou sextu-plet. L'expression « rythme irrationnel » est incorrecte car les valeurs de notes sont des fractions rationnelles et non des concepts mathématiques d'irrationalité ou de logique absurde.",
+      "answer": "Le terme moderne utilisé pour désigner les multiplets de notes est « tuplet » [1][2]. L'expression « rythme irrationnel » serait incorrecte dans ce contexte car, bien que le terme ait été emprunté à la prosodie grecque, il ne s'applique pas au sens mathématique (les valeurs de note sont des fractions rationnelles) ni au sens général d'« absurde ou déraisonnable » [1].",
+      "retrieved": [
+        "en-tuplet#001",
+        "en-tuplet#000",
+        "en-tuplet#002",
+        "fr-cycle_des_quintes#006",
+        "en-rhythm#025"
+      ],
+      "source_chunk_ids": [
+        "en-tuplet#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits exacts, détails supplémentaires pertinents et références justifiées.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "Le terme moderne utilisé pour désigner les multiplets de notes est « tuplet » [1][2]."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "multiplets de notes terme moderne rythme irrationnel incorrect"
+          },
+          "ok": true,
+          "result": "[1] Tuplet — Terminology\nThe modern term 'tuplet' comes from a rebracketing of compound words like quintu(s)-(u)plet and sextu(s)-(u)plet, and from related mathematical terms such as \"tuple\", \"-uplet\" and \"-plet\", which are used to form terms denoting multiplets (Oxford English Dictionary, entries \"multiplet\", \"-plet, comb. form\", \"-let, suffix\", and \"-et, suffix1\"). An alternative modern term, \"irrational rhythm\", was originally borrowed from Greek prosody where it referred to \"a syllable havin"
+        }
+      ],
+      "gen_tokens_in": 3992,
+      "gen_tokens_out": 207,
+      "gen_latency_s": 8.53
+    },
+    {
+      "id": "fr-mult-030",
+      "lang": "fr",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment la fonction du point de prolongation a-t-elle évolué depuis environ 1750 par rapport à sa signification antérieure, et comment doit-on aujourd'hui analyser sa durée lorsqu'il suit une figure de note ?",
+      "reference_answer": "Avant 1750, le point indiquait un prolongement nécessaire pour remplir la mesure jusqu'à la prochaine note courte, sans utiliser de double ou triple points. Depuis cette époque, sa durée est toujours égale à la moitié de la valeur précédente, qu'il s'agisse d'une figure simple ou d'un autre point. Aujourd'hui, lorsqu'il suit une figure de note, il doit être analysé comme une durée qui s'additionne à la valeur initiale via une liaison de prolongation.",
+      "answer": "Depuis environ 1750, la fonction du point de prolongation a évolué pour toujours augmenter la durée d'une figure de note ou d'un silence de la moitié de sa valeur initiale [1][4]. Avant cette période, il indiquait plutôt qu'il fallait prolonger la note jusqu'à remplir le temps ou la mesure suivant une logique rythmique différente [1]. Aujourd'hui, lorsqu'il suit une figure de note, on l'analyse comme une durée s'additionnant à la valeur précédente via une liaison de prolongation [2].",
+      "retrieved": [
+        "fr-point_de_prolongation#001",
+        "fr-point_de_prolongation#000",
+        "fr-représentation_des_durées_en_musique#002",
+        "fr-point_de_prolongation#002",
+        "fr-point_de_prolongation#003"
+      ],
+      "source_chunk_ids": [
+        "fr-point_de_prolongation#000",
+        "fr-point_de_prolongation#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés identiques, formulation précise et complète sur l'évolution et l'analyse moderne.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 2,
+      "agent_stopped": "answer",
+      "agent_nudged": false,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "point de prolongation fonction évolution 1750 durée figure de note"
+          },
+          "ok": true,
+          "result": "[1] Point de prolongation — Histoire\nDepuis environ 1750, la durée du point de prolongation est toujours égale à la moitié de la valeur précédente — que celle-ci soit une figure, ou bien un autre point.\nAvant cette époque, il arrive que le point de prolongation indique qu'il faut prolonger la note qui le porte de la durée nécessaire pour remplir le temps ou la mesure jusqu'à la note courte suivante. On n'utilise alors pas de double ni de triple point. Ceci met en évidence le fait que la notation"
+        }
+      ],
+      "gen_tokens_in": 2711,
+      "gen_tokens_out": 154,
+      "gen_latency_s": 6.67
+    },
+    {
+      "id": "fr-mult-034",
+      "lang": "fr",
+      "qtype": "multihop",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Comment peut-on indiquer une accélération du tempo en utilisant soit des termes italiens, soit une indication métronomique ?",
+      "reference_answer": "Une accélération du tempo peut être signalée par une nouvelle indication métronomique ou par divers termes italiens tels que animato, accelerando, doppio, più mosso, più moto, stretto, etc.",
+      "answer": "On peut indiquer une accélération du tempo soit par des termes italiens comme *accelerando* (abrégé en *accel.*), *animato*, *doppio*, *più mosso*, *più moto*, *stretto*, etc., soit par une nouvelle indication métronomique croissante [1].",
+      "retrieved": [
+        "fr-tempo#009",
+        "fr-tempo#010",
+        "fr-tempo#008",
+        "fr-tempo#004",
+        "fr-tempo#000"
+      ],
+      "source_chunk_ids": [
+        "fr-tempo#001",
+        "fr-tempo#009"
+      ],
+      "recall_at_5": 0.5,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "All terms and indications match the reference; no contradictions or omissions.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "indication d'accélération du tempo terme italien métronomique"
+          },
+          "ok": true,
+          "result": "[1] Tempo — Variations du tempo > Accélération\nDe façon analogue, une accélération du tempo peut être signalée, soit par une nouvelle indication métronomique, soit par divers termes italiens, tels que :\nanimato (litt. « animé ») ;\naccelerando (abrégé en accel. ; litt. « en accélérant ») ;\ndoppio (litt. « double », c'est-à-dire le double du tempo initial) ;\npiù mosso (litt. « plus agité ») ;\npiù moto (litt. « plus de mouvement ») ;\nstretto (litt. « serré ») ;\netc.\n\n[2] Tempo — Variations du tempo"
+        }
+      ],
+      "gen_tokens_in": 3895,
+      "gen_tokens_out": 184,
+      "gen_latency_s": 10.29
+    },
+    {
+      "id": "fr-term-003",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "heldout",
+      "question": "Quelle est la différence entre les configurations d'accord pour une basse à cinq cordes et celle d'une basse à six cordes ?",
+      "reference_answer": "Une basse à cinq cordes utilise généralement l'accord si-1, mi, la, ré, sol ou parfois mi, la, ré, sol, do2, tandis qu'une basse à six cordes ajoute une corde grave pour former si-1, mi, la, ré, sol, do2 ou bien deux cordes graves supplémentaires pour un accord en fa#-1, si-1, mi, la, ré, sol.",
+      "answer": "La principale différence entre les configurations d'accord des basses à cinq et six cordes réside dans l'ajout de cordes supplémentaires : une basse à cinq cordes ajoute généralement une corde grave (B0) par rapport à la basse à quatre cordes, tandis qu'une basse à six cordes ajoute une corde grave (B0) ET une corde aiguë (C3) par rapport à la configuration standard à quatre cordes [1][5].",
+      "retrieved": [
+        "en-standard_tuning#003",
+        "en-bass_guitar#000",
+        "en-standard_tuning#004",
+        "en-bass_guitar#013",
+        "fr-guitare_basse#016"
+      ],
+      "source_chunk_ids": [
+        "fr-guitare_basse#016"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.2,
+      "correctness": 0.0,
+      "relevancy": 0.5,
+      "judge_reason": "Mentionne des cordes correctes mais confond configurations 4/5/6 cordes et donne des accords incomplets/inexacts.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "une basse à cinq cordes ajoute généralement une corde grave (B0) par rapport à la basse à quatre cordes"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "difference between 5 string bass and 6 string bass chord configurations"
+          },
+          "ok": true,
+          "result": "[1] Standard tuning — Guitar family\nGuitars and bass guitars have more standard tunings, depending on the number of strings an instrument has.\nsix-string guitar (the most common configuration) – E2 A2 D3 G3 B3 E4 (ascending perfect fourths, with an exception between G and B, which is a major third). Low E falls a major third above the C on a standard-tuned cello.\nRenaissance lute – E2 A2 D3 F♯3 B3 E4 (used by classical guitarists for certain pieces; identical to standard guitar tuning, except fo"
+        }
+      ],
+      "gen_tokens_in": 3883,
+      "gen_tokens_out": 194,
+      "gen_latency_s": 8.06
+    },
+    {
+      "id": "fr-term-006",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quelle est la différence fondamentale entre le temps strié et le temps lisse selon la définition de Pierre Boulez ?",
+      "reference_answer": "Dans le temps strié, les structures de durée se réfèrent à un balisage régulier ou irrégulier systématique appelé pulsation, où l'on compte le temps pour l'occuper. À l'inverse, le temps lisse remplace ces stries par la durée d'objets sonores, créant un écoulement continu sans mesure repérable où l'on occupe le temps sans le compter.",
+      "answer": "Selon Pierre Boulez, la différence fondamentale réside dans la manière d'occuper le temps : dans le **temps strié**, on compte le temps pour l'occuper grâce à une pulsation régulière ou systématique qui sert de balisage [1]. À l'inverse, dans le **temps lisse**, les structures temporelles sont remplacées par la durée d'objets sonores, créant un écoulement continu sans mesure repérable où l'on occupe le temps sans le compter [1].",
+      "retrieved": [
+        "fr-temps_musique#001",
+        "fr-contrepoint_rigoureux#001",
+        "fr-mesure_musique#004",
+        "en-tempo#019",
+        "fr-mesure_musique#023"
+      ],
+      "source_chunk_ids": [
+        "fr-temps_musique#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Réponse complète, précise et fidèle à la référence, avec une formulation claire.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "Pierre Boulez temps strié temps lisse différence fondamentale"
+          },
+          "ok": true,
+          "result": "[1] Temps (musique) — Musique contemporaine\nLa notion de temps telle que définie ci-dessus ne s'applique plus intégralement à la musique contemporaine, pour laquelle le temps peut ne plus être granulaire. Dans son ouvrage Penser la musique aujourd’hui , Pierre Boulez définit deux nouvelles conceptions :\nle temps strié, dans lequel les structures de la durée se réfèrent au temps chronométrique en fonction d’un balisage régulier ou irrégulier mais systématique : la pulsation. La pulsation est l’un"
+        }
+      ],
+      "gen_tokens_in": 4254,
+      "gen_tokens_out": 219,
+      "gen_latency_s": 8.81
+    },
+    {
+      "id": "fr-term-012",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quelle est la différence entre une tonique principale et une tonique secondaire en termes de degrés utilisés ?",
+      "reference_answer": "La tonique principale correspond au premier degré, qu'il soit fondamental ou à l'état de premier renversement, tandis que la tonique secondaire désigne le sixième degré.",
+      "answer": "Selon les passages retournés, une **tonique principale** correspond au Ier degré (la note fondamentale de la gamme), tandis qu'une **tonique secondaire** correspond au VIe degré [1]. Le Ier degré est considéré comme le fondamental et l'état de premier renversement, alors que le VIe degré permet une ambiguïté conclusive et une ouverture vers le mode relatif mineur [2][4].",
+      "retrieved": [
+        "fr-dominante#004",
+        "fr-degré_musique#001",
+        "fr-tonique_musique#000",
+        "fr-système_tonal#003",
+        "fr-basse_chiffrée#019"
+      ],
+      "source_chunk_ids": [
+        "fr-dominante#004"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés exacts (Ier degré = tonique principale, VIe degré = tonique secondaire) avec détails pertinents ajoutés.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "Le Ier degré est considéré comme le fondamental et l'état de premier renversement, alors que le VIe degré permet une ambiguïté conclusive et une ouverture vers le mode relatif mineur [2][4]."
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "tonique principale tonique secondaire degrés utilisés"
+          },
+          "ok": true,
+          "result": "[1] Dominante — Accord préparatoire > Bons accords préparatoires\nCe sont essentiellement les accords qui remplissent la fonction de tonique.\nSoit tonique principale, c'est-à-dire le Ier degré, fondamental, ou à l'état de premier renversement (exemples E et F) ;\nNous venons de voir que ce degré, lorsqu'il est employé sous forme de quarte et sixte de cadence devient alors un meilleur accord préparatoire (exemple G).\nSoit tonique secondaire, c'est-à-dire le VIe degré (exemple H).\nSeul le IIIe degré"
+        }
+      ],
+      "gen_tokens_in": 3989,
+      "gen_tokens_out": 179,
+      "gen_latency_s": 7.81
+    },
+    {
+      "id": "fr-term-015",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quel musicien est souvent associé au mode acoustique en raison de son utilisation notable dans ses œuvres ?",
+      "reference_answer": "C'est Béla Bartók qui a fait l'usage le plus notoire du mode acoustique, ce qui a conduit les gens à lui donner fréquemment le nom de mode de Bartók.",
+      "answer": "Béla Bartók est souvent associé au mode acoustique (aussi appelé « lydien dominant » ou « gamme Bartók ») en raison de son utilisation notable dans ses œuvres [1][2].",
+      "retrieved": [
+        "fr-mode_musique#025",
+        "fr-mode_musique#039",
+        "fr-guitare_électrique#000",
+        "fr-guitare_acoustique#000",
+        "fr-polyphonie#036"
+      ],
+      "source_chunk_ids": [
+        "fr-mode_musique#025"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 1.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits exacts et complets, réponse claire et pertinente.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "musicien mode acoustique"
+          },
+          "ok": true,
+          "result": "[1] Mode (musique) — Modes altérés > Modes déduits de la gamme mineure mélodique ascendante > Utilisations\nLa gamme mineure mélodique était utilisée bien avant l'usage des modes. Mais l'usage moderne de la forme ascendante en tant que mode à part entière a été pratiqué au début du XXe siècle notamment par Fauré. Le mode majeur-mixte (dit mixolydien 6) en classique a aussi été utilisé, notamment par Gabriel Fauré (exemple « Ce sera par un clair jour d'été » - La bonne chanson) et on en trouve mêm"
+        }
+      ],
+      "gen_tokens_in": 4054,
+      "gen_tokens_out": 146,
+      "gen_latency_s": 7.03
+    },
+    {
+      "id": "fr-term-021",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quel terme désigne la base musicale ou rythmique qui sert d'accroche reconnaissable à un morceau ?",
+      "reference_answer": "Le terme utilisé pour décrire cette base musicale, rythmique ou accompagnement qui constitue l'identité d'une composition est le riff.",
+      "answer": "Le terme qui désigne la base musicale ou rythmique servant d'accroche reconnaissable à un morceau est le **riff**. Selon les sources, c'est une courte phrase mélodique ou rythmique répétée qui constitue souvent l'accompagnement ou la signature d'une composition [1][3].",
+      "retrieved": [
+        "en-riff#000",
+        "en-ostinato#018",
+        "fr-riff_musique#001",
+        "en-melody#000",
+        "en-motif_music#004"
+      ],
+      "source_chunk_ids": [
+        "fr-riff_musique#001"
+      ],
+      "recall_at_5": 1.0,
+      "article_recall_at_5": 1.0,
+      "mrr_at_10": 0.3333333333333333,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Réponse exacte et complète, avec des précisions supplémentaires pertinentes.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "Le terme est utilisé pour la première fois aux alentours des années 1920 par les musiciens de jazz (sans référence explicite dans [1] ou [3] pour cette précision exacte)",
+        "Thriving on a Riff de Charlie Parker est cité comme popularisant le terme en 1945 (référence non citée dans [1] ou [3] comme source directe)"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "term for catchy musical or rhythmic base that serves as recognizable hook in a song"
+          },
+          "ok": true,
+          "result": "[1] Riff — Introduction\nA riff is a short, repeated motif or figure in the melody or accompaniment of a musical composition. Riffs are most often found in various genres of rock music (including punk and heavy metal music), as well as Latin, funk, and jazz, although classical music is also sometimes based on a riff, as in Ravel's Boléro. Riffs can be as simple as a tenor saxophone honking a simple, catchy rhythmic figure, or as complex as the riff-based variations in the head arrangements played"
+        }
+      ],
+      "gen_tokens_in": 4020,
+      "gen_tokens_out": 160,
+      "gen_latency_s": 7.18
+    },
+    {
+      "id": "fr-term-024",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": false,
+      "split": "dev",
+      "question": "Quelle est la différence entre l'oreille relative et l'oreille absolue ?",
+      "reference_answer": "L'oreille relative permet d'identifier un intervalle ou une note en se basant sur une référence donnée, tandis que l'oreille absolue consiste à identifier une note sans avoir besoin de repère préalable.",
+      "answer": "L'oreille absolue (ou \"perfect pitch\") est la capacité à identifier une note spécifique sans référence, comme nommer un son unique [1]. L'oreille relative, en revanche, permet d'identifier une note en la comparant à une autre et de déterminer l'intervalle entre elles [3].",
+      "retrieved": [
+        "en-absolute_pitch#001",
+        "en-relative_pitch#002",
+        "en-relative_pitch#000",
+        "en-absolute_pitch#007",
+        "en-absolute_pitch#013"
+      ],
+      "source_chunk_ids": [
+        "fr-oreille_relative#000"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 1.0,
+      "relevancy": 1.0,
+      "judge_reason": "Faits clés exacts et distinction claire, sans contradiction ni omission majeure.",
+      "faithfulness": 1.0,
+      "unsupported_claims": [],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "difference between relative pitch and absolute pitch"
+          },
+          "ok": true,
+          "result": "[1] Absolute pitch — About\nThe frequency of AP in the general population is not known. A proportion of 1 in 10,000 is widely reported, but may not be accurate; a 2019 review indicated a prevalence of at least 4% amongst music students.\nGenerally, absolute pitch implies some or all of these abilities, achieved without a reference tone:\nIdentify by name individual pitches played on various instruments.\nName the key of a given piece of tonal music.\nIdentify and name all the tones of a given chord o"
+        }
+      ],
+      "gen_tokens_in": 3951,
+      "gen_tokens_out": 153,
+      "gen_latency_s": 7.28
+    },
+    {
+      "id": "fr-term-074",
+      "lang": "fr",
+      "qtype": "terminology",
+      "cross_lingual": true,
+      "split": "dev",
+      "question": "Quelle est la différence entre un pont flottant et un pont fixe sur les instruments à frette acoustiques ?",
+      "reference_answer": "Un pont flottant est maintenu en place par la tension des cordes, tandis qu'un pont fixe, comme celui d'une guitare acoustique standard, utilise une structure rigide avec des piquets.",
+      "answer": "Les passages retournés mentionnent un \"chevalet flottant\" pour les guitares archtop (guitares à table bombée), qui repose sur le corps sans être fixé rigidement [4]. Cependant, aucune information n'est fournie concernant la différence entre un pont flottant et un pont fixe sur les instruments à frette acoustiques en général. Je ne peux donc pas répondre à cette question avec certitude à partir des sources fournies.",
+      "retrieved": [
+        "fr-guitare_acoustique#000",
+        "fr-guitare_acoustique#001",
+        "fr-guitare_électrique#010",
+        "fr-guitare_acoustique#005",
+        "fr-guitare#011"
+      ],
+      "source_chunk_ids": [
+        "en-intonation_music#004"
+      ],
+      "recall_at_5": 0.0,
+      "article_recall_at_5": 0.0,
+      "mrr_at_10": 0.0,
+      "correctness": 0.0,
+      "relevancy": 0.0,
+      "judge_reason": "Refus explicite et non réponse à la question posée.",
+      "faithfulness": 0.0,
+      "unsupported_claims": [
+        "aucune information n'est fournie concernant la différence entre un pont flottant et un pont fixe sur les instruments à frette acoustiques en général"
+      ],
+      "judge_valid": true,
+      "tool_selection": 1.0,
+      "args_correct": null,
+      "expected_tool": "search_corpus",
+      "tools_called": [
+        "search_corpus"
+      ],
+      "agent_turns": 3,
+      "agent_stopped": "answer",
+      "agent_nudged": true,
+      "trace": [
+        {
+          "tool": "search_corpus",
+          "arguments": {
+            "query": "pont flottant pont fixe guitare acoustique différence"
+          },
+          "ok": true,
+          "result": "[1] Guitare acoustique — Introduction\nUne guitare acoustique (parfois nommée guitare sèche) est un type de guitare dans laquelle le son est produit par la vibration des cordes et se propage à des intensités audibles à travers la résonance de la caisse, sans nécessiter d'amplification électrique. Une variante, dite guitare électro-acoustique, reprend la même construction qu'une guitare acoustique en lui ajoutant un pré-amplificateur, ce qui permet de brancher la guitare dans un systéme de sonoris"
+        }
+      ],
+      "gen_tokens_in": 4072,
+      "gen_tokens_out": 190,
+      "gen_latency_s": 8.05
+    }
+  ]
+}
