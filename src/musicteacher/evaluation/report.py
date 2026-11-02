@@ -20,7 +20,8 @@ from musicteacher.config import get_settings
 from musicteacher.evaluation.metrics import bootstrap_ci, summarise
 from musicteacher.evaluation.run import CONDITIONS, METRICS
 
-ALL_CONDITIONS = [*CONDITIONS, "C5"]  # C5 = agent with tools (evaluation/run_agent.py)
+# C5 = agent with tools, C5b = same agent asked once to call a tool (evaluation/run_agent.py)
+ALL_CONDITIONS = [*CONDITIONS, "C5", "C5b"]
 COMPARISONS = [
     ("C1", "C0", "RAG (dense) vs no retrieval"),
     ("C3", "C1", "H1: hybrid vs dense"),
@@ -28,6 +29,8 @@ COMPARISONS = [
     ("C4", "C3", "H2: reranker on top of hybrid"),
     ("C4", "C1", "RQ1: hybrid + reranker vs dense"),
     ("C5", "C4", "agent with tools vs RAG-only"),
+    ("C5b", "C5", "tool call required vs free choice"),
+    ("C5b", "C4", "agent (tool required) vs RAG-only"),
 ]
 LABELS = {
     "recall_at_5": "Recall@5",
@@ -153,8 +156,9 @@ def build_report(runs: dict[str, dict], seed: int = 42) -> str:
         lines += ["", f"### {split}", ""]
         lines += metric_table(blocks, answer_metrics)
 
-    if "C5" in runs:
-        lines += agent_section(runs, seed)
+    for agent in ("C5", "C5b"):
+        if agent in runs:
+            lines += agent_section(runs, seed, agent)
 
     lines += [
         "",
@@ -171,12 +175,12 @@ def build_report(runs: dict[str, dict], seed: int = 42) -> str:
     return "\n".join(lines) + "\n"
 
 
-def agent_section(runs: dict[str, dict], seed: int) -> list[str]:
+def agent_section(runs: dict[str, dict], seed: int, agent: str = "C5") -> list[str]:
     """RQ3: does the agent with tools beat RAG-only on computation (agentic) questions?"""
-    c5 = runs["C5"]
+    c5 = runs[agent]
     lines = [
         "",
-        "## Agent with tools (C5)",
+        f"## Agent with tools ({agent})",
         "",
         "| Subset | Tool selection | Tool arguments | Correctness |",
     ]
@@ -197,7 +201,7 @@ def agent_section(runs: dict[str, dict], seed: int) -> list[str]:
     for other in ("C4", "C0"):
         if other in runs:
             diff = paired_difference(c5, runs[other], "correctness", seed, qtype="agentic")
-            lines.append(f"| C5 − {other} (agentic only) | {fmt_diff(diff)} |")
+            lines.append(f"| {agent} − {other} (agentic only) | {fmt_diff(diff)} |")
     stopped: dict[str, int] = {}
     for q in c5["questions"]:
         stopped[q["agent_stopped"]] = stopped.get(q["agent_stopped"], 0) + 1

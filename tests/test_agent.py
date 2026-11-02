@@ -100,3 +100,32 @@ def test_tool_arguments_can_arrive_as_a_json_string():
     assert parse_arguments(json.dumps({"key": "D major"})) == {"key": "D major"}
     assert parse_arguments("not json") == {}
     assert parse_arguments(None) == {}
+
+
+def test_require_tool_asks_once_for_a_tool_when_the_model_answers_from_memory():
+    llm = FakeLLMClient(
+        turns=[
+            text("A perfect fifth, from memory."),
+            call("interval", note1="C", note2="G"),
+            text("A perfect fifth."),
+        ]
+    )
+    result = run_agent(llm, REGISTRY, "C up to G?", require_tool=True)
+    assert result.nudged is True
+    assert [s.tool for s in result.steps] == ["interval"]
+    assert result.answer == "A perfect fifth."
+    nudge_turn = llm.calls[1]["messages"]
+    assert nudge_turn[-2] == {"role": "assistant", "content": "A perfect fifth, from memory."}
+    assert nudge_turn[-1]["role"] == "user" and "call one of the tools" in nudge_turn[-1]["content"]
+
+
+def test_require_tool_nudges_only_once_and_not_after_a_tool_call():
+    stubborn = FakeLLMClient(turns=[text("From memory."), text("Still from memory.")])
+    result = run_agent(stubborn, REGISTRY, "?", require_tool=True)
+    assert (result.answer, result.nudged, result.turns) == ("Still from memory.", True, 2)
+
+    used_tool = FakeLLMClient(turns=[call("interval", note1="C", note2="G"), text("Fifth.")])
+    assert run_agent(used_tool, REGISTRY, "?", require_tool=True).nudged is False
+
+    free = FakeLLMClient(turns=[text("From memory.")])
+    assert run_agent(free, REGISTRY, "?").nudged is False  # default: no nudge (condition C5)

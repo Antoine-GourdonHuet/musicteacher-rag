@@ -10,6 +10,7 @@ Faithfulness (QA only) is judged against every passage the agent received; a QA 
 without any search is judged against an empty context, so unsupported claims count as unfaithful.
 
 Usage: uv run python -m musicteacher.evaluation.run_agent [--split all] [--limit 5]
+       [--require-tool]   (condition C5b: ask once for a tool call if the first reply has none)
 """
 
 import argparse
@@ -96,6 +97,7 @@ def score_question(judge_llm, q: EvalQuestion, result: AgentResult, top_k: int) 
         "tools_called": tools_called,
         "agent_turns": result.turns,
         "agent_stopped": result.stopped,
+        "agent_nudged": result.nudged,
         "trace": [
             {"tool": s.tool, "arguments": s.arguments, "ok": s.ok, "result": s.result[:500]}
             for s in result.steps
@@ -106,7 +108,7 @@ def score_question(judge_llm, q: EvalQuestion, result: AgentResult, top_k: int) 
     }
 
 
-def run(split: str, limit: int | None, settings: Settings):
+def run(split: str, limit: int | None, settings: Settings, require_tool: bool = False):
     from musicteacher.llm.cache import CachedLLMClient
     from musicteacher.llm.ollama_client import OllamaClient
     from musicteacher.llm.usage import UsageTracker
@@ -119,7 +121,8 @@ def run(split: str, limit: int | None, settings: Settings):
         questions = sorted(
             random.Random(settings.seed).sample(questions, limit), key=lambda q: q.id
         )
-    print(f"C5 (agent with tools) on {len(questions)} questions [{split}]")
+    condition = "C5b" if require_tool else "C5"
+    print(f"{condition} (agent with tools) on {len(questions)} questions [{split}]")
     started = time.perf_counter()
 
     # Retrieval on the CPU: the GPU is left to the LLM, which runs in the same loop.
@@ -142,7 +145,11 @@ def run(split: str, limit: int | None, settings: Settings):
     # memory, and alternating them per question makes Ollama reload a model every time.
     agent_runs = []
     for i, q in enumerate(questions, start=1):
-        agent_runs.append(run_agent(agent_llm, registry, q.question, max_steps=MAX_STEPS))
+        agent_runs.append(
+            run_agent(
+                agent_llm, registry, q.question, max_steps=MAX_STEPS, require_tool=require_tool
+            )
+        )
         tools = [s.tool for s in agent_runs[-1].steps]
         print(f"  agent {i}/{len(questions)} {q.id}: tools={tools}", flush=True)
     agent_llm.close()
@@ -154,7 +161,7 @@ def run(split: str, limit: int | None, settings: Settings):
     judge_llm.close()
 
     result = {
-        "condition": "C5",
+        "condition": condition,
         "retrieval_mode": "agent",
         "split": split,
         "limit": limit,
@@ -168,6 +175,7 @@ def run(split: str, limit: int | None, settings: Settings):
             "search_mode": "hybrid_rerank",
             "top_k": settings.top_k,
             "max_steps": MAX_STEPS,
+            "require_tool": require_tool,
             "temperature": settings.temperature,
             "seed": settings.seed,
             "tools": list(registry.tools),
@@ -182,7 +190,7 @@ def run(split: str, limit: int | None, settings: Settings):
     }
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S")
     suffix = f"_n{limit}" if limit else ""
-    out = settings.evals_dir / "results" / f"C5_{split}{suffix}_{stamp}.json"
+    out = settings.evals_dir / "results" / f"{condition}_{split}{suffix}_{stamp}.json"
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return out
 
@@ -191,8 +199,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run condition C5 (agent with tools).")
     parser.add_argument("--split", default="all", choices=["dev", "heldout", "all"])
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument(
+        "--require-tool",
+        action="store_true",
+        help="C5b: if the first reply uses no tool, ask the model once to call a tool",
+    )
     args = parser.parse_args()
-    out = run(args.split, args.limit, get_settings())
+    out = run(args.split, args.limit, get_settings(), require_tool=args.require_tool)
     result = json.loads(out.read_text(encoding="utf-8"))
     print(f"\nSaved {out}")
     for name, value in result["metrics"]["overall"].items():

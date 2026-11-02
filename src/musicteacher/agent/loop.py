@@ -7,7 +7,9 @@ Safeguards:
 - `max_steps` model turns at most (a model can loop on tool calls forever);
 - tools never raise (see `tools.ToolRegistry.execute`): errors are sent back as text;
 - deterministic fallback if the model never gives a text answer: return the last successful tool
-  result as is (for computation questions it is the answer), else a fixed "cannot answer" message.
+  result as is (for computation questions it is the answer), else a fixed "cannot answer" message;
+- optional `require_tool`: if the first reply answers without calling any tool, that reply is set
+  aside and the model is asked once to call a tool first (small models often skip their tools).
 """
 
 from dataclasses import dataclass, field
@@ -27,6 +29,10 @@ AGENT_SYSTEM = """You are a music theory and guitar teaching assistant with tool
 - Write notes with flats as the tools do (Eb, not D#)."""
 
 NO_ANSWER = "I could not answer this question with the available tools."
+TOOL_NUDGE = (
+    "Do not answer from memory. First call one of the tools: transpose, interval or key_info "
+    "for a computation, search_corpus for anything else. Then answer from the tool result."
+)
 
 
 @dataclass
@@ -44,6 +50,9 @@ class AgentResult:
     steps: list[AgentStep] = field(default_factory=list)
     turns: int = 0
     stopped: str = "answer"  # "answer" | "max_steps" | "empty_answer"
+    nudged: bool = (
+        False  # require_tool: the model was asked to call a tool after answering directly
+    )
     input_tokens: int = 0
     output_tokens: int = 0
     latency_s: float = 0.0
@@ -62,6 +71,7 @@ def run_agent(
     max_steps: int = 4,
     temperature: float = 0.0,
     max_tokens: int = 400,
+    require_tool: bool = False,
 ) -> AgentResult:
     messages: list[dict[str, Any]] = [{"role": "user", "content": question}]
     result = AgentResult(answer="")
@@ -77,6 +87,13 @@ def run_agent(
         result.input_tokens += turn.input_tokens
         result.output_tokens += turn.output_tokens
         result.latency_s += turn.latency_s
+
+        if not turn.tool_calls and require_tool and not result.steps and not result.nudged:
+            # Answered without any tool: keep the reply in the history, ask once for a tool call.
+            result.nudged = True
+            messages.append({"role": "assistant", "content": turn.content})
+            messages.append({"role": "user", "content": TOOL_NUDGE})
+            continue
 
         if not turn.tool_calls:  # the model answers in text: done
             if turn.content.strip():
