@@ -1,1 +1,377 @@
 id,title,url,license,language,retrieved_at,approx_tokens,notes
+en-a_cappella,A cappella,https://en.wikipedia.org/wiki/A_cappella,CC BY-SA 4.0,en,2026-11-02T10:42:36+00:00,7699,revid=1383351540; category=voice_ear
+en-absolute_pitch,Absolute pitch,https://en.wikipedia.org/wiki/Absolute_pitch,CC BY-SA 4.0,en,2026-11-02T10:42:49+00:00,3972,revid=1381279950; category=voice_ear
+en-accidental_music,Accidental (music),https://en.wikipedia.org/wiki/Accidental_(music),CC BY-SA 4.0,en,2026-11-02T08:46:51+00:00,3034,revid=1362724562; category=fundamentals
+en-acoustic_guitar,Acoustic guitar,https://en.wikipedia.org/wiki/Acoustic_guitar,CC BY-SA 4.0,en,2026-11-02T09:58:00+00:00,4136,revid=1381040880; category=guitar
+en-added_tone_chord,Added tone chord,https://en.wikipedia.org/wiki/Added_tone_chord,CC BY-SA 4.0,en,2026-11-02T09:21:00+00:00,1292,revid=1343863717; category=chords
+en-aeolian_mode,Aeolian mode,https://en.wikipedia.org/wiki/Aeolian_mode,CC BY-SA 4.0,en,2026-11-02T09:03:27+00:00,1620,revid=1371158992; category=scales_modes
+en-alternate_picking,Alternate picking,https://en.wikipedia.org/wiki/Alternate_picking,CC BY-SA 4.0,en,2026-11-02T10:18:34+00:00,758,revid=1380930137; category=guitar
+en-anacrusis,Anacrusis,https://en.wikipedia.org/wiki/Anacrusis,CC BY-SA 4.0,en,2026-11-02T09:47:27+00:00,1604,revid=1382161051; category=rhythm
+en-archtop_guitar,Archtop guitar,https://en.wikipedia.org/wiki/Archtop_guitar,CC BY-SA 4.0,en,2026-11-02T10:17:48+00:00,3359,revid=1374140784; category=guitar
+en-arpeggio,Arpeggio,https://en.wikipedia.org/wiki/Arpeggio,CC BY-SA 4.0,en,2026-11-02T09:52:44+00:00,1197,revid=1382466420; category=melody_form
+en-augmented_sixth_chord,Augmented sixth chord,https://en.wikipedia.org/wiki/Augmented_sixth_chord,CC BY-SA 4.0,en,2026-11-02T09:30:05+00:00,3706,revid=1376424817; category=harmony
+en-augmented_triad,Augmented triad,https://en.wikipedia.org/wiki/Augmented_triad,CC BY-SA 4.0,en,2026-11-02T09:14:44+00:00,2301,revid=1353409798; category=chords
+en-bar_chord,Bar chord,https://en.wikipedia.org/wiki/Bar_chord,CC BY-SA 4.0,en,2026-11-02T10:04:06+00:00,2810,revid=1367958424; category=guitar
+en-bar_music,Bar (music),https://en.wikipedia.org/wiki/Bar_(music),CC BY-SA 4.0,en,2026-11-02T09:42:53+00:00,1170,revid=1276563266; category=rhythm
+en-baritone,Baritone,https://en.wikipedia.org/wiki/Baritone,CC BY-SA 4.0,en,2026-11-02T10:41:51+00:00,7551,revid=1373842002; category=voice_ear
+en-bass_guitar,Bass guitar,https://en.wikipedia.org/wiki/Bass_guitar,CC BY-SA 4.0,en,2026-11-02T09:59:30+00:00,3015,revid=1380610023; category=guitar
+en-bass_voice_type,Bass (voice type),https://en.wikipedia.org/wiki/Bass_(voice_type),CC BY-SA 4.0,en,2026-11-02T10:41:56+00:00,1693,revid=1381947939; category=voice_ear
+en-bassline,Bassline,https://en.wikipedia.org/wiki/Bassline,CC BY-SA 4.0,en,2026-11-02T09:54:59+00:00,4065,revid=1378433533; category=melody_form
+en-beat_music,Beat (music),https://en.wikipedia.org/wiki/Beat_(music),CC BY-SA 4.0,en,2026-11-02T09:42:07+00:00,2737,revid=1356459319; category=rhythm
+en-bel_canto,Bel canto,https://en.wikipedia.org/wiki/Bel_canto,CC BY-SA 4.0,en,2026-11-02T10:42:18+00:00,5527,revid=1383230255; category=voice_ear
+en-belting_music,Belting (music),https://en.wikipedia.org/wiki/Belting_(music),CC BY-SA 4.0,en,2026-11-02T10:42:15+00:00,1294,revid=1361826620; category=voice_ear
+en-blue_note,Blue note,https://en.wikipedia.org/wiki/Blue_note,CC BY-SA 4.0,en,2026-11-02T09:39:52+00:00,1444,revid=1336407953; category=harmony
+en-blues_scale,Blues scale,https://en.wikipedia.org/wiki/Blues_scale,CC BY-SA 4.0,en,2026-11-02T08:56:41+00:00,1178,revid=1337619455; category=scales_modes
+en-borrowed_chord,Borrowed chord,https://en.wikipedia.org/wiki/Borrowed_chord,CC BY-SA 4.0,en,2026-11-02T09:30:50+00:00,809,revid=1375863275; category=harmony
+en-bridge_instrument,Bridge (instrument),https://en.wikipedia.org/wiki/Bridge_(instrument),CC BY-SA 4.0,en,2026-11-02T10:22:24+00:00,3100,revid=1348268856; category=guitar
+en-cadence,Cadence,https://en.wikipedia.org/wiki/Cadence,CC BY-SA 4.0,en,2026-11-02T09:23:17+00:00,5510,revid=1373604555; category=harmony
+en-capo,Capo,https://en.wikipedia.org/wiki/Capo,CC BY-SA 4.0,en,2026-11-02T10:02:32+00:00,567,revid=1372850366; category=guitar
+en-chest_voice,Chest voice,https://en.wikipedia.org/wiki/Chest_voice,CC BY-SA 4.0,en,2026-11-02T10:42:00+00:00,1538,revid=1263802632; category=voice_ear
+en-choir,Choir,https://en.wikipedia.org/wiki/Choir,CC BY-SA 4.0,en,2026-11-02T10:42:39+00:00,7163,revid=1379063750; category=voice_ear
+en-chord_chart,Chord chart,https://en.wikipedia.org/wiki/Chord_chart,CC BY-SA 4.0,en,2026-11-02T08:53:39+00:00,2177,revid=1379596411; category=fundamentals
+en-chord_music,Chord (music),https://en.wikipedia.org/wiki/Chord_(music),CC BY-SA 4.0,en,2026-11-02T09:10:59+00:00,2182,revid=1379071667; category=chords
+en-chord_notation,Chord notation,https://en.wikipedia.org/wiki/Chord_notation,CC BY-SA 4.0,en,2026-11-02T09:20:13+00:00,5398,revid=1380008185; category=chords
+en-chord_progression,Chord progression,https://en.wikipedia.org/wiki/Chord_progression,CC BY-SA 4.0,en,2026-11-02T09:22:31+00:00,3779,revid=1380576275; category=harmony
+en-chord_scale_system,Chord-scale system,https://en.wikipedia.org/wiki/Chord-scale_system,CC BY-SA 4.0,en,2026-11-02T09:40:36+00:00,1277,revid=1378562257; category=harmony
+en-chorus_audio_effect,Chorus (audio effect),https://en.wikipedia.org/wiki/Chorus_(audio_effect),CC BY-SA 4.0,en,2026-11-02T10:25:37+00:00,2074,revid=1376334499; category=guitar
+en-chromatic_scale,Chromatic scale,https://en.wikipedia.org/wiki/Chromatic_scale,CC BY-SA 4.0,en,2026-11-02T08:55:12+00:00,1650,revid=1362634296; category=scales_modes
+en-circle_of_fifths,Circle of fifths,https://en.wikipedia.org/wiki/Circle_of_fifths,CC BY-SA 4.0,en,2026-11-02T09:06:28+00:00,5303,revid=1380867389; category=scales_modes
+en-classical_guitar,Classical guitar,https://en.wikipedia.org/wiki/Classical_guitar,CC BY-SA 4.0,en,2026-11-02T09:57:15+00:00,11084,revid=1378304948; category=guitar
+en-clef,Clef,https://en.wikipedia.org/wiki/Clef,CC BY-SA 4.0,en,2026-11-02T08:47:36+00:00,5369,revid=1377518537; category=fundamentals
+en-close_and_open_harmony,Close and open harmony,https://en.wikipedia.org/wiki/Close_and_open_harmony,CC BY-SA 4.0,en,2026-11-02T10:42:41+00:00,1107,revid=1382457613; category=voice_ear
+en-consonance_and_dissonance,Consonance and dissonance,https://en.wikipedia.org/wiki/Consonance_and_dissonance,CC BY-SA 4.0,en,2026-11-02T09:27:47+00:00,8764,revid=1378504564; category=harmony
+en-contralto,Contralto,https://en.wikipedia.org/wiki/Contralto,CC BY-SA 4.0,en,2026-11-02T10:33:08+00:00,1119,revid=1380724318; category=voice_ear
+en-counterpoint,Counterpoint,https://en.wikipedia.org/wiki/Counterpoint,CC BY-SA 4.0,en,2026-11-02T09:27:49+00:00,5673,revid=1379208231; category=harmony
+en-countertenor,Countertenor,https://en.wikipedia.org/wiki/Countertenor,CC BY-SA 4.0,en,2026-11-02T10:33:53+00:00,3391,revid=1371528119; category=voice_ear
+en-degree_music,Degree (music),https://en.wikipedia.org/wiki/Degree_(music),CC BY-SA 4.0,en,2026-11-02T09:05:43+00:00,529,revid=1365968866; category=scales_modes
+en-delay_audio_effect,Delay (audio effect),https://en.wikipedia.org/wiki/Delay_(audio_effect),CC BY-SA 4.0,en,2026-11-02T10:24:07+00:00,4181,revid=1381069044; category=guitar
+en-diatonic_scale,Diatonic scale,https://en.wikipedia.org/wiki/Diatonic_scale,CC BY-SA 4.0,en,2026-11-02T08:58:13+00:00,3834,revid=1351259754; category=scales_modes
+en-diminished_seventh_chord,Diminished seventh chord,https://en.wikipedia.org/wiki/Diminished_seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:17:51+00:00,3576,revid=1360490492; category=chords
+en-diminished_triad,Diminished triad,https://en.wikipedia.org/wiki/Diminished_triad,CC BY-SA 4.0,en,2026-11-02T09:14:00+00:00,1042,revid=1371840312; category=chords
+en-distortion_music,Distortion (music),https://en.wikipedia.org/wiki/Distortion_(music),CC BY-SA 4.0,en,2026-11-02T10:11:41+00:00,7484,revid=1381684285; category=guitar
+en-dominant_music,Dominant (music),https://en.wikipedia.org/wiki/Dominant_(music),CC BY-SA 4.0,en,2026-11-02T09:24:01+00:00,1139,revid=1327424670; category=harmony
+en-dominant_seventh_chord,Dominant seventh chord,https://en.wikipedia.org/wiki/Dominant_seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:16:16+00:00,2318,revid=1382465060; category=chords
+en-dorian_mode,Dorian mode,https://en.wikipedia.org/wiki/Dorian_mode,CC BY-SA 4.0,en,2026-11-02T09:00:28+00:00,1750,revid=1373046955; category=scales_modes
+en-dotted_note,Dotted note,https://en.wikipedia.org/wiki/Dotted_note,CC BY-SA 4.0,en,2026-11-02T09:45:56+00:00,1174,revid=1377234150; category=rhythm
+en-drop_d_tuning,Drop D tuning,https://en.wikipedia.org/wiki/Drop_D_tuning,CC BY-SA 4.0,en,2026-11-02T10:03:20+00:00,1573,revid=1328837162; category=guitar
+en-dynamics_music,Dynamics (music),https://en.wikipedia.org/wiki/Dynamics_(music),CC BY-SA 4.0,en,2026-11-02T08:51:23+00:00,3322,revid=1380057565; category=fundamentals
+en-ear_training,Ear training,https://en.wikipedia.org/wiki/Ear_training,CC BY-SA 4.0,en,2026-11-02T10:42:46+00:00,2676,revid=1380029218; category=voice_ear
+en-economy_picking,Economy picking,https://en.wikipedia.org/wiki/Economy_picking,CC BY-SA 4.0,en,2026-11-02T10:18:36+00:00,962,revid=1354902421; category=guitar
+en-effects_unit,Effects unit,https://en.wikipedia.org/wiki/Effects_unit,CC BY-SA 4.0,en,2026-11-02T10:12:27+00:00,10026,revid=1383206149; category=guitar
+en-electric_guitar,Electric guitar,https://en.wikipedia.org/wiki/Electric_guitar,CC BY-SA 4.0,en,2026-11-02T09:58:45+00:00,7185,revid=1382606549; category=guitar
+en-electronic_tuner,Electronic tuner,https://en.wikipedia.org/wiki/Electronic_tuner,CC BY-SA 4.0,en,2026-11-02T10:27:07+00:00,6118,revid=1376805919; category=guitar
+en-enharmonic_equivalence,Enharmonic equivalence,https://en.wikipedia.org/wiki/Enharmonic_equivalence,CC BY-SA 4.0,en,2026-11-02T08:46:07+00:00,3054,revid=1368459752; category=fundamentals
+en-equal_temperament,Equal temperament,https://en.wikipedia.org/wiki/Equal_temperament,CC BY-SA 4.0,en,2026-11-02T09:35:22+00:00,3058,revid=1382023659; category=harmony
+en-falsetto,Falsetto,https://en.wikipedia.org/wiki/Falsetto,CC BY-SA 4.0,en,2026-11-02T10:42:04+00:00,3151,revid=1383235824; category=voice_ear
+en-figured_bass,Figured bass,https://en.wikipedia.org/wiki/Figured_bass,CC BY-SA 4.0,en,2026-11-02T09:27:02+00:00,2811,revid=1373277805; category=harmony
+en-fingerboard,Fingerboard,https://en.wikipedia.org/wiki/Fingerboard,CC BY-SA 4.0,en,2026-11-02T10:01:01+00:00,3538,revid=1381400447; category=guitar
+en-fingerstyle_guitar,Fingerstyle guitar,https://en.wikipedia.org/wiki/Fingerstyle_guitar,CC BY-SA 4.0,en,2026-11-02T10:04:52+00:00,8464,revid=1381826065; category=guitar
+en-flamenco_guitar,Flamenco guitar,https://en.wikipedia.org/wiki/Flamenco_guitar,CC BY-SA 4.0,en,2026-11-02T10:13:13+00:00,2738,revid=1382112100; category=guitar
+en-fret,Fret,https://en.wikipedia.org/wiki/Fret,CC BY-SA 4.0,en,2026-11-02T10:01:47+00:00,2214,revid=1351407673; category=guitar
+en-guitar,Guitar,https://en.wikipedia.org/wiki/Guitar,CC BY-SA 4.0,en,2026-11-02T09:56:30+00:00,15489,revid=1383233458; category=guitar
+en-guitar_amplifier,Guitar amplifier,https://en.wikipedia.org/wiki/Guitar_amplifier,CC BY-SA 4.0,en,2026-11-02T10:10:56+00:00,8128,revid=1379532586; category=guitar
+en-guitar_chord,Guitar chord,https://en.wikipedia.org/wiki/Guitar_chord,CC BY-SA 4.0,en,2026-11-02T10:04:05+00:00,9064,revid=1379620565; category=guitar
+en-guitar_pick,Guitar pick,https://en.wikipedia.org/wiki/Guitar_pick,CC BY-SA 4.0,en,2026-11-02T10:06:22+00:00,3109,revid=1368288578; category=guitar
+en-guitar_solo,Guitar solo,https://en.wikipedia.org/wiki/Guitar_solo,CC BY-SA 4.0,en,2026-11-02T10:13:59+00:00,4202,revid=1378425528; category=guitar
+en-guitar_tunings,Guitar tunings,https://en.wikipedia.org/wiki/Guitar_tunings,CC BY-SA 4.0,en,2026-11-02T10:03:17+00:00,6653,revid=1379620601; category=guitar
+en-half_diminished_seventh_chord,Half-diminished seventh chord,https://en.wikipedia.org/wiki/Half-diminished_seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:17:04+00:00,2788,revid=1380015869; category=chords
+en-hammer_on,Hammer-on,https://en.wikipedia.org/wiki/Hammer-on,CC BY-SA 4.0,en,2026-11-02T10:07:54+00:00,547,revid=1291231523; category=guitar
+en-harmonic_series_music,Harmonic series (music),https://en.wikipedia.org/wiki/Harmonic_series_(music),CC BY-SA 4.0,en,2026-11-02T09:34:37+00:00,3753,revid=1378043274; category=harmony
+en-harmony,Harmony,https://en.wikipedia.org/wiki/Harmony,CC BY-SA 4.0,en,2026-11-02T09:21:45+00:00,6462,revid=1382513704; category=harmony
+en-head_voice,Head voice,https://en.wikipedia.org/wiki/Head_voice,CC BY-SA 4.0,en,2026-11-02T10:42:03+00:00,2112,revid=1370977243; category=voice_ear
+en-hemiola,Hemiola,https://en.wikipedia.org/wiki/Hemiola,CC BY-SA 4.0,en,2026-11-02T09:48:13+00:00,2216,revid=1353698661; category=rhythm
+en-homophony,Homophony,https://en.wikipedia.org/wiki/Homophony,CC BY-SA 4.0,en,2026-11-02T09:51:57+00:00,1501,revid=1380366241; category=melody_form
+en-human_voice,Human voice,https://en.wikipedia.org/wiki/Human_voice,CC BY-SA 4.0,en,2026-11-02T10:28:37+00:00,3369,revid=1374378037; category=voice_ear
+en-hybrid_picking,Hybrid picking,https://en.wikipedia.org/wiki/Hybrid_picking,CC BY-SA 4.0,en,2026-11-02T10:20:07+00:00,1331,revid=1376727328; category=guitar
+en-i_v_vi_iv_progression,I–V–vi–IV progression,https://en.wikipedia.org/wiki/I%E2%80%93V%E2%80%93vi%E2%80%93IV_progression,CC BY-SA 4.0,en,2026-11-02T09:33:07+00:00,1754,revid=1375797393; category=harmony
+en-ii_v_i_progression,Ii–V–I progression,https://en.wikipedia.org/wiki/Ii%E2%80%93V%E2%80%93I_progression,CC BY-SA 4.0,en,2026-11-02T09:33:06+00:00,1265,revid=1366373673; category=harmony
+en-interval_music,Interval (music),https://en.wikipedia.org/wiki/Interval_(music),CC BY-SA 4.0,en,2026-11-02T08:43:51+00:00,11304,revid=1379838502; category=fundamentals
+en-intonation_music,Intonation (music),https://en.wikipedia.org/wiki/Intonation_(music),CC BY-SA 4.0,en,2026-11-02T10:42:43+00:00,2434,revid=1380370624; category=voice_ear
+en-inversion_music,Inversion (music),https://en.wikipedia.org/wiki/Inversion_(music),CC BY-SA 4.0,en,2026-11-02T09:19:28+00:00,3727,revid=1380574154; category=chords
+en-ionian_mode,Ionian mode,https://en.wikipedia.org/wiki/Ionian_mode,CC BY-SA 4.0,en,2026-11-02T08:59:43+00:00,604,revid=1372900115; category=scales_modes
+en-jazz_guitar,Jazz guitar,https://en.wikipedia.org/wiki/Jazz_guitar,CC BY-SA 4.0,en,2026-11-02T10:16:13+00:00,5643,revid=1380370774; category=guitar
+en-jazz_harmony,Jazz harmony,https://en.wikipedia.org/wiki/Jazz_harmony,CC BY-SA 4.0,en,2026-11-02T09:39:07+00:00,2211,revid=1353904118; category=harmony
+en-just_intonation,Just intonation,https://en.wikipedia.org/wiki/Just_intonation,CC BY-SA 4.0,en,2026-11-02T09:36:52+00:00,2220,revid=1380937476; category=harmony
+en-key_music,Key (music),https://en.wikipedia.org/wiki/Key_(music),CC BY-SA 4.0,en,2026-11-02T09:07:13+00:00,2934,revid=1347661523; category=scales_modes
+en-key_signature,Key signature,https://en.wikipedia.org/wiki/Key_signature,CC BY-SA 4.0,en,2026-11-02T08:49:51+00:00,4470,revid=1370278230; category=fundamentals
+en-lead_guitar,Lead guitar,https://en.wikipedia.org/wiki/Lead_guitar,CC BY-SA 4.0,en,2026-11-02T10:14:44+00:00,2567,revid=1377899994; category=guitar
+en-locrian_mode,Locrian mode,https://en.wikipedia.org/wiki/Locrian_mode,CC BY-SA 4.0,en,2026-11-02T09:04:12+00:00,1612,revid=1380208295; category=scales_modes
+en-luthier,Luthier,https://en.wikipedia.org/wiki/Luthier,CC BY-SA 4.0,en,2026-11-02T10:26:22+00:00,2083,revid=1379781362; category=guitar
+en-lydian_mode,Lydian mode,https://en.wikipedia.org/wiki/Lydian_mode,CC BY-SA 4.0,en,2026-11-02T09:01:57+00:00,1376,revid=1368569702; category=scales_modes
+en-major_chord,Major chord,https://en.wikipedia.org/wiki/Major_chord,CC BY-SA 4.0,en,2026-11-02T09:12:30+00:00,321,revid=1363414349; category=chords
+en-major_scale,Major scale,https://en.wikipedia.org/wiki/Major_scale,CC BY-SA 4.0,en,2026-11-02T08:55:09+00:00,2366,revid=1381796180; category=scales_modes
+en-major_seventh_chord,Major seventh chord,https://en.wikipedia.org/wiki/Major_seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:17:01+00:00,877,revid=1323056339; category=chords
+en-melisma,Melisma,https://en.wikipedia.org/wiki/Melisma,CC BY-SA 4.0,en,2026-11-02T10:42:24+00:00,910,revid=1378743266; category=voice_ear
+en-melody,Melody,https://en.wikipedia.org/wiki/Melody,CC BY-SA 4.0,en,2026-11-02T09:48:57+00:00,1509,revid=1376291662; category=melody_form
+en-metre_music,Metre (music),https://en.wikipedia.org/wiki/Metre_(music),CC BY-SA 4.0,en,2026-11-02T09:42:52+00:00,4777,revid=1374261192; category=rhythm
+en-mezzo_soprano,Mezzo-soprano,https://en.wikipedia.org/wiki/Mezzo-soprano,CC BY-SA 4.0,en,2026-11-02T10:32:23+00:00,1624,revid=1381300345; category=voice_ear
+en-minor_chord,Minor chord,https://en.wikipedia.org/wiki/Minor_chord,CC BY-SA 4.0,en,2026-11-02T09:13:15+00:00,454,revid=1378502621; category=chords
+en-minor_scale,Minor scale,https://en.wikipedia.org/wiki/Minor_scale,CC BY-SA 4.0,en,2026-11-02T08:55:10+00:00,1351,revid=1382414833; category=scales_modes
+en-minor_seventh_chord,Minor seventh chord,https://en.wikipedia.org/wiki/Minor_seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:17:02+00:00,764,revid=1335546050; category=chords
+en-mixolydian_mode,Mixolydian mode,https://en.wikipedia.org/wiki/Mixolydian_mode,CC BY-SA 4.0,en,2026-11-02T09:02:42+00:00,1983,revid=1368570826; category=scales_modes
+en-mode_music,Mode (music),https://en.wikipedia.org/wiki/Mode_(music),CC BY-SA 4.0,en,2026-11-02T08:58:58+00:00,8782,revid=1380173178; category=scales_modes
+en-modulation_music,Modulation (music),https://en.wikipedia.org/wiki/Modulation_(music),CC BY-SA 4.0,en,2026-11-02T09:09:29+00:00,4218,revid=1370995195; category=scales_modes
+en-motif_music,Motif (music),https://en.wikipedia.org/wiki/Motif_(music),CC BY-SA 4.0,en,2026-11-02T09:49:42+00:00,964,revid=1373591933; category=melody_form
+en-musical_form,Musical form,https://en.wikipedia.org/wiki/Musical_form,CC BY-SA 4.0,en,2026-11-02T09:50:27+00:00,4085,revid=1369008917; category=melody_form
+en-musical_notation,Musical notation,https://en.wikipedia.org/wiki/Musical_notation,CC BY-SA 4.0,en,2026-11-02T08:49:06+00:00,10687,revid=1382833669; category=fundamentals
+en-musical_note,Musical note,https://en.wikipedia.org/wiki/Musical_note,CC BY-SA 4.0,en,2026-11-02T08:42:20+00:00,5485,revid=1379278796; category=fundamentals
+en-neapolitan_chord,Neapolitan chord,https://en.wikipedia.org/wiki/Neapolitan_chord,CC BY-SA 4.0,en,2026-11-02T09:29:20+00:00,3473,revid=1382171952; category=harmony
+en-ninth_chord,Ninth chord,https://en.wikipedia.org/wiki/Ninth_chord,CC BY-SA 4.0,en,2026-11-02T09:17:52+00:00,1730,revid=1365949358; category=chords
+en-nonchord_tone,Nonchord tone,https://en.wikipedia.org/wiki/Nonchord_tone,CC BY-SA 4.0,en,2026-11-02T09:32:20+00:00,2431,revid=1276383433; category=harmony
+en-note_value,Note value,https://en.wikipedia.org/wiki/Note_value,CC BY-SA 4.0,en,2026-11-02T09:43:39+00:00,1236,revid=1378323707; category=rhythm
+en-nut_string_instrument,Nut (string instrument),https://en.wikipedia.org/wiki/Nut_(string_instrument),CC BY-SA 4.0,en,2026-11-02T10:21:39+00:00,1484,revid=1382284363; category=guitar
+en-octatonic_scale,Octatonic scale,https://en.wikipedia.org/wiki/Octatonic_scale,CC BY-SA 4.0,en,2026-11-02T08:58:11+00:00,5569,revid=1381399583; category=scales_modes
+en-octave,Octave,https://en.wikipedia.org/wiki/Octave,CC BY-SA 4.0,en,2026-11-02T08:44:36+00:00,2298,revid=1373324804; category=fundamentals
+en-ornament_music,Ornament (music),https://en.wikipedia.org/wiki/Ornament_(music),CC BY-SA 4.0,en,2026-11-02T09:53:29+00:00,4815,revid=1374426096; category=melody_form
+en-ostinato,Ostinato,https://en.wikipedia.org/wiki/Ostinato,CC BY-SA 4.0,en,2026-11-02T09:51:59+00:00,6185,revid=1374925857; category=melody_form
+en-overtone_singing,Overtone singing,https://en.wikipedia.org/wiki/Overtone_singing,CC BY-SA 4.0,en,2026-11-02T10:42:33+00:00,3800,revid=1376489220; category=voice_ear
+en-palm_mute,Palm mute,https://en.wikipedia.org/wiki/Palm_mute,CC BY-SA 4.0,en,2026-11-02T10:09:24+00:00,1420,revid=1380815462; category=guitar
+en-parallel_key,Parallel key,https://en.wikipedia.org/wiki/Parallel_key,CC BY-SA 4.0,en,2026-11-02T09:08:43+00:00,298,revid=1336207576; category=scales_modes
+en-passaggio,Passaggio,https://en.wikipedia.org/wiki/Passaggio,CC BY-SA 4.0,en,2026-11-02T10:42:12+00:00,3253,revid=1382416051; category=voice_ear
+en-pedal_point,Pedal point,https://en.wikipedia.org/wiki/Pedal_point,CC BY-SA 4.0,en,2026-11-02T09:31:35+00:00,2942,revid=1377316546; category=harmony
+en-pentatonic_scale,Pentatonic scale,https://en.wikipedia.org/wiki/Pentatonic_scale,CC BY-SA 4.0,en,2026-11-02T08:55:57+00:00,3893,revid=1380412499; category=scales_modes
+en-phrygian_dominant_scale,Phrygian dominant scale,https://en.wikipedia.org/wiki/Phrygian_dominant_scale,CC BY-SA 4.0,en,2026-11-02T09:04:56+00:00,838,revid=1358739820; category=scales_modes
+en-phrygian_mode,Phrygian mode,https://en.wikipedia.org/wiki/Phrygian_mode,CC BY-SA 4.0,en,2026-11-02T09:01:13+00:00,2527,revid=1378230465; category=scales_modes
+en-pickup_music_technology,Pickup (music technology),https://en.wikipedia.org/wiki/Pickup_(music_technology),CC BY-SA 4.0,en,2026-11-02T10:12:28+00:00,4629,revid=1380930785; category=guitar
+en-pitch_music,Pitch (music),https://en.wikipedia.org/wiki/Pitch_(music),CC BY-SA 4.0,en,2026-11-02T08:43:05+00:00,4137,revid=1381280769; category=fundamentals
+en-polyphony,Polyphony,https://en.wikipedia.org/wiki/Polyphony,CC BY-SA 4.0,en,2026-11-02T09:51:12+00:00,3508,revid=1372203611; category=melody_form
+en-polyrhythm,Polyrhythm,https://en.wikipedia.org/wiki/Polyrhythm,CC BY-SA 4.0,en,2026-11-02T09:45:10+00:00,5952,revid=1382557568; category=rhythm
+en-power_chord,Power chord,https://en.wikipedia.org/wiki/Power_chord,CC BY-SA 4.0,en,2026-11-02T09:18:43+00:00,2787,revid=1374392214; category=chords
+en-pull_off,Pull-off,https://en.wikipedia.org/wiki/Pull-off,CC BY-SA 4.0,en,2026-11-02T10:08:39+00:00,1184,revid=1379885127; category=guitar
+en-pythagorean_tuning,Pythagorean tuning,https://en.wikipedia.org/wiki/Pythagorean_tuning,CC BY-SA 4.0,en,2026-11-02T09:36:07+00:00,3709,revid=1369976598; category=harmony
+en-rasgueado,Rasgueado,https://en.wikipedia.org/wiki/Rasgueado,CC BY-SA 4.0,en,2026-11-02T10:20:09+00:00,698,revid=1368398108; category=guitar
+en-relative_key,Relative key,https://en.wikipedia.org/wiki/Relative_key,CC BY-SA 4.0,en,2026-11-02T09:07:58+00:00,712,revid=1358817037; category=scales_modes
+en-relative_pitch,Relative pitch,https://en.wikipedia.org/wiki/Relative_pitch,CC BY-SA 4.0,en,2026-11-02T10:42:51+00:00,748,revid=1380472465; category=voice_ear
+en-resonator_guitar,Resonator guitar,https://en.wikipedia.org/wiki/Resonator_guitar,CC BY-SA 4.0,en,2026-11-02T10:17:49+00:00,4201,revid=1331053109; category=guitar
+en-rest_music,Rest (music),https://en.wikipedia.org/wiki/Rest_(music),CC BY-SA 4.0,en,2026-11-02T09:46:41+00:00,1251,revid=1362829609; category=rhythm
+en-reverb_effect,Reverb effect,https://en.wikipedia.org/wiki/Reverb_effect,CC BY-SA 4.0,en,2026-11-02T10:24:52+00:00,1076,revid=1380060734; category=guitar
+en-rhythm,Rhythm,https://en.wikipedia.org/wiki/Rhythm,CC BY-SA 4.0,en,2026-11-02T09:41:22+00:00,5855,revid=1380716779; category=rhythm
+en-rhythm_guitar,Rhythm guitar,https://en.wikipedia.org/wiki/Rhythm_guitar,CC BY-SA 4.0,en,2026-11-02T10:15:28+00:00,3944,revid=1380029220; category=guitar
+en-riff,Riff,https://en.wikipedia.org/wiki/Riff,CC BY-SA 4.0,en,2026-11-02T09:55:44+00:00,1359,revid=1367707991; category=melody_form
+en-roman_numeral_analysis,Roman numeral analysis,https://en.wikipedia.org/wiki/Roman_numeral_analysis,CC BY-SA 4.0,en,2026-11-02T09:27:01+00:00,1995,revid=1360934832; category=harmony
+en-scale_length_string_instruments,Scale length (string instruments),https://en.wikipedia.org/wiki/Scale_length_(string_instruments),CC BY-SA 4.0,en,2026-11-02T10:20:54+00:00,2485,revid=1344774806; category=guitar
+en-scale_music,Scale (music),https://en.wikipedia.org/wiki/Scale_(music),CC BY-SA 4.0,en,2026-11-02T08:54:24+00:00,4210,revid=1365850453; category=scales_modes
+en-scat_singing,Scat singing,https://en.wikipedia.org/wiki/Scat_singing,CC BY-SA 4.0,en,2026-11-02T10:42:27+00:00,3749,revid=1368890950; category=voice_ear
+en-scientific_pitch_notation,Scientific pitch notation,https://en.wikipedia.org/wiki/Scientific_pitch_notation,CC BY-SA 4.0,en,2026-11-02T08:52:53+00:00,1964,revid=1355585069; category=fundamentals
+en-secondary_chord,Secondary chord,https://en.wikipedia.org/wiki/Secondary_chord,CC BY-SA 4.0,en,2026-11-02T09:25:31+00:00,2968,revid=1365949376; category=harmony
+en-semitone,Semitone,https://en.wikipedia.org/wiki/Semitone,CC BY-SA 4.0,en,2026-11-02T08:45:21+00:00,6850,revid=1380088535; category=fundamentals
+en-seven_string_guitar,Seven-string guitar,https://en.wikipedia.org/wiki/Seven-string_guitar,CC BY-SA 4.0,en,2026-11-02T10:17:46+00:00,4371,revid=1373650128; category=guitar
+en-seventh_chord,Seventh chord,https://en.wikipedia.org/wiki/Seventh_chord,CC BY-SA 4.0,en,2026-11-02T09:15:31+00:00,2218,revid=1350406648; category=chords
+en-sight_reading,Sight-reading,https://en.wikipedia.org/wiki/Sight-reading,CC BY-SA 4.0,en,2026-11-02T10:42:55+00:00,4167,revid=1371524263; category=voice_ear
+en-singing,Singing,https://en.wikipedia.org/wiki/Singing,CC BY-SA 4.0,en,2026-11-02T10:27:52+00:00,10581,revid=1382133963; category=voice_ear
+en-sixth_chord,Sixth chord,https://en.wikipedia.org/wiki/Sixth_chord,CC BY-SA 4.0,en,2026-11-02T09:17:57+00:00,1796,revid=1378930185; category=chords
+en-slash_chord,Slash chord,https://en.wikipedia.org/wiki/Slash_chord,CC BY-SA 4.0,en,2026-11-02T09:20:58+00:00,896,revid=1330689928; category=chords
+en-slide_guitar,Slide guitar,https://en.wikipedia.org/wiki/Slide_guitar,CC BY-SA 4.0,en,2026-11-02T10:07:09+00:00,7245,revid=1351514561; category=guitar
+en-solfège,Solfège,https://en.wikipedia.org/wiki/Solf%C3%A8ge,CC BY-SA 4.0,en,2026-11-02T08:52:08+00:00,3272,revid=1382709064; category=fundamentals
+en-soprano,Soprano,https://en.wikipedia.org/wiki/Soprano,CC BY-SA 4.0,en,2026-11-02T10:31:38+00:00,2111,revid=1382983400; category=voice_ear
+en-staff_music,Staff (music),https://en.wikipedia.org/wiki/Staff_(music),CC BY-SA 4.0,en,2026-11-02T08:48:21+00:00,1855,revid=1383137631; category=fundamentals
+en-standard_tuning,Standard tuning,https://en.wikipedia.org/wiki/Standard_tuning,CC BY-SA 4.0,en,2026-11-02T10:03:19+00:00,1010,revid=1327934795; category=guitar
+en-steel_string_acoustic_guitar,Steel-string acoustic guitar,https://en.wikipedia.org/wiki/Steel-string_acoustic_guitar,CC BY-SA 4.0,en,2026-11-02T10:16:59+00:00,3807,revid=1379443005; category=guitar
+en-string_bending,String bending,https://en.wikipedia.org/wiki/String_bending,CC BY-SA 4.0,en,2026-11-02T10:07:08+00:00,1077,revid=1340626148; category=guitar
+en-string_harmonic,String harmonic,https://en.wikipedia.org/wiki/String_harmonic,CC BY-SA 4.0,en,2026-11-02T10:10:54+00:00,1915,revid=1381888278; category=guitar
+en-strum,Strum,https://en.wikipedia.org/wiki/Strum,CC BY-SA 4.0,en,2026-11-02T10:05:37+00:00,1000,revid=1380815524; category=guitar
+en-subdominant,Subdominant,https://en.wikipedia.org/wiki/Subdominant,CC BY-SA 4.0,en,2026-11-02T09:24:46+00:00,514,revid=1365324035; category=harmony
+en-suspended_chord,Suspended chord,https://en.wikipedia.org/wiki/Suspended_chord,CC BY-SA 4.0,en,2026-11-02T09:17:58+00:00,971,revid=1378911585; category=chords
+en-sweep_picking,Sweep picking,https://en.wikipedia.org/wiki/Sweep_picking,CC BY-SA 4.0,en,2026-11-02T10:19:21+00:00,740,revid=1287098579; category=guitar
+en-swing_time,Swing time,https://en.wikipedia.org/wiki/Swing_time,CC BY-SA 4.0,en,2026-11-02T09:45:08+00:00,3167,revid=1368051468; category=rhythm
+en-syncopation,Syncopation,https://en.wikipedia.org/wiki/Syncopation,CC BY-SA 4.0,en,2026-11-02T09:44:23+00:00,2420,revid=1375427674; category=rhythm
+en-tablature,Tablature,https://en.wikipedia.org/wiki/Tablature,CC BY-SA 4.0,en,2026-11-02T08:52:54+00:00,3250,revid=1383137515; category=fundamentals
+en-tapping,Tapping,https://en.wikipedia.org/wiki/Tapping,CC BY-SA 4.0,en,2026-11-02T10:10:09+00:00,2686,revid=1368363407; category=guitar
+en-tempo,Tempo,https://en.wikipedia.org/wiki/Tempo,CC BY-SA 4.0,en,2026-11-02T08:50:38+00:00,6164,revid=1378417747; category=fundamentals
+en-tendency_tone,Tendency tone,https://en.wikipedia.org/wiki/Tendency_tone,CC BY-SA 4.0,en,2026-11-02T09:38:22+00:00,2721,revid=1381573279; category=harmony
+en-tenor,Tenor,https://en.wikipedia.org/wiki/Tenor,CC BY-SA 4.0,en,2026-11-02T10:41:48+00:00,2638,revid=1374536385; category=voice_ear
+en-tessitura,Tessitura,https://en.wikipedia.org/wiki/Tessitura,CC BY-SA 4.0,en,2026-11-02T10:30:54+00:00,798,revid=1310341320; category=voice_ear
+en-time_signature,Time signature,https://en.wikipedia.org/wiki/Time_signature,CC BY-SA 4.0,en,2026-11-02T08:50:36+00:00,6020,revid=1379400059; category=fundamentals
+en-tonality,Tonality,https://en.wikipedia.org/wiki/Tonality,CC BY-SA 4.0,en,2026-11-02T09:08:44+00:00,6555,revid=1374858582; category=scales_modes
+en-tonic_music,Tonic (music),https://en.wikipedia.org/wiki/Tonic_(music),CC BY-SA 4.0,en,2026-11-02T09:04:58+00:00,1013,revid=1363933868; category=scales_modes
+en-transposition_music,Transposition (music),https://en.wikipedia.org/wiki/Transposition_(music),CC BY-SA 4.0,en,2026-11-02T09:10:15+00:00,2236,revid=1382087599; category=scales_modes
+en-triad_music,Triad (music),https://en.wikipedia.org/wiki/Triad_(music),CC BY-SA 4.0,en,2026-11-02T09:11:45+00:00,1466,revid=1380268146; category=chords
+en-trill_music,Trill (music),https://en.wikipedia.org/wiki/Trill_(music),CC BY-SA 4.0,en,2026-11-02T09:54:14+00:00,2564,revid=1381432373; category=melody_form
+en-tritone,Tritone,https://en.wikipedia.org/wiki/Tritone,CC BY-SA 4.0,en,2026-11-02T09:37:37+00:00,4978,revid=1375041687; category=harmony
+en-tritone_substitution,Tritone substitution,https://en.wikipedia.org/wiki/Tritone_substitution,CC BY-SA 4.0,en,2026-11-02T09:26:16+00:00,2421,revid=1367986136; category=harmony
+en-tuplet,Tuplet,https://en.wikipedia.org/wiki/Tuplet,CC BY-SA 4.0,en,2026-11-02T09:45:55+00:00,2301,revid=1366216750; category=rhythm
+en-twelve_bar_blues,Twelve-bar blues,https://en.wikipedia.org/wiki/Twelve-bar_blues,CC BY-SA 4.0,en,2026-11-02T09:33:52+00:00,1289,revid=1354844877; category=harmony
+en-twelve_string_guitar,Twelve-string guitar,https://en.wikipedia.org/wiki/Twelve-string_guitar,CC BY-SA 4.0,en,2026-11-02T10:00:16+00:00,4029,revid=1378909877; category=guitar
+en-vibrato,Vibrato,https://en.wikipedia.org/wiki/Vibrato,CC BY-SA 4.0,en,2026-11-02T10:06:23+00:00,7359,revid=1344845204; category=guitar
+en-vibrato_systems_for_guitar,Vibrato systems for guitar,https://en.wikipedia.org/wiki/Vibrato_systems_for_guitar,CC BY-SA 4.0,en,2026-11-02T10:23:10+00:00,10484,revid=1379154204; category=guitar
+en-vocal_cords,Vocal cords,https://en.wikipedia.org/wiki/Vocal_cords,CC BY-SA 4.0,en,2026-11-02T10:29:22+00:00,8025,revid=1378026704; category=voice_ear
+en-vocal_fry_register,Vocal fry register,https://en.wikipedia.org/wiki/Vocal_fry_register,CC BY-SA 4.0,en,2026-11-02T10:42:09+00:00,1912,revid=1376731443; category=voice_ear
+en-vocal_pedagogy,Vocal pedagogy,https://en.wikipedia.org/wiki/Vocal_pedagogy,CC BY-SA 4.0,en,2026-11-02T10:42:20+00:00,8163,revid=1333348600; category=voice_ear
+en-vocal_range,Vocal range,https://en.wikipedia.org/wiki/Vocal_range,CC BY-SA 4.0,en,2026-11-02T10:30:07+00:00,2083,revid=1381177937; category=voice_ear
+en-vocal_register,Vocal register,https://en.wikipedia.org/wiki/Vocal_register,CC BY-SA 4.0,en,2026-11-02T10:41:59+00:00,2997,revid=1372466104; category=voice_ear
+en-vocal_warm_up,Vocal warm-up,https://en.wikipedia.org/wiki/Vocal_warm-up,CC BY-SA 4.0,en,2026-11-02T10:42:22+00:00,2039,revid=1349720895; category=voice_ear
+en-voice_leading,Voice leading,https://en.wikipedia.org/wiki/Voice_leading,CC BY-SA 4.0,en,2026-11-02T09:28:35+00:00,1574,revid=1380029211; category=harmony
+en-voice_type,Voice type,https://en.wikipedia.org/wiki/Voice_type,CC BY-SA 4.0,en,2026-11-02T10:30:52+00:00,4423,revid=1371431200; category=voice_ear
+en-wah_wah_pedal,Wah-wah pedal,https://en.wikipedia.org/wiki/Wah-wah_pedal,CC BY-SA 4.0,en,2026-11-02T10:24:06+00:00,3263,revid=1371661178; category=guitar
+en-whistle_register,Whistle register,https://en.wikipedia.org/wiki/Whistle_register,CC BY-SA 4.0,en,2026-11-02T10:42:06+00:00,826,revid=1375570833; category=voice_ear
+en-whole_tone_scale,Whole-tone scale,https://en.wikipedia.org/wiki/Whole-tone_scale,CC BY-SA 4.0,en,2026-11-02T08:57:26+00:00,1963,revid=1362312307; category=scales_modes
+en-yodeling,Yodeling,https://en.wikipedia.org/wiki/Yodeling,CC BY-SA 4.0,en,2026-11-02T10:42:30+00:00,11135,revid=1379557004; category=voice_ear
+fr-a_cappella,A cappella,https://fr.wikipedia.org/wiki/A_cappella,CC BY-SA 4.0,fr,2026-11-02T10:42:37+00:00,1466,revid=240764428; category=voice_ear
+fr-accord_avec_note_ajoutée,Accord avec note ajoutée,https://fr.wikipedia.org/wiki/Accord_avec_note_ajout%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:21:22+00:00,470,revid=161094960; category=chords
+fr-accord_barré,Accord barré,https://fr.wikipedia.org/wiki/Accord_barr%C3%A9,CC BY-SA 4.0,fr,2026-11-02T10:04:29+00:00,497,revid=177040814; category=guitar
+fr-accord_d_emprunt,Accord d'emprunt,https://fr.wikipedia.org/wiki/Accord_d%27emprunt,CC BY-SA 4.0,fr,2026-11-02T09:31:13+00:00,739,revid=223066747; category=harmony
+fr-accord_de_quinte_augmentée,Accord de quinte augmentée,https://fr.wikipedia.org/wiki/Accord_de_quinte_augment%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:15:07+00:00,133,revid=197072111; category=chords
+fr-accord_de_quinte_diminuée,Accord de quinte diminuée,https://fr.wikipedia.org/wiki/Accord_de_quinte_diminu%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:14:22+00:00,199,revid=223843076; category=chords
+fr-accord_de_septième_d_espèce,Accord de septième d'espèce,https://fr.wikipedia.org/wiki/Accord_de_septi%C3%A8me_d%27esp%C3%A8ce,CC BY-SA 4.0,fr,2026-11-02T09:15:54+00:00,1674,revid=238620647; category=chords
+fr-accord_de_septième_de_dominante,Accord de septième de dominante,https://fr.wikipedia.org/wiki/Accord_de_septi%C3%A8me_de_dominante,CC BY-SA 4.0,fr,2026-11-02T09:16:39+00:00,2147,revid=232859270; category=chords
+fr-accord_de_septième_demi_diminuée,Accord de septième demi-diminuée,https://fr.wikipedia.org/wiki/Accord_de_septi%C3%A8me_demi-diminu%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:17:26+00:00,1369,revid=239302129; category=chords
+fr-accord_de_sixte_napolitaine,Accord de sixte napolitaine,https://fr.wikipedia.org/wiki/Accord_de_sixte_napolitaine,CC BY-SA 4.0,fr,2026-11-02T09:29:43+00:00,939,revid=239507515; category=harmony
+fr-accord_de_trois_notes,Accord de trois notes,https://fr.wikipedia.org/wiki/Accord_de_trois_notes,CC BY-SA 4.0,fr,2026-11-02T09:12:07+00:00,1172,revid=236622374; category=chords
+fr-accord_musique,Accord (musique),https://fr.wikipedia.org/wiki/Accord_(musique),CC BY-SA 4.0,fr,2026-11-02T09:11:22+00:00,5380,revid=238851978; category=chords
+fr-accord_parfait_majeur,Accord parfait majeur,https://fr.wikipedia.org/wiki/Accord_parfait_majeur,CC BY-SA 4.0,fr,2026-11-02T09:12:52+00:00,468,revid=236622411; category=chords
+fr-accord_parfait_mineur,Accord parfait mineur,https://fr.wikipedia.org/wiki/Accord_parfait_mineur,CC BY-SA 4.0,fr,2026-11-02T09:13:37+00:00,525,revid=226635043; category=chords
+fr-accord_pythagoricien,Accord pythagoricien,https://fr.wikipedia.org/wiki/Accord_pythagoricien,CC BY-SA 4.0,fr,2026-11-02T09:36:30+00:00,7987,revid=240234726; category=harmony
+fr-accord_suspendu,Accord suspendu,https://fr.wikipedia.org/wiki/Accord_suspendu,CC BY-SA 4.0,fr,2026-11-02T09:18:21+00:00,122,revid=206962295; category=chords
+fr-accordeur_outil,Accordeur (outil),https://fr.wikipedia.org/wiki/Accordeur_(outil),CC BY-SA 4.0,fr,2026-11-02T10:27:30+00:00,564,revid=235897028; category=guitar
+fr-altération_musique,Altération (musique),https://fr.wikipedia.org/wiki/Alt%C3%A9ration_(musique),CC BY-SA 4.0,fr,2026-11-02T08:47:14+00:00,2364,revid=238183347; category=fundamentals
+fr-amplificateur_pour_guitare_électrique,Amplificateur pour guitare électrique,https://fr.wikipedia.org/wiki/Amplificateur_pour_guitare_%C3%A9lectrique,CC BY-SA 4.0,fr,2026-11-02T10:11:18+00:00,8721,revid=224636008; category=guitar
+fr-anacrouse,Anacrouse,https://fr.wikipedia.org/wiki/Anacrouse,CC BY-SA 4.0,fr,2026-11-02T09:47:50+00:00,278,revid=236369970; category=rhythm
+fr-armure_musique,Armure (musique),https://fr.wikipedia.org/wiki/Armure_(musique),CC BY-SA 4.0,fr,2026-11-02T08:50:14+00:00,1644,revid=239829737; category=fundamentals
+fr-arpège,Arpège,https://fr.wikipedia.org/wiki/Arp%C3%A8ge,CC BY-SA 4.0,fr,2026-11-02T09:53:06+00:00,447,revid=226077835; category=melody_form
+fr-audition_intérieure,Audition intérieure,https://fr.wikipedia.org/wiki/Audition_int%C3%A9rieure,CC BY-SA 4.0,fr,2026-11-02T10:42:47+00:00,448,revid=233975822; category=voice_ear
+fr-baryton_voix,Baryton (voix),https://fr.wikipedia.org/wiki/Baryton_(voix),CC BY-SA 4.0,fr,2026-11-02T10:41:53+00:00,1780,revid=238589712; category=voice_ear
+fr-basse_chiffrée,Basse chiffrée,https://fr.wikipedia.org/wiki/Basse_chiffr%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:27:25+00:00,5325,revid=231924452; category=harmony
+fr-basse_voix,Basse (voix),https://fr.wikipedia.org/wiki/Basse_(voix),CC BY-SA 4.0,fr,2026-11-02T10:41:57+00:00,776,revid=239618402; category=voice_ear
+fr-battement_instruments_à_cordes_pincées,Battement (instruments à cordes pincées),https://fr.wikipedia.org/wiki/Battement_(instruments_%C3%A0_cordes_pinc%C3%A9es),CC BY-SA 4.0,fr,2026-11-02T10:05:59+00:00,762,revid=227952907; category=guitar
+fr-bel_canto,Bel canto,https://fr.wikipedia.org/wiki/Bel_canto,CC BY-SA 4.0,fr,2026-11-02T10:42:19+00:00,1321,revid=235218371; category=voice_ear
+fr-belting_musique,Belting (musique),https://fr.wikipedia.org/wiki/Belting_(musique),CC BY-SA 4.0,fr,2026-11-02T10:42:16+00:00,436,revid=236905456; category=voice_ear
+fr-blues_à_12_mesures,Blues à 12 mesures,https://fr.wikipedia.org/wiki/Blues_%C3%A0_12_mesures,CC BY-SA 4.0,fr,2026-11-02T09:34:14+00:00,250,revid=234767017; category=harmony
+fr-cadence_harmonique,Cadence harmonique,https://fr.wikipedia.org/wiki/Cadence_harmonique,CC BY-SA 4.0,fr,2026-11-02T09:23:39+00:00,2410,revid=237751532; category=harmony
+fr-capo,Capo,https://fr.wikipedia.org/wiki/Capo,CC BY-SA 4.0,fr,2026-11-02T10:02:55+00:00,240,revid=233846376; category=guitar
+fr-chant,Chant,https://fr.wikipedia.org/wiki/Chant,CC BY-SA 4.0,fr,2026-11-02T10:28:15+00:00,1364,revid=239484835; category=voice_ear
+fr-chant_diphonique,Chant diphonique,https://fr.wikipedia.org/wiki/Chant_diphonique,CC BY-SA 4.0,fr,2026-11-02T10:42:34+00:00,6753,revid=239398702; category=voice_ear
+fr-chevalet_musique,Chevalet (musique),https://fr.wikipedia.org/wiki/Chevalet_(musique),CC BY-SA 4.0,fr,2026-11-02T10:22:47+00:00,1085,revid=233320955; category=guitar
+fr-chiffrage_des_accords,Chiffrage des accords,https://fr.wikipedia.org/wiki/Chiffrage_des_accords,CC BY-SA 4.0,fr,2026-11-02T09:20:36+00:00,3981,revid=238665137; category=chords
+fr-chorale,Chorale,https://fr.wikipedia.org/wiki/Chorale,CC BY-SA 4.0,fr,2026-11-02T10:42:40+00:00,650,revid=237900620; category=voice_ear
+fr-chorus_effet,Chorus (effet),https://fr.wikipedia.org/wiki/Chorus_(effet),CC BY-SA 4.0,fr,2026-11-02T10:26:00+00:00,3613,revid=235987835; category=guitar
+fr-clef_musique,Clef (musique),https://fr.wikipedia.org/wiki/Clef_(musique),CC BY-SA 4.0,fr,2026-11-02T08:47:59+00:00,2757,revid=239975874; category=fundamentals
+fr-conduite_des_voix,Conduite des voix,https://fr.wikipedia.org/wiki/Conduite_des_voix,CC BY-SA 4.0,fr,2026-11-02T09:28:58+00:00,3108,revid=231712854; category=harmony
+fr-contralto,Contralto,https://fr.wikipedia.org/wiki/Contralto,CC BY-SA 4.0,fr,2026-11-02T10:33:30+00:00,698,revid=240645897; category=voice_ear
+fr-contrepoint_rigoureux,Contrepoint rigoureux,https://fr.wikipedia.org/wiki/Contrepoint_rigoureux,CC BY-SA 4.0,fr,2026-11-02T09:28:11+00:00,2803,revid=239578261; category=harmony
+fr-contreténor,Contreténor,https://fr.wikipedia.org/wiki/Contret%C3%A9nor,CC BY-SA 4.0,fr,2026-11-02T10:41:47+00:00,1157,revid=240027176; category=voice_ear
+fr-corde_vocale,Corde vocale,https://fr.wikipedia.org/wiki/Corde_vocale,CC BY-SA 4.0,fr,2026-11-02T10:29:45+00:00,893,revid=236967952; category=voice_ear
+fr-cycle_des_quintes,Cycle des quintes,https://fr.wikipedia.org/wiki/Cycle_des_quintes,CC BY-SA 4.0,fr,2026-11-02T09:06:50+00:00,3106,revid=239986841; category=scales_modes
+fr-degré_musique,Degré (musique),https://fr.wikipedia.org/wiki/Degr%C3%A9_(musique),CC BY-SA 4.0,fr,2026-11-02T09:06:05+00:00,1024,revid=238791102; category=scales_modes
+fr-delay_effet,Delay (effet),https://fr.wikipedia.org/wiki/Delay_(effet),CC BY-SA 4.0,fr,2026-11-02T10:24:29+00:00,2808,revid=236317382; category=guitar
+fr-demi_ton,Demi-ton,https://fr.wikipedia.org/wiki/Demi-ton,CC BY-SA 4.0,fr,2026-11-02T08:45:44+00:00,1371,revid=236793081; category=fundamentals
+fr-diapason_lutherie,Diapason (lutherie),https://fr.wikipedia.org/wiki/Diapason_(lutherie),CC BY-SA 4.0,fr,2026-11-02T10:21:16+00:00,273,revid=240156604; category=guitar
+fr-distorsion_musique,Distorsion (musique),https://fr.wikipedia.org/wiki/Distorsion_(musique),CC BY-SA 4.0,fr,2026-11-02T10:12:04+00:00,2539,revid=240723802; category=guitar
+fr-dominante,Dominante,https://fr.wikipedia.org/wiki/Dominante,CC BY-SA 4.0,fr,2026-11-02T09:24:24+00:00,945,revid=237012066; category=harmony
+fr-dominante_passagère,Dominante passagère,https://fr.wikipedia.org/wiki/Dominante_passag%C3%A8re,CC BY-SA 4.0,fr,2026-11-02T09:25:54+00:00,807,revid=239572739; category=harmony
+fr-drop_d,Drop D,https://fr.wikipedia.org/wiki/Drop_D,CC BY-SA 4.0,fr,2026-11-02T10:03:42+00:00,498,revid=213070688; category=guitar
+fr-economy_picking,Economy picking,https://fr.wikipedia.org/wiki/Economy_picking,CC BY-SA 4.0,fr,2026-11-02T10:18:58+00:00,137,revid=192116437; category=guitar
+fr-enharmonie,Enharmonie,https://fr.wikipedia.org/wiki/Enharmonie,CC BY-SA 4.0,fr,2026-11-02T08:46:29+00:00,1266,revid=216413808; category=fundamentals
+fr-fausset,Fausset,https://fr.wikipedia.org/wiki/Fausset,CC BY-SA 4.0,fr,2026-11-02T10:42:05+00:00,1505,revid=240898208; category=voice_ear
+fr-forme_musicale,Forme musicale,https://fr.wikipedia.org/wiki/Forme_musicale,CC BY-SA 4.0,fr,2026-11-02T09:50:50+00:00,494,revid=238830203; category=melody_form
+fr-frette_musique,Frette (musique),https://fr.wikipedia.org/wiki/Frette_(musique),CC BY-SA 4.0,fr,2026-11-02T10:02:10+00:00,1598,revid=237641063; category=guitar
+fr-gamme_blues,Gamme blues,https://fr.wikipedia.org/wiki/Gamme_blues,CC BY-SA 4.0,fr,2026-11-02T08:57:04+00:00,391,revid=235513870; category=scales_modes
+fr-gamme_d_accord,Gamme d'accord,https://fr.wikipedia.org/wiki/Gamme_d%27accord,CC BY-SA 4.0,fr,2026-11-02T09:40:59+00:00,384,revid=237091900; category=harmony
+fr-gamme_musique,Gamme (musique),https://fr.wikipedia.org/wiki/Gamme_(musique),CC BY-SA 4.0,fr,2026-11-02T08:54:46+00:00,2721,revid=237756523; category=scales_modes
+fr-gamme_par_tons,Gamme par tons,https://fr.wikipedia.org/wiki/Gamme_par_tons,CC BY-SA 4.0,fr,2026-11-02T08:57:48+00:00,573,revid=239247172; category=scales_modes
+fr-gamme_pentatonique,Gamme pentatonique,https://fr.wikipedia.org/wiki/Gamme_pentatonique,CC BY-SA 4.0,fr,2026-11-02T08:56:19+00:00,2650,revid=237666095; category=scales_modes
+fr-gamme_tempérée,Gamme tempérée,https://fr.wikipedia.org/wiki/Gamme_temp%C3%A9r%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:35:44+00:00,3150,revid=238687076; category=harmony
+fr-grille_harmonique,Grille harmonique,https://fr.wikipedia.org/wiki/Grille_harmonique,CC BY-SA 4.0,fr,2026-11-02T08:54:01+00:00,781,revid=236951262; category=fundamentals
+fr-guitare,Guitare,https://fr.wikipedia.org/wiki/Guitare,CC BY-SA 4.0,fr,2026-11-02T09:56:52+00:00,11539,revid=240933678; category=guitar
+fr-guitare_acoustique,Guitare acoustique,https://fr.wikipedia.org/wiki/Guitare_acoustique,CC BY-SA 4.0,fr,2026-11-02T09:58:23+00:00,1552,revid=237458854; category=guitar
+fr-guitare_basse,Guitare basse,https://fr.wikipedia.org/wiki/Guitare_basse,CC BY-SA 4.0,fr,2026-11-02T09:59:53+00:00,13122,revid=240264215; category=guitar
+fr-guitare_classique,Guitare classique,https://fr.wikipedia.org/wiki/Guitare_classique,CC BY-SA 4.0,fr,2026-11-02T09:57:38+00:00,4911,revid=240265853; category=guitar
+fr-guitare_fingerstyle,Guitare fingerstyle,https://fr.wikipedia.org/wiki/Guitare_fingerstyle,CC BY-SA 4.0,fr,2026-11-02T10:05:14+00:00,980,revid=240183871; category=guitar
+fr-guitare_flamenca,Guitare flamenca,https://fr.wikipedia.org/wiki/Guitare_flamenca,CC BY-SA 4.0,fr,2026-11-02T10:13:36+00:00,1968,revid=240164404; category=guitar
+fr-guitare_folk,Guitare folk,https://fr.wikipedia.org/wiki/Guitare_folk,CC BY-SA 4.0,fr,2026-11-02T10:17:23+00:00,836,revid=231044370; category=guitar
+fr-guitare_jazz,Guitare jazz,https://fr.wikipedia.org/wiki/Guitare_jazz,CC BY-SA 4.0,fr,2026-11-02T10:16:36+00:00,616,revid=213971286; category=guitar
+fr-guitare_rythmique,Guitare rythmique,https://fr.wikipedia.org/wiki/Guitare_rythmique,CC BY-SA 4.0,fr,2026-11-02T10:15:51+00:00,561,revid=228910062; category=guitar
+fr-guitare_slide,Guitare slide,https://fr.wikipedia.org/wiki/Guitare_slide,CC BY-SA 4.0,fr,2026-11-02T10:07:32+00:00,241,revid=191965911; category=guitar
+fr-guitare_solo,Guitare solo,https://fr.wikipedia.org/wiki/Guitare_solo,CC BY-SA 4.0,fr,2026-11-02T10:15:06+00:00,1100,revid=230654753; category=guitar
+fr-guitare_à_douze_cordes,Guitare à douze cordes,https://fr.wikipedia.org/wiki/Guitare_%C3%A0_douze_cordes,CC BY-SA 4.0,fr,2026-11-02T10:00:39+00:00,2883,revid=240183473; category=guitar
+fr-guitare_électrique,Guitare électrique,https://fr.wikipedia.org/wiki/Guitare_%C3%A9lectrique,CC BY-SA 4.0,fr,2026-11-02T09:59:08+00:00,6728,revid=238463665; category=guitar
+fr-hammer_on,Hammer-on,https://fr.wikipedia.org/wiki/Hammer-on,CC BY-SA 4.0,fr,2026-11-02T10:08:17+00:00,335,revid=203747483; category=guitar
+fr-harmonie,Harmonie,https://fr.wikipedia.org/wiki/Harmonie,CC BY-SA 4.0,fr,2026-11-02T09:22:07+00:00,5720,revid=240294429; category=harmony
+fr-harmonie_du_jazz,Harmonie du jazz,https://fr.wikipedia.org/wiki/Harmonie_du_jazz,CC BY-SA 4.0,fr,2026-11-02T09:39:29+00:00,2314,revid=238906484; category=harmony
+fr-hauteur_musique,Hauteur (musique),https://fr.wikipedia.org/wiki/Hauteur_(musique),CC BY-SA 4.0,fr,2026-11-02T08:43:28+00:00,5985,revid=239949776; category=fundamentals
+fr-hémiole,Hémiole,https://fr.wikipedia.org/wiki/H%C3%A9miole,CC BY-SA 4.0,fr,2026-11-02T09:48:35+00:00,1954,revid=230375700; category=rhythm
+fr-instrument_à_résonateur,Instrument à résonateur,https://fr.wikipedia.org/wiki/Instrument_%C3%A0_r%C3%A9sonateur,CC BY-SA 4.0,fr,2026-11-02T10:18:12+00:00,694,revid=240170387; category=guitar
+fr-intervalle_musique,Intervalle (musique),https://fr.wikipedia.org/wiki/Intervalle_(musique),CC BY-SA 4.0,fr,2026-11-02T08:44:14+00:00,4358,revid=240913656; category=fundamentals
+fr-intonation_juste,Intonation juste,https://fr.wikipedia.org/wiki/Intonation_juste,CC BY-SA 4.0,fr,2026-11-02T09:37:15+00:00,3846,revid=238419724; category=harmony
+fr-intonation_musicale,Intonation musicale,https://fr.wikipedia.org/wiki/Intonation_musicale,CC BY-SA 4.0,fr,2026-11-02T10:42:44+00:00,1185,revid=235161120; category=voice_ear
+fr-laryngalisation,Laryngalisation,https://fr.wikipedia.org/wiki/Laryngalisation,CC BY-SA 4.0,fr,2026-11-02T10:42:11+00:00,433,revid=232793733; category=voice_ear
+fr-lecture_à_vue,Lecture à vue,https://fr.wikipedia.org/wiki/Lecture_%C3%A0_vue,CC BY-SA 4.0,fr,2026-11-02T10:42:56+00:00,477,revid=238927964; category=voice_ear
+fr-ligne_de_basse,Ligne de basse,https://fr.wikipedia.org/wiki/Ligne_de_basse,CC BY-SA 4.0,fr,2026-11-02T09:55:22+00:00,688,revid=211563484; category=melody_form
+fr-luthier,Luthier,https://fr.wikipedia.org/wiki/Luthier,CC BY-SA 4.0,fr,2026-11-02T10:26:45+00:00,1741,revid=237824565; category=guitar
+fr-mesure_musique,Mesure (musique),https://fr.wikipedia.org/wiki/Mesure_(musique),CC BY-SA 4.0,fr,2026-11-02T09:43:16+00:00,5438,revid=233489985; category=rhythm
+fr-mezzo_soprano,Mezzo-soprano,https://fr.wikipedia.org/wiki/Mezzo-soprano,CC BY-SA 4.0,fr,2026-11-02T10:32:46+00:00,1103,revid=230440269; category=voice_ear
+fr-micro_guitare,Micro (guitare),https://fr.wikipedia.org/wiki/Micro_(guitare),CC BY-SA 4.0,fr,2026-11-02T10:12:51+00:00,3716,revid=233876068; category=guitar
+fr-mode_dorien,Mode dorien,https://fr.wikipedia.org/wiki/Mode_dorien,CC BY-SA 4.0,fr,2026-11-02T09:00:50+00:00,2581,revid=233333571; category=scales_modes
+fr-mode_ionien,Mode ionien,https://fr.wikipedia.org/wiki/Mode_ionien,CC BY-SA 4.0,fr,2026-11-02T09:00:05+00:00,446,revid=232615466; category=scales_modes
+fr-mode_locrien,Mode locrien,https://fr.wikipedia.org/wiki/Mode_locrien,CC BY-SA 4.0,fr,2026-11-02T09:04:34+00:00,487,revid=235509771; category=scales_modes
+fr-mode_lydien,Mode lydien,https://fr.wikipedia.org/wiki/Mode_lydien,CC BY-SA 4.0,fr,2026-11-02T09:02:20+00:00,870,revid=239022646; category=scales_modes
+fr-mode_mixolydien,Mode mixolydien,https://fr.wikipedia.org/wiki/Mode_mixolydien,CC BY-SA 4.0,fr,2026-11-02T09:03:04+00:00,2284,revid=240610162; category=scales_modes
+fr-mode_musique,Mode (musique),https://fr.wikipedia.org/wiki/Mode_(musique),CC BY-SA 4.0,fr,2026-11-02T08:59:20+00:00,9471,revid=239577575; category=scales_modes
+fr-mode_phrygien,Mode phrygien,https://fr.wikipedia.org/wiki/Mode_phrygien,CC BY-SA 4.0,fr,2026-11-02T09:01:35+00:00,667,revid=240913951; category=scales_modes
+fr-mode_éolien,Mode éolien,https://fr.wikipedia.org/wiki/Mode_%C3%A9olien,CC BY-SA 4.0,fr,2026-11-02T09:03:49+00:00,494,revid=232615592; category=scales_modes
+fr-modulation_musique,Modulation (musique),https://fr.wikipedia.org/wiki/Modulation_(musique),CC BY-SA 4.0,fr,2026-11-02T09:09:52+00:00,5361,revid=227147230; category=scales_modes
+fr-motif_musique,Motif (musique),https://fr.wikipedia.org/wiki/Motif_(musique),CC BY-SA 4.0,fr,2026-11-02T09:50:05+00:00,267,revid=218358167; category=melody_form
+fr-mélisme,Mélisme,https://fr.wikipedia.org/wiki/M%C3%A9lisme,CC BY-SA 4.0,fr,2026-11-02T10:42:25+00:00,732,revid=220510308; category=voice_ear
+fr-mélodie,Mélodie,https://fr.wikipedia.org/wiki/M%C3%A9lodie,CC BY-SA 4.0,fr,2026-11-02T09:49:20+00:00,570,revid=240493820; category=melody_form
+fr-notation_musicale,Notation musicale,https://fr.wikipedia.org/wiki/Notation_musicale,CC BY-SA 4.0,fr,2026-11-02T08:49:29+00:00,4265,revid=239051718; category=fundamentals
+fr-note_bleue,Note bleue,https://fr.wikipedia.org/wiki/Note_bleue,CC BY-SA 4.0,fr,2026-11-02T09:40:14+00:00,945,revid=240326127; category=harmony
+fr-note_de_musique,Note de musique,https://fr.wikipedia.org/wiki/Note_de_musique,CC BY-SA 4.0,fr,2026-11-02T08:42:43+00:00,4094,revid=240486463; category=fundamentals
+fr-note_étrangère,Note étrangère,https://fr.wikipedia.org/wiki/Note_%C3%A9trang%C3%A8re,CC BY-SA 4.0,fr,2026-11-02T09:32:42+00:00,1223,revid=229461835; category=harmony
+fr-nuance_musique,Nuance (musique),https://fr.wikipedia.org/wiki/Nuance_(musique),CC BY-SA 4.0,fr,2026-11-02T08:51:45+00:00,997,revid=236536454; category=fundamentals
+fr-octave_musique,Octave (musique),https://fr.wikipedia.org/wiki/Octave_(musique),CC BY-SA 4.0,fr,2026-11-02T08:44:58+00:00,2810,revid=240556694; category=fundamentals
+fr-oreille_absolue,Oreille absolue,https://fr.wikipedia.org/wiki/Oreille_absolue,CC BY-SA 4.0,fr,2026-11-02T10:42:50+00:00,3928,revid=240723479; category=voice_ear
+fr-oreille_relative,Oreille relative,https://fr.wikipedia.org/wiki/Oreille_relative,CC BY-SA 4.0,fr,2026-11-02T10:42:53+00:00,203,revid=231473734; category=voice_ear
+fr-ornement_musique,Ornement (musique),https://fr.wikipedia.org/wiki/Ornement_(musique),CC BY-SA 4.0,fr,2026-11-02T09:53:51+00:00,1096,revid=222867293; category=melody_form
+fr-ostinato,Ostinato,https://fr.wikipedia.org/wiki/Ostinato,CC BY-SA 4.0,fr,2026-11-02T09:52:21+00:00,3139,revid=236105220; category=melody_form
+fr-palm_mute,Palm mute,https://fr.wikipedia.org/wiki/Palm_mute,CC BY-SA 4.0,fr,2026-11-02T10:09:47+00:00,566,revid=240282767; category=guitar
+fr-passaggio,Passaggio,https://fr.wikipedia.org/wiki/Passaggio,CC BY-SA 4.0,fr,2026-11-02T10:42:13+00:00,815,revid=227901246; category=voice_ear
+fr-point_de_prolongation,Point de prolongation,https://fr.wikipedia.org/wiki/Point_de_prolongation,CC BY-SA 4.0,fr,2026-11-02T09:46:19+00:00,583,revid=223537501; category=rhythm
+fr-polyphonie,Polyphonie,https://fr.wikipedia.org/wiki/Polyphonie,CC BY-SA 4.0,fr,2026-11-02T09:51:35+00:00,10329,revid=236946485; category=melody_form
+fr-polyrythmie,Polyrythmie,https://fr.wikipedia.org/wiki/Polyrythmie,CC BY-SA 4.0,fr,2026-11-02T09:45:32+00:00,1301,revid=230585224; category=rhythm
+fr-portée_musique,Portée (musique),https://fr.wikipedia.org/wiki/Port%C3%A9e_(musique),CC BY-SA 4.0,fr,2026-11-02T08:48:43+00:00,1116,revid=237066801; category=fundamentals
+fr-power_chord,Power chord,https://fr.wikipedia.org/wiki/Power_chord,CC BY-SA 4.0,fr,2026-11-02T09:19:06+00:00,1110,revid=239376672; category=chords
+fr-progression_d_accords,Progression d'accords,https://fr.wikipedia.org/wiki/Progression_d%27accords,CC BY-SA 4.0,fr,2026-11-02T09:22:54+00:00,4511,revid=213515013; category=harmony
+fr-progression_i_v_vi_iv,Progression I-V-vi-IV,https://fr.wikipedia.org/wiki/Progression_I-V-vi-IV,CC BY-SA 4.0,fr,2026-11-02T09:33:29+00:00,455,revid=219338302; category=harmony
+fr-pull_off,Pull-off,https://fr.wikipedia.org/wiki/Pull-off,CC BY-SA 4.0,fr,2026-11-02T10:09:01+00:00,194,revid=168275148; category=guitar
+fr-pédale_harmonique,Pédale harmonique,https://fr.wikipedia.org/wiki/P%C3%A9dale_harmonique,CC BY-SA 4.0,fr,2026-11-02T09:31:57+00:00,910,revid=230199114; category=harmony
+fr-rasgueado,Rasgueado,https://fr.wikipedia.org/wiki/Rasgueado,CC BY-SA 4.0,fr,2026-11-02T10:20:31+00:00,263,revid=240767029; category=guitar
+fr-renversement_musique,Renversement (musique),https://fr.wikipedia.org/wiki/Renversement_(musique),CC BY-SA 4.0,fr,2026-11-02T09:19:51+00:00,736,revid=225687591; category=chords
+fr-représentation_des_durées_en_musique,Représentation des durées en musique,https://fr.wikipedia.org/wiki/Repr%C3%A9sentation_des_dur%C3%A9es_en_musique,CC BY-SA 4.0,fr,2026-11-02T09:44:01+00:00,2437,revid=240486477; category=rhythm
+fr-riff_musique,Riff (musique),https://fr.wikipedia.org/wiki/Riff_(musique),CC BY-SA 4.0,fr,2026-11-02T09:56:07+00:00,960,revid=240700267; category=melody_form
+fr-rythme_musique,Rythme (musique),https://fr.wikipedia.org/wiki/Rythme_(musique),CC BY-SA 4.0,fr,2026-11-02T09:41:44+00:00,1975,revid=228746244; category=rhythm
+fr-réverbération_effet,Réverbération (effet),https://fr.wikipedia.org/wiki/R%C3%A9verb%C3%A9ration_(effet),CC BY-SA 4.0,fr,2026-11-02T10:25:15+00:00,5839,revid=234257158; category=guitar
+fr-scat,Scat,https://fr.wikipedia.org/wiki/Scat,CC BY-SA 4.0,fr,2026-11-02T10:42:28+00:00,2278,revid=239196375; category=voice_ear
+fr-sensible_musique,Sensible (musique),https://fr.wikipedia.org/wiki/Sensible_(musique),CC BY-SA 4.0,fr,2026-11-02T09:38:45+00:00,1177,revid=239892502; category=harmony
+fr-silence_musique,Silence en musique,https://fr.wikipedia.org/wiki/Silence_en_musique,CC BY-SA 4.0,fr,2026-11-02T09:47:04+00:00,821,revid=240513720; category=rhythm
+fr-sillet,Sillet,https://fr.wikipedia.org/wiki/Sillet,CC BY-SA 4.0,fr,2026-11-02T10:22:01+00:00,487,revid=216413856; category=guitar
+fr-sixte_augmentée,Sixte augmentée,https://fr.wikipedia.org/wiki/Sixte_augment%C3%A9e,CC BY-SA 4.0,fr,2026-11-02T09:30:28+00:00,1670,revid=238792913; category=harmony
+fr-solfège,Solfège,https://fr.wikipedia.org/wiki/Solf%C3%A8ge,CC BY-SA 4.0,fr,2026-11-02T08:52:30+00:00,939,revid=239852620; category=fundamentals
+fr-solo_de_guitare,Solo de guitare,https://fr.wikipedia.org/wiki/Solo_de_guitare,CC BY-SA 4.0,fr,2026-11-02T10:14:21+00:00,322,revid=212850149; category=guitar
+fr-soprano,Soprano,https://fr.wikipedia.org/wiki/Soprano,CC BY-SA 4.0,fr,2026-11-02T10:32:01+00:00,2496,revid=240339350; category=voice_ear
+fr-sous_dominante,Sous-dominante,https://fr.wikipedia.org/wiki/Sous-dominante,CC BY-SA 4.0,fr,2026-11-02T09:25:09+00:00,342,revid=237930389; category=harmony
+fr-substitution_tritonique,Substitution tritonique,https://fr.wikipedia.org/wiki/Substitution_tritonique,CC BY-SA 4.0,fr,2026-11-02T09:26:38+00:00,1754,revid=238793624; category=harmony
+fr-sweeping,Sweeping,https://fr.wikipedia.org/wiki/Sweeping,CC BY-SA 4.0,fr,2026-11-02T10:19:43+00:00,381,revid=221217946; category=guitar
+fr-syncope_musique,Syncope (musique),https://fr.wikipedia.org/wiki/Syncope_(musique),CC BY-SA 4.0,fr,2026-11-02T09:44:46+00:00,511,revid=236773420; category=rhythm
+fr-système_tonal,Système tonal,https://fr.wikipedia.org/wiki/Syst%C3%A8me_tonal,CC BY-SA 4.0,fr,2026-11-02T09:09:07+00:00,4905,revid=240767411; category=scales_modes
+fr-série_harmonique_musique,Harmonique (musique),https://fr.wikipedia.org/wiki/Harmonique_(musique),CC BY-SA 4.0,fr,2026-11-02T09:34:59+00:00,6128,revid=240915072; category=harmony
+fr-tablature,Tablature,https://fr.wikipedia.org/wiki/Tablature,CC BY-SA 4.0,fr,2026-11-02T08:53:17+00:00,2210,revid=240407939; category=fundamentals
+fr-tapping,Tapping,https://fr.wikipedia.org/wiki/Tapping,CC BY-SA 4.0,fr,2026-11-02T10:10:32+00:00,4013,revid=238166530; category=guitar
+fr-tempo,Tempo,https://fr.wikipedia.org/wiki/Tempo,CC BY-SA 4.0,fr,2026-11-02T08:51:00+00:00,2927,revid=231017565; category=fundamentals
+fr-temps_musique,Temps (musique),https://fr.wikipedia.org/wiki/Temps_(musique),CC BY-SA 4.0,fr,2026-11-02T09:42:29+00:00,467,revid=206203196; category=rhythm
+fr-tessiture,Tessiture,https://fr.wikipedia.org/wiki/Tessiture,CC BY-SA 4.0,fr,2026-11-02T10:31:16+00:00,1487,revid=236627405; category=voice_ear
+fr-tonalité,Tonalité,https://fr.wikipedia.org/wiki/Tonalit%C3%A9,CC BY-SA 4.0,fr,2026-11-02T09:07:35+00:00,4746,revid=237671204; category=scales_modes
+fr-tonalité_relative,Tonalité relative,https://fr.wikipedia.org/wiki/Tonalit%C3%A9_relative,CC BY-SA 4.0,fr,2026-11-02T09:08:20+00:00,511,revid=236082220; category=scales_modes
+fr-tonique_musique,Tonique (musique),https://fr.wikipedia.org/wiki/Tonique_(musique),CC BY-SA 4.0,fr,2026-11-02T09:05:20+00:00,400,revid=216400801; category=scales_modes
+fr-touche_lutherie,Touche (lutherie),https://fr.wikipedia.org/wiki/Touche_(lutherie),CC BY-SA 4.0,fr,2026-11-02T10:01:24+00:00,1450,revid=225572228; category=guitar
+fr-transposition_musique,Transposition (musique),https://fr.wikipedia.org/wiki/Transposition_(musique),CC BY-SA 4.0,fr,2026-11-02T09:10:37+00:00,1816,revid=235193610; category=scales_modes
+fr-trille,Trille,https://fr.wikipedia.org/wiki/Trille,CC BY-SA 4.0,fr,2026-11-02T09:54:36+00:00,625,revid=234437959; category=melody_form
+fr-triton_musique,Triton (musique),https://fr.wikipedia.org/wiki/Triton_(musique),CC BY-SA 4.0,fr,2026-11-02T09:38:00+00:00,1627,revid=239218579; category=harmony
+fr-ténor,Ténor,https://fr.wikipedia.org/wiki/T%C3%A9nor,CC BY-SA 4.0,fr,2026-11-02T10:41:50+00:00,3302,revid=240407017; category=voice_ear
+fr-vibrato,Vibrato,https://fr.wikipedia.org/wiki/Vibrato,CC BY-SA 4.0,fr,2026-11-02T10:06:46+00:00,1277,revid=240119698; category=guitar
+fr-vibrato_guitare,Vibrato (guitare),https://fr.wikipedia.org/wiki/Vibrato_(guitare),CC BY-SA 4.0,fr,2026-11-02T10:23:43+00:00,5223,revid=228174754; category=guitar
+fr-voix_de_poitrine,Voix de poitrine,https://fr.wikipedia.org/wiki/Voix_de_poitrine,CC BY-SA 4.0,fr,2026-11-02T10:42:01+00:00,1324,revid=230295522; category=voice_ear
+fr-voix_de_sifflet,Voix de sifflet,https://fr.wikipedia.org/wiki/Voix_de_sifflet,CC BY-SA 4.0,fr,2026-11-02T10:42:08+00:00,246,revid=233759263; category=voice_ear
+fr-voix_en_musique_classique,Voix en musique classique,https://fr.wikipedia.org/wiki/Voix_en_musique_classique,CC BY-SA 4.0,fr,2026-11-02T10:30:30+00:00,4280,revid=240412873; category=voice_ear
+fr-voix_humaine,Voix humaine,https://fr.wikipedia.org/wiki/Voix_humaine,CC BY-SA 4.0,fr,2026-11-02T10:29:00+00:00,4299,revid=240147975; category=voice_ear
+fr-yodel,Yodel,https://fr.wikipedia.org/wiki/Yodel,CC BY-SA 4.0,fr,2026-11-02T10:42:31+00:00,3654,revid=239966258; category=voice_ear
+fr-échelle_chromatique,Échelle chromatique,https://fr.wikipedia.org/wiki/%C3%89chelle_chromatique,CC BY-SA 4.0,fr,2026-11-02T08:55:34+00:00,1634,revid=237666890; category=scales_modes
+fr-échelle_diatonique,Échelle diatonique,https://fr.wikipedia.org/wiki/%C3%89chelle_diatonique,CC BY-SA 4.0,fr,2026-11-02T08:58:35+00:00,444,revid=237246665; category=scales_modes

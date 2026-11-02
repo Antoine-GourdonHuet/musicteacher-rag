@@ -1,0 +1,208 @@
+category,title_en,title_fr
+fundamentals,Musical note,Note de musique
+fundamentals,Pitch (music),Hauteur (musique)
+fundamentals,Interval (music),Intervalle (musique)
+fundamentals,Octave,Octave (musique)
+fundamentals,Semitone,Demi-ton
+fundamentals,Enharmonic equivalence,Enharmonie
+fundamentals,Accidental (music),Altération (musique)
+fundamentals,Clef,Clef (musique)
+fundamentals,Staff (music),Portée (musique)
+fundamentals,Musical notation,Notation musicale
+fundamentals,Key signature,Armure (musique)
+fundamentals,Time signature,
+fundamentals,Tempo,Tempo
+fundamentals,Dynamics (music),Nuance (musique)
+fundamentals,Solfège,Solfège
+fundamentals,Scientific pitch notation,
+fundamentals,Tablature,Tablature
+fundamentals,Chord chart,Grille harmonique
+scales_modes,Scale (music),Gamme (musique)
+scales_modes,Major scale,
+scales_modes,Minor scale,
+scales_modes,Chromatic scale,Échelle chromatique
+scales_modes,Pentatonic scale,Gamme pentatonique
+scales_modes,Blues scale,Gamme blues
+scales_modes,Whole-tone scale,Gamme par tons
+scales_modes,Octatonic scale,
+scales_modes,Diatonic scale,Échelle diatonique
+scales_modes,Mode (music),Mode (musique)
+scales_modes,Ionian mode,Mode ionien
+scales_modes,Dorian mode,Mode dorien
+scales_modes,Phrygian mode,Mode phrygien
+scales_modes,Lydian mode,Mode lydien
+scales_modes,Mixolydian mode,Mode mixolydien
+scales_modes,Aeolian mode,Mode éolien
+scales_modes,Locrian mode,Mode locrien
+scales_modes,Phrygian dominant scale,
+scales_modes,Tonic (music),Tonique (musique)
+scales_modes,Degree (music),Degré (musique)
+scales_modes,Circle of fifths,Cycle des quintes
+scales_modes,Key (music),Tonalité
+scales_modes,Relative key,Tonalité relative
+scales_modes,Parallel key,
+scales_modes,Tonality,Système tonal
+scales_modes,Modulation (music),Modulation (musique)
+scales_modes,Transposition (music),Transposition (musique)
+chords,Chord (music),Accord (musique)
+chords,Triad (music),Accord de trois notes
+chords,Major chord,Accord parfait majeur
+chords,Minor chord,Accord parfait mineur
+chords,Diminished triad,Accord de quinte diminuée
+chords,Augmented triad,Accord de quinte augmentée
+chords,Seventh chord,Accord de septième d'espèce
+chords,Dominant seventh chord,Accord de septième de dominante
+chords,Major seventh chord,
+chords,Minor seventh chord,
+chords,Half-diminished seventh chord,Accord de septième demi-diminuée
+chords,Diminished seventh chord,
+chords,Ninth chord,
+chords,Sixth chord,
+chords,Suspended chord,Accord suspendu
+chords,Power chord,Power chord
+chords,Inversion (music),Renversement (musique)
+chords,Chord notation,Chiffrage des accords
+chords,Slash chord,
+chords,Added tone chord,Accord avec note ajoutée
+harmony,Harmony,Harmonie
+harmony,Chord progression,Progression d'accords
+harmony,Cadence,Cadence harmonique
+harmony,Dominant (music),Dominante
+harmony,Subdominant,Sous-dominante
+harmony,Secondary chord,Dominante passagère
+harmony,Tritone substitution,Substitution tritonique
+harmony,Roman numeral analysis,
+harmony,Figured bass,Basse chiffrée
+harmony,Consonance and dissonance,
+harmony,Counterpoint,Contrepoint rigoureux
+harmony,Voice leading,Conduite des voix
+harmony,Neapolitan chord,Accord de sixte napolitaine
+harmony,Augmented sixth chord,Sixte augmentée
+harmony,Borrowed chord,Accord d'emprunt
+harmony,Pedal point,Pédale harmonique
+harmony,Nonchord tone,Note étrangère
+harmony,Ii–V–I progression,
+harmony,I–V–vi–IV progression,Progression I-V-vi-IV
+harmony,Twelve-bar blues,Blues à 12 mesures
+harmony,Harmonic series (music),Série harmonique (musique)
+harmony,Equal temperament,Gamme tempérée
+harmony,Pythagorean tuning,Accord pythagoricien
+harmony,Just intonation,Intonation juste
+harmony,Tritone,Triton (musique)
+harmony,Tendency tone,Sensible (musique)
+harmony,Jazz harmony,Harmonie du jazz
+harmony,Blue note,Note bleue
+harmony,Chord-scale system,Gamme d'accord
+rhythm,Rhythm,Rythme (musique)
+rhythm,Beat (music),Temps (musique)
+rhythm,Metre (music),
+rhythm,Bar (music),Mesure (musique)
+rhythm,Note value,Représentation des durées en musique
+rhythm,Syncopation,Syncope (musique)
+rhythm,Swing time,
+rhythm,Polyrhythm,Polyrythmie
+rhythm,Tuplet,
+rhythm,Dotted note,Point de prolongation
+rhythm,Rest (music),Silence (musique)
+rhythm,Anacrusis,Anacrouse
+rhythm,Hemiola,Hémiole
+melody_form,Melody,Mélodie
+melody_form,Motif (music),Motif (musique)
+melody_form,Musical form,Forme musicale
+melody_form,Polyphony,Polyphonie
+melody_form,Homophony,
+melody_form,Ostinato,Ostinato
+melody_form,Arpeggio,Arpège
+melody_form,Ornament (music),Ornement (musique)
+melody_form,Trill (music),Trille
+melody_form,Bassline,Ligne de basse
+melody_form,Riff,Riff (musique)
+guitar,Guitar,Guitare
+guitar,Classical guitar,Guitare classique
+guitar,Acoustic guitar,Guitare acoustique
+guitar,Electric guitar,Guitare électrique
+guitar,Bass guitar,Guitare basse
+guitar,Twelve-string guitar,Guitare à douze cordes
+guitar,Fingerboard,Touche (lutherie)
+guitar,Fret,Frette (musique)
+guitar,Capo,Capo
+guitar,Guitar tunings,
+guitar,Standard tuning,
+guitar,Drop D tuning,Drop D
+guitar,Guitar chord,
+guitar,Bar chord,Accord barré
+guitar,Fingerstyle guitar,Guitare fingerstyle
+guitar,Strum,Battement (instruments à cordes pincées)
+guitar,Guitar pick,
+guitar,Vibrato,Vibrato
+guitar,String bending,
+guitar,Slide guitar,Guitare slide
+guitar,Hammer-on,Hammer-on
+guitar,Pull-off,Pull-off
+guitar,Palm mute,Palm mute
+guitar,Tapping,Tapping
+guitar,String harmonic,
+guitar,Guitar amplifier,Amplificateur pour guitare électrique
+guitar,Distortion (music),Distorsion (musique)
+guitar,Effects unit,
+guitar,Pickup (music technology),Micro (guitare)
+guitar,Flamenco guitar,Guitare flamenca
+guitar,Guitar solo,Solo de guitare
+guitar,Lead guitar,Guitare solo
+guitar,Rhythm guitar,Guitare rythmique
+guitar,Jazz guitar,Guitare jazz
+guitar,Steel-string acoustic guitar,Guitare folk
+guitar,Seven-string guitar,
+guitar,Archtop guitar,
+guitar,Resonator guitar,Instrument à résonateur
+guitar,Alternate picking,
+guitar,Economy picking,Economy picking
+guitar,Sweep picking,Sweeping
+guitar,Hybrid picking,
+guitar,Rasgueado,Rasgueado
+guitar,Scale length (string instruments),Diapason (lutherie)
+guitar,Nut (string instrument),Sillet
+guitar,Bridge (instrument),Chevalet (musique)
+guitar,Vibrato systems for guitar,Vibrato (guitare)
+guitar,Wah-wah pedal,
+guitar,Delay (audio effect),Delay (effet)
+guitar,Reverb effect,Réverbération (effet)
+guitar,Chorus (audio effect),Chorus (effet)
+guitar,Luthier,Luthier
+guitar,Electronic tuner,Accordeur (outil)
+voice_ear,Singing,Chant
+voice_ear,Human voice,Voix humaine
+voice_ear,Vocal cords,Corde vocale
+voice_ear,Vocal range,Voix en musique classique
+voice_ear,Voice type,
+voice_ear,Tessitura,Tessiture
+voice_ear,Soprano,Soprano
+voice_ear,Mezzo-soprano,Mezzo-soprano
+voice_ear,Contralto,Contralto
+voice_ear,Countertenor,Contreténor
+voice_ear,Tenor,Ténor
+voice_ear,Baritone,Baryton (voix)
+voice_ear,Bass (voice type),Basse (voix)
+voice_ear,Vocal register,
+voice_ear,Chest voice,Voix de poitrine
+voice_ear,Head voice,
+voice_ear,Falsetto,Fausset
+voice_ear,Whistle register,Voix de sifflet
+voice_ear,Vocal fry register,Laryngalisation
+voice_ear,Passaggio,Passaggio
+voice_ear,Belting (music),Belting (musique)
+voice_ear,Bel canto,Bel canto
+voice_ear,Vocal pedagogy,
+voice_ear,Vocal warm-up,
+voice_ear,Melisma,Mélisme
+voice_ear,Scat singing,Scat
+voice_ear,Yodeling,Yodel
+voice_ear,Overtone singing,Chant diphonique
+voice_ear,A cappella,A cappella
+voice_ear,Choir,Chorale
+voice_ear,Close and open harmony,
+voice_ear,Intonation (music),Intonation musicale
+voice_ear,Ear training,Audition intérieure
+voice_ear,Absolute pitch,Oreille absolue
+voice_ear,Relative pitch,Oreille relative
+voice_ear,Sight-reading,Lecture à vue

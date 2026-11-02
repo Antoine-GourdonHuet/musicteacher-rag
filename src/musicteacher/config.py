@@ -24,6 +24,13 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-m3"
     reranker_model: str = "BAAI/bge-reranker-v2-m3"
 
+    # Wikimedia API etiquette: identify the client and do not hammer the servers.
+    wikipedia_user_agent: str = (
+        "MusicTeacherRAG/0.1 (educational research project; "
+        "https://github.com/Antoine-GourdonHuet/musicteacher-rag)"
+    )
+    wikipedia_delay_s: float = 1.0
+
     seed: int = 42
     top_k: int = 5
     temperature: float = 0.0
