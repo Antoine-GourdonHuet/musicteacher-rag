@@ -125,8 +125,8 @@ def build_prompt(slot: Slot, passages: list[dict]) -> str:
     )
 
 
-def parse_json_reply(text: str) -> dict | None:
-    """First {...} object in the reply, if it has a non-empty question and answer."""
+def parse_json_object(text: str) -> dict | None:
+    """The {...} object in an LLM reply, tolerating text around it."""
     match = re.search(r"\{.*\}", text, re.DOTALL)
     if not match:
         return None
@@ -134,7 +134,13 @@ def parse_json_reply(text: str) -> dict | None:
         data = json.loads(match.group(0))
     except json.JSONDecodeError:
         return None
-    if not isinstance(data, dict):
+    return data if isinstance(data, dict) else None
+
+
+def parse_json_reply(text: str) -> dict | None:
+    """Question and answer from a drafting reply, if both are non-empty."""
+    data = parse_json_object(text)
+    if data is None:
         return None
     question = str(data.get("question", "")).strip()
     answer = str(data.get("reference_answer", "")).strip()

@@ -84,10 +84,14 @@ def ask_edit(draft: dict) -> dict:
 
 
 def review(drafts_path: Path, state_path: Path) -> None:
-    drafts = read_jsonl(drafts_path)
+    all_drafts = read_jsonl(drafts_path)
+    drafts = [d for d in all_drafts if (d.get("auto_filter") or {}).get("kept", True)]
     decisions = latest_decisions(read_jsonl(state_path))
     pending = [d for d in drafts if d["id"] not in decisions]
-    print(f"{len(drafts)} drafts, {len(decisions)} already decided, {len(pending)} to review.")
+    print(
+        f"{len(all_drafts)} drafts, {len(all_drafts) - len(drafts)} dropped by the automatic "
+        f"filter, {len(decisions)} already decided, {len(pending)} to review."
+    )
     print("Commands: [a]ccept  [e]dit then accept  [r]eject  [s]kip  [q]uit (progress is saved)")
 
     for i, draft in enumerate(pending, start=1):
@@ -144,7 +148,13 @@ def accepted_questions(decisions: dict[str, dict]) -> list[EvalQuestion]:
     return sorted(questions, key=lambda q: q.id)
 
 
-def freeze(state_path: Path, out_path: Path, changelog: Path, seed: int) -> list[EvalQuestion]:
+def freeze(
+    state_path: Path,
+    out_path: Path,
+    changelog: Path,
+    seed: int,
+    drafts_path: Path | None = None,
+) -> list[EvalQuestion]:
     if out_path.exists():
         raise SystemExit(
             f"{out_path} already exists: the set is frozen. Log changes in CHANGELOG.md."
@@ -158,12 +168,17 @@ def freeze(state_path: Path, out_path: Path, changelog: Path, seed: int) -> list
     split_counts = Counter(q.split for q in questions)
     by_group = Counter((q.lang, q.qtype) for q in questions)
     rejected = sum(d["decision"] == "reject" for d in decisions.values())
+    drafts = read_jsonl(drafts_path) if drafts_path else []
+    auto_dropped = sum(not (d.get("auto_filter") or {}).get("kept", True) for d in drafts)
     edited = sum(d["edited"] for d in decisions.values() if d["decision"] == "accept")
     groups_text = ", ".join(f"{lang}/{qtype} {n}" for (lang, qtype), n in sorted(by_group.items()))
     date = datetime.now(UTC).date().isoformat()
     entry = (
         f"\n## {date}: evaluation set frozen\n\n"
-        f"- {len(questions)} questions accepted ({edited} edited), {rejected} drafts rejected.\n"
+        f"- {len(drafts) or 'n/a'} drafts; {auto_dropped} dropped by the automatic filter "
+        "(evaluation/auto_filter.py); the rest reviewed one by one by a human.\n"
+        f"- {len(questions)} questions accepted ({edited} edited), "
+        f"{rejected} rejected by the reviewer.\n"
         f"- QA: {sum(q.qtype != 'agentic' for q in questions)}, "
         f"agentic: {sum(q.qtype == 'agentic' for q in questions)}, "
         f"cross-lingual: {sum(q.cross_lingual for q in questions)}.\n"
@@ -190,6 +205,7 @@ def main() -> None:
             evals / "questions.jsonl",
             evals / "CHANGELOG.md",
             settings.seed,
+            drafts_path=evals / "drafts.jsonl",
         )
     else:
         review(evals / "drafts.jsonl", evals / "review_state.jsonl")
