@@ -12,6 +12,9 @@ build/
 .env
 
 
+# Smoke runs on a few questions (--limit N) are not experiment results
+evals/results/*_n[0-9]*.json
+
 # Caches and heavy artefacts
 .cache/
 data/raw/*
