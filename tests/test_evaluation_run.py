@@ -77,16 +77,34 @@ def test_generation_uses_context_prompt_or_closed_book():
     assert "Context" not in closed_call["messages"][0].content
 
 
-def test_judge_parses_scores_and_flags_invalid_replies():
-    good = json.dumps({"correctness": 1, "faithfulness": 0.5, "relevancy": 1, "reason": "ok"})
-    verdict = judge_answer(FakeLLMClient([good]), "q", "ref", "ans", context="[1] passage")
-    assert (verdict["correctness"], verdict["faithfulness"], verdict["relevancy"]) == (1, 0.5, 1)
+def test_judge_scores_correctness_then_faithfulness_from_the_claims_list():
+    correct = json.dumps({"correctness": 1, "relevancy": 1, "reason": "ok"})
+    no_claims = json.dumps({"unsupported_claims": [], "faithful": True})
+    one_claim = json.dumps({"unsupported_claims": ["Bach invented it"], "faithful": True})
+
+    good = judge_answer(FakeLLMClient([correct, no_claims]), "q", "ref", "a", "[1] passage")
+    assert (good["correctness"], good["faithfulness"], good["judge_valid"]) == (1, 1, True)
+
+    # the list decides, even if the "faithful" flag contradicts it
+    bad = judge_answer(FakeLLMClient([correct, one_claim]), "q", "ref", "a", "[1] passage")
+    assert bad["faithfulness"] == 0
+    assert bad["unsupported_claims"] == ["Bach invented it"]
+
+
+def test_judge_without_context_makes_one_call_and_no_faithfulness():
+    client = FakeLLMClient([json.dumps({"correctness": 0.5, "relevancy": 1, "reason": "r"})])
+    verdict = judge_answer(client, "q", "ref", "a", context=None)
+    assert len(client.calls) == 1
+    assert (verdict["correctness"], verdict["faithfulness"]) == (0.5, None)
     assert verdict["judge_valid"] is True
 
-    closed = judge_answer(FakeLLMClient([good]), "q", "ref", "ans", context=None)
-    assert closed["faithfulness"] is None  # no context: faithfulness is not defined
-    assert closed["judge_valid"] is True
 
-    odd = json.dumps({"correctness": 0.7, "faithfulness": 1, "relevancy": 1})
-    assert judge_answer(FakeLLMClient([odd]), "q", "r", "a", "[1] p")["judge_valid"] is False
-    assert judge_answer(FakeLLMClient(["no json"]), "q", "r", "a", "[1] p")["judge_valid"] is False
+def test_judge_flags_invalid_replies():
+    odd = json.dumps({"correctness": 0.7, "relevancy": 1})
+    no_list = json.dumps({"faithful": False})
+    assert judge_answer(FakeLLMClient([odd]), "q", "r", "a", None)["judge_valid"] is False
+    verdict = judge_answer(
+        FakeLLMClient([json.dumps({"correctness": 1, "relevancy": 1}), no_list]), "q", "r", "a", "c"
+    )
+    assert verdict["faithfulness"] is None
+    assert verdict["judge_valid"] is False

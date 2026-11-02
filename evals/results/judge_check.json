@@ -1,0 +1,15 @@
+{
+  "condition": "C1",
+  "source_file": "C1_all_20261102T132913.json",
+  "judge_model": "ministral-3:8b",
+  "fabrication": {
+    "caught": 20,
+    "n": 20,
+    "rate": 1.0
+  },
+  "swapped_answer": {
+    "caught": 20,
+    "n": 20,
+    "rate": 1.0
+  }
+}

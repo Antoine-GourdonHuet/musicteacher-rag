@@ -26,7 +26,7 @@ from pathlib import Path
 
 from musicteacher.config import Settings, get_settings
 from musicteacher.evaluation.dataset import EvalQuestion, load_questions
-from musicteacher.evaluation.judge import JUDGE_SYSTEM, judge_answer
+from musicteacher.evaluation.judge import CORRECTNESS_SYSTEM, FAITHFULNESS_SYSTEM, judge_answer
 from musicteacher.evaluation.metrics import recall_at_k, reciprocal_rank, summarise
 from musicteacher.generation.rag import (
     CLOSED_BOOK_SYSTEM,
@@ -206,7 +206,9 @@ def run(condition: str, split: str, limit: int | None, settings: Settings) -> Pa
             "temperature": settings.temperature,
             "seed": settings.seed,
             "max_answer_tokens": MAX_ANSWER_TOKENS,
-            "prompt_hash": prompt_hash(RAG_SYSTEM, CLOSED_BOOK_SYSTEM, JUDGE_SYSTEM),
+            "prompt_hash": prompt_hash(
+                RAG_SYSTEM, CLOSED_BOOK_SYSTEM, CORRECTNESS_SYSTEM, FAITHFULNESS_SYSTEM
+            ),
         },
         "n_questions": len(rows),
         "judge_invalid": sum(not r["judge_valid"] for r in rows),
