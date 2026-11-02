@@ -11,6 +11,7 @@ build/
 # Secrets and local config
 .env
 
+
 # Caches and heavy artefacts
 .cache/
 data/raw/*

@@ -1,6 +1,6 @@
 # MusicTeacher (RAG)
 
-Bilingual (FR/EN) agentic RAG assistant for music theory education, built as a controlled experiment:
+Bilingual (FR/EN) agentic RAG assistant for music theory and guitar, built as a controlled experiment:
 **does hybrid retrieval + reranking improve answer faithfulness?**
 
 > Status: work in progress.
@@ -9,7 +9,7 @@ Bilingual (FR/EN) agentic RAG assistant for music theory education, built as a c
 
 ```powershell
 uv sync --group dev
-copy .env.example .env      # then fill MUSICTEACHER_ANTHROPIC_API_KEY
+copy .env.example .env
 uv run pytest -q
 ```
 
