@@ -31,6 +31,12 @@ class Settings(BaseSettings):
     )
     wikipedia_delay_s: float = 1.0
 
+    # Retrieval: hybrid fuses the top `fusion_depth` of dense and BM25 with RRF (k=60, the value
+    # from the original RRF paper); the reranker re-scores the top `rerank_candidates` results.
+    fusion_depth: int = 50
+    rrf_k: int = 60
+    rerank_candidates: int = 20
+
     seed: int = 42
     top_k: int = 5
     temperature: float = 0.0
