@@ -13,9 +13,7 @@ from musicteacher.llm.ollama_client import OllamaClient
 
 def main() -> None:
     settings = get_settings()
-    inner = OllamaClient(
-        settings.generator_model, settings.ollama_base_url, seed=settings.seed
-    )
+    inner = OllamaClient(settings.generator_model, settings.ollama_base_url, seed=settings.seed)
     client = CachedLLMClient(inner, settings.cache_dir / "llm")
     question = [Message("user", "Name the three notes of a C major triad. Answer in one line.")]
 
