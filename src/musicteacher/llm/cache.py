@@ -8,10 +8,11 @@ temperature and max_tokens.
 import hashlib
 import json
 from pathlib import Path
+from typing import Any
 
 import diskcache
 
-from musicteacher.llm.base import LLMClient, LLMResponse, Message
+from musicteacher.llm.base import LLMClient, LLMResponse, Message, ToolCall, ToolTurn
 from musicteacher.llm.usage import UsageTracker
 
 
@@ -73,6 +74,59 @@ class CachedLLMClient:
             )
         self.usage.record(response)
         return response
+
+    def chat_with_tools(
+        self,
+        messages: list[dict[str, Any]],
+        tools: list[dict[str, Any]],
+        *,
+        system: str | None = None,
+        temperature: float = 0.0,
+        max_tokens: int = 1024,
+    ) -> ToolTurn:
+        """Same caching for tool-using turns; the key also covers the conversation and the tools."""
+        blob = json.dumps(
+            {
+                "kind": "chat_with_tools",
+                "model": self.model,
+                "system": system,
+                "messages": messages,
+                "tools": tools,
+                "temperature": temperature,
+                "max_tokens": max_tokens,
+            },
+            sort_keys=True,
+            ensure_ascii=False,
+        )
+        key = hashlib.sha256(blob.encode("utf-8")).hexdigest()
+        hit = self._cache.get(key)
+        if hit is not None:
+            turn = ToolTurn(
+                content=hit["content"],
+                tool_calls=[ToolCall(c["name"], c["arguments"]) for c in hit["tool_calls"]],
+                input_tokens=hit["input_tokens"],
+                output_tokens=hit["output_tokens"],
+                latency_s=hit["latency_s"],
+                cached=True,
+            )
+        else:
+            turn = self.inner.chat_with_tools(  # type: ignore[attr-defined]
+                messages, tools, system=system, temperature=temperature, max_tokens=max_tokens
+            )
+            self._cache.set(
+                key,
+                {
+                    "content": turn.content,
+                    "tool_calls": [
+                        {"name": c.name, "arguments": c.arguments} for c in turn.tool_calls
+                    ],
+                    "input_tokens": turn.input_tokens,
+                    "output_tokens": turn.output_tokens,
+                    "latency_s": turn.latency_s,
+                },
+            )
+        self.usage.record(turn)
+        return turn
 
     def close(self) -> None:
         self._cache.close()

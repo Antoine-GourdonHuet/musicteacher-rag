@@ -5,7 +5,7 @@ The generator runs locally, so the cost to track is time rather than money.
 
 from dataclasses import dataclass
 
-from musicteacher.llm.base import LLMResponse
+from musicteacher.llm.base import LLMResponse, ToolTurn
 
 
 @dataclass
@@ -16,7 +16,7 @@ class UsageTracker:
     output_tokens: int = 0
     latency_s: float = 0.0
 
-    def record(self, response: LLMResponse) -> None:
+    def record(self, response: LLMResponse | ToolTurn) -> None:
         self.calls += 1
         if response.cached:
             self.cache_hits += 1

@@ -24,8 +24,8 @@ def load_records(path: Path) -> list[dict]:
         return [json.loads(line) for line in f]
 
 
-def dense_backend(settings: Settings, client: QdrantClient) -> Backend:
-    model = load_embedder(settings.embedding_model)
+def dense_backend(settings: Settings, client: QdrantClient, device: str | None = None) -> Backend:
+    model = load_embedder(settings.embedding_model, device)
 
     def search(query: str, n: int) -> list[tuple[int, float]]:
         vector = embed(model, [query])[0].tolist()
@@ -46,8 +46,8 @@ def bm25_backend(index_dir: Path) -> Backend:
     return search
 
 
-def cross_encoder_reranker(model_name: str) -> Reranker:
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+def cross_encoder_reranker(model_name: str, device: str | None = None) -> Reranker:
+    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
     model = CrossEncoder(model_name, device=device, max_length=MAX_SEQ_LENGTH)
     if device == "cuda":
         model.half()
@@ -58,16 +58,20 @@ def cross_encoder_reranker(model_name: str) -> Reranker:
     return rerank
 
 
-def load_retriever(settings: Settings | None = None, *, with_reranker: bool = True) -> Retriever:
+def load_retriever(
+    settings: Settings | None = None, *, with_reranker: bool = True, device: str | None = None
+) -> Retriever:
     settings = settings or get_settings()
     index_dir = settings.data_dir / "index"
     records = load_records(settings.data_dir / "processed" / "chunks.jsonl")
     client = QdrantClient(path=str(index_dir / "qdrant"))
     return Retriever(
         records,
-        dense=dense_backend(settings, client),
+        dense=dense_backend(settings, client, device),
         bm25=bm25_backend(index_dir / "bm25"),
-        reranker=cross_encoder_reranker(settings.reranker_model) if with_reranker else None,
+        reranker=(
+            cross_encoder_reranker(settings.reranker_model, device) if with_reranker else None
+        ),
         fusion_depth=settings.fusion_depth,
         rrf_k=settings.rrf_k,
         rerank_candidates=settings.rerank_candidates,

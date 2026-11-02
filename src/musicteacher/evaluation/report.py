@@ -20,12 +20,14 @@ from musicteacher.config import get_settings
 from musicteacher.evaluation.metrics import bootstrap_ci, summarise
 from musicteacher.evaluation.run import CONDITIONS, METRICS
 
+ALL_CONDITIONS = [*CONDITIONS, "C5"]  # C5 = agent with tools (evaluation/run_agent.py)
 COMPARISONS = [
     ("C1", "C0", "RAG (dense) vs no retrieval"),
     ("C3", "C1", "H1: hybrid vs dense"),
     ("C2", "C1", "BM25 vs dense"),
     ("C4", "C3", "H2: reranker on top of hybrid"),
     ("C4", "C1", "RQ1: hybrid + reranker vs dense"),
+    ("C5", "C4", "agent with tools vs RAG-only"),
 ]
 LABELS = {
     "recall_at_5": "Recall@5",
@@ -34,6 +36,8 @@ LABELS = {
     "correctness": "Correctness",
     "faithfulness": "Faithfulness",
     "relevancy": "Relevancy",
+    "tool_selection": "Tool selection",
+    "args_correct": "Tool arguments",
 }
 
 
@@ -41,19 +45,24 @@ def latest_full_runs(results_dir: Path) -> dict[str, dict]:
     runs: dict[str, dict] = {}
     for path in sorted(results_dir.glob("C*_*.json")):
         result = json.loads(path.read_text(encoding="utf-8"))
-        if result.get("limit") is None and result["condition"] in CONDITIONS:
+        if result.get("limit") is None and result["condition"] in ALL_CONDITIONS:
             result["_file"] = path.name
             runs[result["condition"]] = result  # sorted by name: the latest timestamp wins
     return dict(sorted(runs.items()))
 
 
-def paired_difference(a: dict, b: dict, metric: str, seed: int = 42) -> dict:
-    """Mean of (a - b) over the questions scored in both runs, with a bootstrap CI."""
+def paired_difference(
+    a: dict, b: dict, metric: str, seed: int = 42, qtype: str | None = None
+) -> dict:
+    """Mean of (a - b) over the questions scored in both runs, with a bootstrap CI.
+    `qtype` restricts the comparison to one question type (e.g. "agentic")."""
     b_values = {q["id"]: q.get(metric) for q in b["questions"]}
     diffs = [
         q[metric] - b_values[q["id"]]
         for q in a["questions"]
-        if q.get(metric) is not None and b_values.get(q["id"]) is not None
+        if q.get(metric) is not None
+        and b_values.get(q["id"]) is not None
+        and (qtype is None or q["qtype"] == qtype)
     ]
     return bootstrap_ci(diffs, seed=seed)
 
@@ -144,6 +153,9 @@ def build_report(runs: dict[str, dict], seed: int = 42) -> str:
         lines += ["", f"### {split}", ""]
         lines += metric_table(blocks, answer_metrics)
 
+    if "C5" in runs:
+        lines += agent_section(runs, seed)
+
     lines += [
         "",
         "## Cost",
@@ -157,6 +169,43 @@ def build_report(runs: dict[str, dict], seed: int = 42) -> str:
             f"| {names[c]} | {np.mean(latencies):.1f} | {r['judge_invalid']} | `{r['_file']}` |"
         )
     return "\n".join(lines) + "\n"
+
+
+def agent_section(runs: dict[str, dict], seed: int) -> list[str]:
+    """RQ3: does the agent with tools beat RAG-only on computation (agentic) questions?"""
+    c5 = runs["C5"]
+    lines = [
+        "",
+        "## Agent with tools (C5)",
+        "",
+        "| Subset | Tool selection | Tool arguments | Correctness |",
+    ]
+    lines.append("|---|---|---|---|")
+    for label, rows in [
+        ("Agentic questions", [q for q in c5["questions"] if q["qtype"] == "agentic"]),
+        ("QA questions", [q for q in c5["questions"] if q["qtype"] != "agentic"]),
+    ]:
+        block = summarise(rows, ["tool_selection", "args_correct", "correctness"], seed=seed)
+        stats = block["overall"]
+        lines.append(
+            f"| {label} (n={len(rows)}) | {fmt(stats['tool_selection'])} | "
+            f"{fmt(stats['args_correct'])} | {fmt(stats['correctness'])} |"
+        )
+    lines += ["", "Correctness on agentic questions, paired with the same questions (RQ3):", ""]
+    lines.append("| Comparison | Correctness difference |")
+    lines.append("|---|---|")
+    for other in ("C4", "C0"):
+        if other in runs:
+            diff = paired_difference(c5, runs[other], "correctness", seed, qtype="agentic")
+            lines.append(f"| C5 − {other} (agentic only) | {fmt_diff(diff)} |")
+    stopped: dict[str, int] = {}
+    for q in c5["questions"]:
+        stopped[q["agent_stopped"]] = stopped.get(q["agent_stopped"], 0) + 1
+    lines += [
+        "",
+        "Agent stop reasons: " + ", ".join(f"{k} {v}" for k, v in sorted(stopped.items())),
+    ]
+    return lines
 
 
 def main() -> None:

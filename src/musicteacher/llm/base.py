@@ -37,3 +37,37 @@ class LLMClient(Protocol):
     ) -> LLMResponse:
         """Return the model's reply to `messages`."""
         ...
+
+
+@dataclass(frozen=True)
+class ToolCall:
+    name: str
+    arguments: dict[str, Any]
+
+
+@dataclass(frozen=True)
+class ToolTurn:
+    """One reply of a tool-using model: either text, or one or more tool calls."""
+
+    content: str
+    tool_calls: list[ToolCall]
+    input_tokens: int = 0
+    output_tokens: int = 0
+    latency_s: float = 0.0
+    cached: bool = False
+
+
+class ToolLLMClient(Protocol):
+    model: str
+
+    def chat_with_tools(
+        self,
+        messages: list[dict[str, Any]],
+        tools: list[dict[str, Any]],
+        *,
+        system: str | None = None,
+        temperature: float = 0.0,
+        max_tokens: int = 1024,
+    ) -> ToolTurn:
+        """One model turn; `messages` use the chat format (user / assistant / tool roles)."""
+        ...

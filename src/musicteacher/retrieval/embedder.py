@@ -8,8 +8,9 @@ from sentence_transformers import SentenceTransformer
 MAX_SEQ_LENGTH = 512
 
 
-def load_embedder(model_name: str) -> SentenceTransformer:
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+def load_embedder(model_name: str, device: str | None = None) -> SentenceTransformer:
+    """`device=None` picks the GPU when available; "cpu" keeps the GPU free for the LLM."""
+    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
     model = SentenceTransformer(model_name, device=device)
     if device == "cuda":
         model.half()  # float16: half the memory, faster, negligible quality loss for retrieval

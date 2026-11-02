@@ -68,3 +68,17 @@ def test_report_contains_tables_and_comparisons():
     assert "C3 − C1 (H1: hybrid vs dense)" in report
     assert "C1 (dense)" in report and "C0 (no retrieval)" in report
     assert "### heldout" in report
+
+
+def test_report_has_an_agent_section_with_paired_agentic_comparison():
+    c4 = make_run("C4", "hybrid_rerank", [0, 0, 1, 1])
+    c5 = make_run("C5", "agent", [1, 1, 1, 1])
+    for run in (c4, c5):
+        for q in run["questions"]:
+            q["qtype"] = "agentic"
+            q.update({"tool_selection": 1.0, "args_correct": 1.0, "agent_stopped": "answer"})
+        run["_file"] = f"{run['condition']}.json"
+    report = build_report({"C4": c4, "C5": c5})
+    assert "## Agent with tools (C5)" in report
+    assert "| C5 − C4 (agentic only) | +0.50" in report
+    assert "Agent stop reasons: answer 4" in report
