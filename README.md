@@ -1,5 +1,7 @@
 # MusicTeacher (RAG)
 
+[![CI](https://github.com/Antoine-GourdonHuet/musicteacher-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Antoine-GourdonHuet/musicteacher-rag/actions/workflows/ci.yml)
+
 A bilingual (French / English) retrieval-augmented assistant for music theory, guitar and singing,
 built as a **controlled experiment**: which retrieval design actually makes the answers more correct
 and more faithful to their sources, and do deterministic tools fix what retrieval cannot?
@@ -237,6 +239,6 @@ tests/          unit tests (no network, no model)
 
 ## Data and licence
 
-Corpus text comes from Wikipedia (English and French) under
+Code: [MIT](LICENSE). Corpus text comes from Wikipedia (English and French) under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); each article, URL and revision is listed
 in [`data/sources.csv`](data/sources.csv).
