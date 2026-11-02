@@ -1,6 +1,6 @@
 import json
 
-from musicteacher.evaluation.judge_check import FABRICATED, check
+from musicteacher.evaluation.judge_check import FABRICATED, check, verbatim_answer
 from musicteacher.llm.fake import FakeLLMClient
 
 
@@ -17,27 +17,34 @@ ROWS = [
     {"id": "b", "lang": "fr", "question": "Qb?", "reference_answer": "Rb", "answer": "Ab"},
 ]
 CONTEXTS = {"a": "[1] ctx a", "b": "[1] ctx b"}
+FIRST = {"a": "One. Two. Three.", "b": "Un. Deux."}
 
 
-def test_check_counts_detections_and_sends_broken_answers():
-    # per row: fabricated answer (correctness + faithfulness calls), then swapped answer (same)
+def test_verbatim_answer_takes_two_sentences_and_cites_them():
+    assert verbatim_answer("A capo clamps.\nIt raises the pitch. Third one.") == (
+        "A capo clamps. It raises the pitch. [1]"
+    )
+
+
+def test_check_measures_the_three_error_types():
+    # per row: fabricated (faithfulness), verbatim (faithfulness), swapped (correctness)
     client = FakeLLMClient(
         [
-            correctness(1),
-            claims("Bach 1950"),  # row a: fabrication caught
-            correctness(0),
-            claims(),  # row a: swap caught
-            correctness(1),
-            claims(),  # row b: fabrication missed
-            correctness(1),
-            claims(),  # row b: swap missed
+            claims("Bach 1950"),  # a: fabrication caught
+            claims(),  # a: verbatim accepted
+            correctness(0),  # a: swap caught
+            claims(),  # b: fabrication missed
+            claims("too strict"),  # b: verbatim rejected (false alarm)
+            correctness(0),  # b: swap caught
         ]
     )
-    result = check(client, ROWS, CONTEXTS)
-    assert result["fabrication"] == {"caught": 1, "n": 2, "rate": 0.5}
-    assert result["swapped_answer"] == {"caught": 1, "n": 2, "rate": 0.5}
+    result = check(client, ROWS, CONTEXTS, FIRST)
+    assert result["fabrication_caught"] == {"ok": 1, "n": 2, "rate": 0.5}
+    assert result["verbatim_accepted"] == {"ok": 1, "n": 2, "rate": 0.5}
+    assert result["swapped_answer_caught"] == {"ok": 2, "n": 2, "rate": 1.0}
+    assert result["passes_threshold"] is False
 
     prompts = [c["messages"][0].content for c in client.calls]
     assert FABRICATED["en"] in prompts[0]
+    assert "Answer: One. Two. [1]" in prompts[1]
     assert "Answer: Ab" in prompts[2]  # question a judged with the answer of question b
-    assert FABRICATED["fr"] in prompts[4]

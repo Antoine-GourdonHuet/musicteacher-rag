@@ -1,15 +1,21 @@
 {
   "condition": "C1",
-  "source_file": "C1_all_20261102T132913.json",
+  "source_file": "C1_all_20261102T144725.json",
   "judge_model": "ministral-3:8b",
-  "fabrication": {
-    "caught": 20,
+  "fabrication_caught": {
+    "ok": 20,
     "n": 20,
     "rate": 1.0
   },
-  "swapped_answer": {
-    "caught": 20,
+  "verbatim_accepted": {
+    "ok": 20,
     "n": 20,
     "rate": 1.0
-  }
+  },
+  "swapped_answer_caught": {
+    "ok": 20,
+    "n": 20,
+    "rate": 1.0
+  },
+  "passes_threshold": true
 }

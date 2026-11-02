@@ -12,6 +12,8 @@ Two separate calls per answer:
    A first version asked for all three scores in one call: on answers with a planted false claim,
    the judge often returned `null` for faithfulness instead of 0, so unfaithful answers silently
    dropped out of the average. Forcing a list of unsupported claims removed that escape hatch.
+   The second version then flagged plain paraphrases as unsupported (false positives), so the
+   rubric now spells out what counts as supported. `judge_check` measures both error types.
 """
 
 from musicteacher.evaluation.draft_questions import parse_json_object
@@ -30,10 +32,13 @@ Reply with JSON only, reason in at most 20 words:
 {"correctness": 0/0.5/1, "relevancy": 0/0.5/1, "reason": "..."}"""
 
 FAITHFULNESS_SYSTEM = """You check whether an answer is faithful to the context passages.
-List every factual claim of the answer that is NOT supported by the context passages.
-Citation markers like [1] are not claims. A refusal ("the passages do not say") makes no claim.
-The passages and the answer may be in different languages; compare the meaning.
-Reply with JSON only:
+A claim IS supported when the passages state it, paraphrase it, summarise it, translate it, or
+when it follows directly from what they say (including combining two statements of the passages).
+A claim is UNSUPPORTED only if it adds a new fact, name, date, number or relation that the passages
+do not contain, or if it contradicts them. When in doubt, the claim is supported.
+Citation markers like [1] are not claims. Saying that the passages do not contain something is not
+a claim. The passages and the answer may be in different languages; compare the meaning.
+List only the UNSUPPORTED claims. Reply with JSON only:
 {"unsupported_claims": ["claim 1", "..."], "faithful": true/false}
 "faithful" is true only if "unsupported_claims" is empty."""
 
