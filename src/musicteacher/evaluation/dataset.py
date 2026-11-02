@@ -15,9 +15,13 @@ class EvalQuestion(BaseModel):
     reference_answer: str
     source_doc: str | None = None  # id from data/sources.csv
     source_passage: str | None = None  # supporting text copied from the corpus
+    source_chunk_ids: list[str] = []  # chunks of data/processed/chunks.jsonl (2 for multihop)
+    category: str | None = None  # topic category from data/topics.csv
     cross_lingual: bool = False  # True if the supporting passage is in the other language
     split: Literal["dev", "heldout"] = "dev"
-    origin: Literal["manual", "llm_draft_human_reviewed"] = "manual"
+    origin: Literal[
+        "manual", "llm_draft", "llm_draft_human_reviewed", "template", "template_human_reviewed"
+    ] = "manual"
     expected_tool: str | None = None  # agentic questions only
     expected_tool_args: dict[str, Any] | None = None
 
