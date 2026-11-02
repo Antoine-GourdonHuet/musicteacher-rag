@@ -82,3 +82,28 @@ def test_report_has_an_agent_section_with_paired_agentic_comparison():
     assert "## Agent with tools (C5)" in report
     assert "| C5 − C4 (agentic only) | +0.50" in report
     assert "Agent stop reasons: answer 4" in report
+
+
+def test_readme_block_is_written_between_markers_only(tmp_path):
+    from musicteacher.evaluation.report import readme_block, update_readme
+
+    runs = {"C0": make_run("C0", None, [0, 1]), "C1": make_run("C1", "dense", [1, 1])}
+    corpus = {
+        "articles": 3,
+        "chunks": 9,
+        "chunks_en": 5,
+        "chunks_fr": 4,
+        "chunk_tokens_total": 1200,
+    }
+    block = readme_block(runs, corpus, None, seed=42)
+    assert "Corpus: 3 Wikipedia articles, 9 chunks (5 EN / 4 FR), 1,200 tokens." in block
+    assert "| C1 − C0: retrieval vs no retrieval |" in block
+
+    readme = tmp_path / "README.md"
+    readme.write_text(
+        "intro\n<!-- results:start -->\nold\n<!-- results:end -->\noutro\n", encoding="utf-8"
+    )
+    update_readme(readme, block)
+    text = readme.read_text(encoding="utf-8")
+    assert text.startswith("intro\n<!-- results:start -->\n<!-- Generated")
+    assert "old" not in text and text.endswith("<!-- results:end -->\noutro\n")

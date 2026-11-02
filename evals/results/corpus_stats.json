@@ -1,0 +1,16 @@
+{
+  "articles": 376,
+  "chunks": 4886,
+  "chunks_en": 3208,
+  "chunks_fr": 1678,
+  "chunk_tokens_total": 972377,
+  "qdrant_points": 4886,
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dim": 1024,
+  "timings_s": {
+    "chunking_s": 24.2,
+    "embedding_s": 164.9,
+    "qdrant_s": 22.8,
+    "bm25_s": 1.0
+  }
+}
