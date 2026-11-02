@@ -20,7 +20,12 @@ class EvalQuestion(BaseModel):
     cross_lingual: bool = False  # True if the supporting passage is in the other language
     split: Literal["dev", "heldout"] = "dev"
     origin: Literal[
-        "manual", "llm_draft", "llm_draft_human_reviewed", "template", "template_human_reviewed"
+        "manual",
+        "llm_draft",
+        "llm_draft_human_reviewed",
+        "llm_draft_llm_verified",
+        "template",
+        "template_human_reviewed",
     ] = "manual"
     expected_tool: str | None = None  # agentic questions only
     expected_tool_args: dict[str, Any] | None = None

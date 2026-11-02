@@ -18,8 +18,9 @@ class Settings(BaseSettings):
     # Local LLMs served by Ollama (https://ollama.com/library).
     ollama_base_url: str = "http://localhost:11434"
     generator_model: str = "qwen3.5:9b"
-    # Placeholder: a judge from another model family is chosen with the evaluation.
-    judge_model: str = "qwen3.5:9b"
+    # Verifier of the drafted questions and judge of the answers: another model family (Mistral)
+    # than the generator (Qwen), to limit a model approving its own outputs.
+    judge_model: str = "ministral-3:8b"
 
     embedding_model: str = "BAAI/bge-m3"
     reranker_model: str = "BAAI/bge-reranker-v2-m3"

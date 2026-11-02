@@ -1,10 +1,12 @@
 """Automatic pre-filter of the drafted QA questions, before the human review.
 
 A draft is dropped if any check fails:
-1. it refers to "the passage" / "the text" (a student would never say that);
+1. its question or answer refers to "the passage" / "the text" (a student would never say that);
 2. it copies 6+ consecutive words from the passage (flagged at drafting time);
-3. a second, independent LLM pass judges that the question cannot be answered from the passage
-   alone, or that the reference answer is not supported by the passage.
+3. an LLM pass judges that the question cannot be answered from the passage alone, that the
+   reference answer is not supported, or that the question is trivia about the text;
+4. the LLM must quote the sentence that supports the answer, and the quote must really be in the
+   passage (checked in code): the model has to show its evidence, not just say "yes".
 
 The verdict is stored in each draft as `auto_filter` ({"kept": bool, "reasons": [...]}) and
 `evaluation.review` only shows the kept drafts. Agentic questions are always kept (their answers are
@@ -17,7 +19,7 @@ import json
 import re
 
 from musicteacher.config import get_settings
-from musicteacher.evaluation.draft_questions import parse_json_object
+from musicteacher.evaluation.draft_questions import longest_shared_run, parse_json_object, words
 from musicteacher.llm.base import LLMClient, Message
 
 META_REFERENCE = re.compile(
@@ -29,17 +31,36 @@ CHECK_SYSTEM = """You check evaluation questions for a music theory teaching ass
 Given a passage, a question and a reference answer, decide:
 - "answerable": true if the question can be fully answered using ONLY the passage.
 - "supported": true if the reference answer is correct according to the passage.
-- "trivia": true ONLY if the question is about an anecdote, a person, a date, a quotation or a
-  piece of music named in the text rather than about a music concept or technique. Questions about
-  definitions, rules, techniques or how something works are NOT trivia, even if the passage answers
-  them directly (that is expected).
+- "evidence": copy, word for word, the ONE sentence of the passage that best supports the
+  reference answer. The passage may be in another language than the question: copy the sentence
+  in the passage's ORIGINAL language, never translate it. Empty string if there is none.
+- "trivia": true if the question is about a specific person, performer, date, song, anecdote or
+  quotation mentioned in the text, rather than about a music concept or technique.
+  Trivia examples: "What did singer X alternate with bird calls?", "Which band used this technique
+  in 1971?", "Who composed the operetta mentioned?".
+  NOT trivia: definitions, rules, techniques, how or why something works, even when the passage
+  answers them directly (that is expected).
 Reply with JSON only, reason in at most 15 words:
-{"answerable": true/false, "supported": true/false, "trivia": true/false, "reason": "..."}"""
+{"answerable": true/false, "supported": true/false, "evidence": "...", "trivia": true/false,
+"reason": "..."}"""
+
+MIN_EVIDENCE_WORDS = 5
+EVIDENCE_RUN_WORDS = 8
+
+
+def evidence_found(evidence: str, passage: str) -> bool:
+    """True if the quote really comes from the passage: at least 8 consecutive words of it (or
+    the whole quote, if shorter, with a minimum of 5) appear in the passage. Tolerates small
+    copying slips (punctuation, a changed word) but not paraphrases or translations."""
+    n_words = len(words(evidence))
+    if n_words < MIN_EVIDENCE_WORDS:
+        return False
+    return longest_shared_run(evidence, passage) >= min(EVIDENCE_RUN_WORDS, n_words)
 
 
 def rule_reasons(draft: dict) -> list[str]:
     reasons = []
-    if META_REFERENCE.search(draft["question"]):
+    if META_REFERENCE.search(draft["question"]) or META_REFERENCE.search(draft["reference_answer"]):
         reasons.append("mentions the passage/text")
     if (draft.get("review") or {}).get("copy_flag"):
         reasons.append("copies 6+ words from the passage")
@@ -65,6 +86,8 @@ def llm_reasons(client: LLMClient, draft: dict) -> list[str]:
         reasons.append("reference answer not supported")
     if verdict.get("trivia") is not False:
         reasons.append("trivia about the text, not a music concept")
+    if not evidence_found(str(verdict.get("evidence", "")), draft["source_passage"]):
+        reasons.append("no verbatim evidence quoted from the passage")
     if reasons and verdict.get("reason"):
         reasons.append(f"checker: {verdict['reason']}")
     return reasons

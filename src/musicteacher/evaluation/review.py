@@ -111,6 +111,7 @@ def review(drafts_path: Path, state_path: Path) -> None:
             "id": draft["id"],
             "decision": "reject" if choice == "r" else "accept",
             "edited": choice == "e",
+            "reviewer": "human",
             "question": question,
             "decided_at": datetime.now(UTC).isoformat(timespec="seconds"),
         }
@@ -142,8 +143,9 @@ def accepted_questions(decisions: dict[str, dict]) -> list[EvalQuestion]:
     for d in decisions.values():
         if d["decision"] != "accept":
             continue
-        data = {k: v for k, v in d["question"].items() if k != "review"}
-        data["origin"] = REVIEWED_ORIGIN.get(data["origin"], data["origin"])
+        data = {k: v for k, v in d["question"].items() if k not in ("review", "auto_filter")}
+        if d.get("reviewer", "human") == "human":
+            data["origin"] = REVIEWED_ORIGIN.get(data["origin"], data["origin"])
         questions.append(EvalQuestion.model_validate(data))
     return sorted(questions, key=lambda q: q.id)
 
@@ -172,13 +174,16 @@ def freeze(
     auto_dropped = sum(not (d.get("auto_filter") or {}).get("kept", True) for d in drafts)
     edited = sum(d["edited"] for d in decisions.values() if d["decision"] == "accept")
     groups_text = ", ".join(f"{lang}/{qtype} {n}" for (lang, qtype), n in sorted(by_group.items()))
+    reviewers = Counter(d.get("reviewer", "human") for d in decisions.values())
+    reviewers_text = ", ".join(f"{name}: {n}" for name, n in sorted(reviewers.items()))
     date = datetime.now(UTC).date().isoformat()
     entry = (
         f"\n## {date}: evaluation set frozen\n\n"
         f"- {len(drafts) or 'n/a'} drafts; {auto_dropped} dropped by the automatic filter "
-        "(evaluation/auto_filter.py); the rest reviewed one by one by a human.\n"
+        "(evaluation/auto_filter.py).\n"
+        f"- Remaining drafts decided by: {reviewers_text}.\n"
         f"- {len(questions)} questions accepted ({edited} edited), "
-        f"{rejected} rejected by the reviewer.\n"
+        f"{rejected} rejected at review.\n"
         f"- QA: {sum(q.qtype != 'agentic' for q in questions)}, "
         f"agentic: {sum(q.qtype == 'agentic' for q in questions)}, "
         f"cross-lingual: {sum(q.cross_lingual for q in questions)}.\n"

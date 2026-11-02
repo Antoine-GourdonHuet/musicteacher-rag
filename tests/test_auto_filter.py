@@ -1,6 +1,6 @@
 import json
 
-from musicteacher.evaluation.auto_filter import filter_draft, rule_reasons
+from musicteacher.evaluation.auto_filter import evidence_found, filter_draft, rule_reasons
 from musicteacher.llm.fake import FakeLLMClient
 
 DRAFT = {
@@ -13,8 +13,17 @@ DRAFT = {
 }
 
 
+EVIDENCE = "A capo clamps the strings to raise their pitch."
+
+
 def verdict(**values) -> str:
-    base = {"answerable": True, "supported": True, "trivia": False, "reason": "ok"}
+    base = {
+        "answerable": True,
+        "supported": True,
+        "trivia": False,
+        "reason": "ok",
+        "evidence": EVIDENCE,
+    }
     return json.dumps({**base, **values})
 
 
@@ -53,3 +62,29 @@ def test_rule_failure_skips_the_llm_and_agentic_is_always_kept():
     filter_draft(client, {**DRAFT, "question": "In this text, what is a capo?"})
     filter_draft(client, {**DRAFT, "qtype": "agentic"})
     assert client.calls == []
+
+
+def test_answer_mentioning_the_text_is_caught():
+    draft = {**DRAFT, "reference_answer": "The text describes it as a clamp."}
+    assert rule_reasons(draft) == ["mentions the passage/text"]
+
+
+def test_evidence_must_be_a_verbatim_quote_of_at_least_five_words():
+    passage = "Le « palm mute » consiste à poser la main près du chevalet."
+    assert evidence_found("le palm mute consiste à poser la main", passage)
+    assert not evidence_found("poser la main sur la touche", passage)  # invented
+    assert not evidence_found("palm mute", passage)  # too short to prove anything
+    long_passage = "If two distinctly different themes are alternated indefinitely, then this "
+    long_passage += "gives rise to a simple binary form."
+    slip = "If two different themes are alternated indefinitely, then this gives rise to a form."
+    assert evidence_found(slip, long_passage)  # small copying slip, 8+ words still match
+    translated = "Si deux thèmes différents alternent indéfiniment, cela donne une forme binaire."
+    assert not evidence_found(translated, long_passage)  # a translation is not evidence
+
+
+def test_missing_or_invented_evidence_drops_the_draft():
+    result = filter_draft(
+        FakeLLMClient([verdict(evidence="A capo makes the guitar louder.")]), DRAFT
+    )
+    assert result["kept"] is False
+    assert "no verbatim evidence quoted from the passage" in result["reasons"]
