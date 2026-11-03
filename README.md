@@ -10,6 +10,8 @@ Everything runs locally and for free: open models served by [Ollama](https://oll
 and reranker on a laptop GPU (8 GB), a Wikipedia corpus, and an evaluation pipeline whose numbers
 are all generated from result files.
 
+New here? Follow the [tutorial](#tutorial-from-zero-to-your-first-answer) to ask your first question.
+
 ## Why
 
 LLMs used as learning assistants make two kinds of mistakes in music theory:
@@ -153,44 +155,107 @@ held-out split → one run per condition (retrieval → generation → judging) 
 Every LLM call is cached on disk, so a re-run reproduces the same outputs without recomputing them.
 Unit tests use fake LLM clients and fake HTTP servers: no model or network is needed in CI.
 
-## How to run
+## Tutorial: from zero to your first answer
 
-Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), [Ollama](https://ollama.com). An NVIDIA GPU
-is recommended (on Windows the CUDA build of PyTorch is installed automatically; Linux gets the CPU build).
+### 1. Install the tools
+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) (Python package manager; it installs
+  Python 3.12 for you) and [Git](https://git-scm.com/downloads).
+- [Ollama](https://ollama.com/download), which runs the language models locally. Start the Ollama app.
+- An NVIDIA GPU is recommended. On Windows the CUDA build of PyTorch is installed automatically;
+  on Linux the CPU build is installed (it works, but indexing and the reranker are slower).
+
+### 2. Get the code and its dependencies
 
 ```bash
-uv sync --group dev
-cp .env.example .env                     # optional: change models or paths
-ollama pull qwen3.5:9b                   # generator and agent
-ollama pull ministral-3:8b               # question verifier and judge
-
-uv run pytest -q                         # unit tests, no model needed
-
-# Corpus and indexes
-uv run python -m musicteacher.ingestion.fetch_wikipedia
-uv run python -m musicteacher.ingestion.build_index
-
-# Evaluation set (already frozen in evals/questions.jsonl)
-uv run python -m musicteacher.evaluation.draft_questions
-uv run python -m musicteacher.evaluation.auto_filter
-uv run python -m musicteacher.evaluation.verify
-uv run python -m musicteacher.evaluation.review --freeze
-
-# Experiments
-uv run python -m musicteacher.evaluation.run --condition C4 --split all     # C0 ... C4
-uv run python -m musicteacher.evaluation.run_agent --split all              # C5
-uv run python -m musicteacher.evaluation.run_agent --split all --require-tool   # C5b
-uv run python -m musicteacher.evaluation.judge_check                        # sanity check of the judge
-uv run python -m musicteacher.evaluation.report --readme                    # report + this README's table
+git clone https://github.com/Antoine-GourdonHuet/musicteacher-rag.git
+cd musicteacher-rag
+uv sync --group dev          # creates .venv with the exact versions of uv.lock
+uv run pytest -q             # unit tests: no model, no network needed
 ```
 
-Quick checks: `uv run python -m musicteacher.llm.smoke` (one cached LLM call) and
-`uv run python -m musicteacher.retrieval.smoke` (10 queries, 4 retrieval modes).
+Optional: `cp .env.example .env` (Windows: `copy .env.example .env`) to change models or settings.
+Every setting is prefixed with `MUSICTEACHER_` (see [`src/musicteacher/config.py`](src/musicteacher/config.py)).
+
+### 3. Download the two language models
+
+```bash
+ollama pull qwen3.5:9b       # answers the questions (generator and agent)
+ollama pull ministral-3:8b   # judges the answers in the evaluation (another model family)
+uv run python -m musicteacher.llm.smoke    # one test call, then the same call served by the cache
+```
+
+### 4. Build the corpus and the search indexes
+
+```bash
+uv run python -m musicteacher.ingestion.fetch_wikipedia   # downloads the articles of data/topics.csv
+uv run python -m musicteacher.ingestion.build_index       # chunks, embeddings (Qdrant), BM25
+uv run python -m musicteacher.retrieval.smoke             # 10 test queries, 4 retrieval modes
+```
+
+Both steps take a few minutes; re-running the download skips articles already on disk. The first run
+also downloads the embedding and reranker models from Hugging Face. If Hugging Face is slow to answer
+afterwards, set `HF_HUB_OFFLINE=1`: the models are then read from the local cache.
+
+### 5. Ask questions
+
+```bash
+uv run python -m musicteacher.ask "Qu'est-ce que le mode dorien ?"
+```
+
+```
+Le mode dorien est une notion qui peut désigner l'harmonia grecque antique, les modes musicaux
+médiévaux ou, plus couramment, les gammes diatoniques modernes correspondant aux notes naturelles de
+ré à ré [3]. Il s'agit d'une gamme symétrique dont le schéma des tons et demi-tons (1-½-1-1-1-½-1)
+est identique en montant comme en descendant [2].
+
+Sources:
+  [1] Mode dorien — Mode dorien grec (fr)  https://fr.wikipedia.org/wiki/Mode_dorien
+  [2] Mode dorien — ... > Mode dorien moderne > Construction mélodique (fr)  https://fr.wikipedia.org/wiki/Mode_dorien
+  ...
+```
+
+The numbers in brackets point to the listed sources. By default the assistant uses hybrid search +
+reranker (C4); try `--mode dense` or `--mode bm25` to compare. For computations, use the agent:
+
+```bash
+uv run python -m musicteacher.ask "Transpose C - Am - F - G up a minor third." --agent
+```
+
+```
+The transposed chords are Eb - Cm - Ab - Bb.
+
+  tool: transpose({'chords': ['C', 'Am', 'F', 'G'], 'semitones': 3}) -> ok
+```
+
+The model did not compute the answer: it asked for the `transpose` tool, and Python computed it.
+
+### 6. Reproduce the experiment
+
+The evaluation set is frozen in [`evals/questions.jsonl`](evals/questions.jsonl). Every LLM call is
+cached in `.cache/`, so a second run is fast and returns the same outputs.
+
+```bash
+uv run python -m musicteacher.evaluation.run --condition C4 --split all     # also C0, C1, C2, C3
+uv run python -m musicteacher.evaluation.run_agent --split all              # C5
+uv run python -m musicteacher.evaluation.run_agent --split all --require-tool   # C5b
+uv run python -m musicteacher.evaluation.judge_check                        # test the judge itself
+uv run python -m musicteacher.evaluation.report --readme                    # report + the table above
+```
+
+Add `--limit 5` to try a run on 5 questions first. Each run writes a JSON file in `evals/results/` with
+the git commit, the configuration, the metrics and every answer.
+
+How the evaluation set was built (only needed to make a new one):
+`evaluation.draft_questions` (LLM drafts from sampled passages) → `evaluation.auto_filter` (rules) →
+`evaluation.verify` (second model, quoted evidence) → `evaluation.review --freeze` (writes the set and a
+20% held-out split; it refuses to overwrite an existing set).
 
 ## Repository layout
 
 ```
 src/musicteacher/
+  ask.py        command line: ask a question (RAG or agent)
   ingestion/    fetch Wikipedia, clean, chunk, build the Qdrant and BM25 indexes
   retrieval/    dense, BM25, hybrid (RRF), reranker, one search(query, mode, k) function
   generation/   RAG and closed-book prompts
